@@ -2,9 +2,26 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    // Allow next/image to serve from the public/images directory
     unoptimized: false,
-    // Remote patterns can be added later for any external image URLs
+  },
+  async redirects() {
+    return [
+      {
+        source: '/bluetti',
+        destination: 'https://bluetti.thekeithhopkins.com/power-page',
+        permanent: false,
+      },
+      {
+        source: '/electric',
+        destination: 'https://electric.thekeithhopkins.com/',
+        permanent: false,
+      },
+      {
+        source: '/machinebaseai',
+        destination: 'https://machinebaseai.thekeithhopkins.com',
+        permanent: false,
+      },
+    ];
   },
 };
 
