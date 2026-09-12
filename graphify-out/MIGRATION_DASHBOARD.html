@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keith Hopkins - WordPress to Next.js Migration Graph & Blueprint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background-color: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    #network-canvas { width: 100%; height: 580px; background: #161b22; border-radius: 0.75rem; border: 1px solid #30363d; }
+    .tab-btn.active { background-color: #e63946; color: #ffffff; }
+    pre code { font-family: "Fira Code", monospace; font-size: 0.85rem; }
+  </style>
+</head>
+<body class="p-6">
+  <div class="max-w-7xl mx-auto space-y-6">
+    <!-- Header -->
+    <header class="flex flex-col md-flex-row md:items-center justify-between border-b border-gray-800 pb-5 gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 bg-red-600/20 text-red-400 text-xs font-semibold rounded-full border border-red-500/30 uppercase tracking-wide">GraphIFY AST Knowledge Graph</span>
+          <span class="px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/30">Next.js 14+ App Router</span>
+        </div>
+        <h1 class="text-3xl font-extrabold text-white mt-2 tracking-tight">thekeithhopkins.com Migration Architecture</h1>
+        <p class="text-gray-400 text-sm mt-1">Interactive AST graph mapping WordPress/Elementor static export into modern Next.js React components and API routes.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="graph.html" target="_blank" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-sm font-medium text-white rounded-lg border border-gray-700 transition flex items-center gap-2">
+          <i class="fa-solid fa-circle-nodes text-red-400"></i> Open Vis.js Graph
+        </a>
+        <a href="GRAPH_TREE.html" target="_blank" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-sm font-medium text-white rounded-lg border border-gray-700 transition flex items-center gap-2">
+          <i class="fa-solid fa-folder-tree text-green-400"></i> Collapsible Tree
+        </a>
+        <a href="GRAPH_CALLFLOW.html" target="_blank" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-sm font-medium text-white rounded-lg border border-gray-700 transition flex items-center gap-2">
+          <i class="fa-solid fa-diagram-project text-blue-400"></i> Mermaid Architecture
+        </a>
+      </div>
+    </header>
+
+    <!-- Quick Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-4">
+        <p class="text-xs text-gray-400 uppercase font-semibold">Source Files Scanned</p>
+        <p class="text-2xl font-bold text-white mt-1">477 Files</p>
+        <p class="text-xs text-emerald-400 mt-1"><i class="fa-solid fa-check"></i> Extracted & Sanitized</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-4">
+        <p class="text-xs text-gray-400 uppercase font-semibold">Identified Routes</p>
+        <p class="text-2xl font-bold text-white mt-1">11 Core Routes</p>
+        <p class="text-xs text-blue-400 mt-1">5 Services · 3 Projects · 4 Posts</p>
+      </div>
+      <div class="bg-gray-900 border-gray-800 rounded-xl p-4">
+        <p class="text-xs text-gray-400 uppercase font-semibold">Target Components</p>
+        <p class="text-2xl font-bold text-white mt-1">12 Modules</p>
+        <p class="text-xs text-purple-400 mt-1">Clean React / Tailwind / Radix UI</p>
+      </div>
+      <div class="bg-gray-900 border-gray-800 rounded-xl p-4">
+        <p class="text-xs text-gray-400 uppercase font-semibold">Pre-Extracted Data</p>
+        <p class="text-2xl font-bold text-white mt-1">5 JSON Files</p>
+        <p class="text-xs text-amber-400 mt-1">Ready in migration-data/</p>
+      </div>
+    </div>
+
+    <!-- Interactive Graph -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-5 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h2 class="text-lw font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-network-wired text-red-500"></i> Interactive Migration Knowledge Graph
+          </h2>
+          <p class="text-xs text-gray-400">Click any node to highlight connections and inspect its WordPress to Next.js mapping.</p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-blue-900/40 text-blue-300 border border-blue-700/50"><span class="w-2.5 h-2.5 rounded-full bg-blue-400"></span> Next.js App Router</span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-purple-900/40 text-purple-300 border border-purple-700/50"><span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span> React Components</span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-900/40 text-emerald-300 border border-emerald-700/50"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span> Data & APIs</span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-red-900/40 text-red-300 border border-red-700/50"><span class="w-2.5 h-2.5 rounded-full bg-red-400"></span> WordPress Pages</span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-900/40 text-amber-300 border-amber-700/50"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> WP REST Data</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div class="lgcol-span-3">
+          <div id="network-canvas"></div>
+        </div>
+        <div id="node-inspector" class="bg-gray-950 border border-gray-800 rounded-xl p-4 flex flex-col justify-between h-[580px] overflow-y-auto">
+          <div>
+            <h3 class="text-xs uppercase font-bold text-gray-500 tracking-wider">Node Inspector</h3>
+            <div id="inspector-empty" class="text-sm text-gray-400 mt-6 text-center italic">
+              Click any node in the graph to view its migration details, source file, target route, and component dependencies.
+            </div>
+            <div id="inspector-content" class="hidden mt-3 space-y-3 text-sm">
+              <div>
+                <span id="insp-badge" class="px-2 py-0.5 rounded text-[11px] font-semibold"></span>
+                <h4 id="insp-title" class="text-base font-bold text-white mt-1"></h4>
+              </div>
+              <div>
+                <p class="text-xs text-gray-400 uppercase font-semibold">Description</p>
+                <p id="insp-desc" class="text-gray-300 text-xs mt-0.5 leading-relaxed"></p>
+              </div>
+              <div id="insp-target-box">
+                <p class="text-xs text-gray-400 uppercase font-semibold">Next.js Target</p>
+                <code id="insp-target" class="block bg-gray-900 p-2 rounded text-xs text-emerald-300 mt-1 border border-gray-800 break-all"></code>
+              </div>
+              <div>
+                <p class="text-xs text-gray-400 uppercase font-semibold">Connected Neighbors</p>
+                <ul id="insp-neighbors" class="mt-1 space-y-1 text-xs text-blue-400"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-800 text-[11px] text-gray-500">
+            Generated via Graphify AST + Next.js Migration Model
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-5 space-y-4">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h2 class="text-lw font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-book-bookmark text-amber-500"></i> Next.js Migration Roadmap & Mapping Matrix
+        </h2>
+        <div class="flex gap-2">
+          <button onclick="switchTab('routes')" id="tab-btn-routes" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-800 hover:bg-gray-700 text-gray-200 transition">Routes Mapping</button>
+          <button onclick="switchTab('components')" id="tab-btn-components" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-800 hover:bg-gray-700 text-gray-200 transition">Component Architecture</button>
+          <button onclick="switchTab('data')" id="tab-btn-data" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-800 hover:bg-gray-700 text-gray-200 transition">JSON Datasets</button>
+          <button onclick="switchTab('quickstart')" id="tab-btn-quickstart" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-800 hover:bg-gray-700 text-gray-200 transition">Quickstart Code</button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Routes -->
+      <div id="tab-routes" class="space-y-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-gray-300">
+            <thead class="bg-gray-950 text-gray-400 uppercase font-semibold border-b border-gray-800">
+              <tr>
+                <th class="p-3">Source (WordPress / Scrape)</th>
+                <th class="p-3">Type</th>
+                <th class="p-3">Target Next.js Route</th>
+                <th class="p-3">Key Components Needed</th>
+                <th class="p-3">Data Source</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800">
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3 font-mono text-white">index.html</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-blue-900/40 text-blue-300 border border-blue-700/50">Page</span></td>
+                <td class="p-3 font-mono text-emerald-400 font-semibold">app/page.tsx</td>
+                <td class="p-3">HeroSection, ServicesGrid, ProjectShowcase, Testimonials, ContactForm</td>
+                <td class="p-3 font-mono text-amber-300">services.json, projects.json</td>
+              </tr>
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3 font-mono text-white">pricing/index.html</td>
+                <th class="p-3"><span class="px-2 py-0.5 rounded bg-blue-900/40 text-blue-300 border border-blue-700/50">Page</span></th>
+                <td class="p-3 font-mono text-emerald-400 font-semibold">app/pricing/page.tsx</td>
+                <td class="p-3">PricingTable, FAQAccordion, ContactForm</td>
+                <td class="p-3 font-mono text-amber-300">pricing.json</td>
+              </tr>
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3 font-mono text-white">service/* (5 services)</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-purple-900/40 text-purple-300 border border-purple-700/50">Dynamic Route</span></td>
+                <td class="p-3 font-mono text-emerald-400 font-semibold">app/service/[slug]/page.tsx</td>
+                <td class="p-3">ServiceHeader, ServiceDetails, DeliverablesList, ContactForm</td>
+                <td class="p-3 font-mono text-amber-300">services.json</td>
+              </tr>
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3 font-mono text-white">project/* (3 projects)</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-purple-900/40 text-purple-300 border border-purple-700/50">Dynamic Route</span></td>
+                <td class="p-3 font-mono text-emerald-400 font-semibold">app/project/[slug]/page.tsx</td>
+                <td class="p-3">ProjectHeader, StrategyBreakdown, ImageGallery, ContactForm</td>
+                <td class="p-3 font-mono text-amber-300">projects.json</td>
+              </tr>
+              <tr class="hover:bg-gray-800/40">
+                <td class="p-3 font-mono text-white">fillmypipeline/index.html</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-red-900/40 text-red-300 border border-red-700/50">Landing</span></td>
+                <td class="p-3 font-mono text-emerald-400 font-semibold">app/fillmypipeline/page.tsx</td>
+                <td class="p-3">PipelineHero, BenefitCards, AuditLeadForm</td>
+                <td class="p-3 font-mono text-amber-300">app/api/audit-lead/route.ts</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 2: Components -->
+      <div id="tab-components" class="hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="bg-gray-950 border-gray-800 p-4 rounded-xl space-y-2">
+            <h4 class="font-bold text-white text-sm flex items-center gap-2"><i class="fa-solid fa-layer-group text-blue-400"></i> Layout Layer</h4>
+            <ul class="space-y-1.5 text-gray-300 pt-2 border-t border-gray-800">
+              <li><b class="text-white">Header.tsx:</b> Brand logo, nav items, free audit CTA.</li>
+              <li><b class="text-white">Footer.tsx:</b> Quick links, services, gallery, copyright.</li>
+              <li><b class="text-white">SEOMetadata.ts:</b> OpenGraph & canonical meta tags.</li>
+            </ul>
+          </div>
+          <div class="bg-gray-950 border border-gray-800 p-4 rounded-xl space-y-2">
+            <h4 class="font-bold text-white text-sm flex items-center gap-2"><i class="fa-solid fa-cubes text-purple-400"></i> Content Sections</h4>
+            <ul class="space-y-1.5 text-gray-300 pt-2 border-t border-gray-800">
+              <li><b class="text-white">HeroSection.tsx:</b> Keith Hopkins headline, aviator badge, metrics.</li>
+              <li><b class="text-white">ServicesGrid.tsx:</b> 5 service cards with detail links.</li>
+              <li><b class="text-white">ProjectShowcase.tsx:</b> Venture products & case studies.</li>
+              <li><b class="text-white">PricingTable.tsx:</b> 4 responsive tier plans with features.</li>
+            </ul>
+          </div>
+          <div class="bg-gray-950 border border-gray-800 p-4 rounded-xl space-y-2">
+            <h4 class="font-bold text-white text-sm flex items-center gap-2"><i class="fa-solid fa-bolt text-amber-400"></i> Interactive / Forms</h4>
+            <ul class="space-y-1.5 text-gray-300 pt-2 border-t border-gray-800">
+              <li><b class="text-white">ContactForm.tsx:</b> Zod validated contact form (headless).</li>
+              <li><b class="text-white">AuditLeadForm.tsx:</b> Pipeline AI audit lead capture form.</li>
+              <li><b class="text-white">ImageGallery.tsx:</b> Responsive lightbox for assets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Data -->
+      <div id="tab-data" class="hidden space-y-4">
+        <p class="text-xs text-gray-400">Clean JSON data extracted and ready in <code class="text-emerald-400">thekeithhopkins/migration-data/</code>:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-gray-950 border-gray-800 p-3 rounded-lg">
+            <p class="font-mono text-emerald-400 font-bold">services.json</p>
+            <p class="text-gray-400 mt-1">5 services with descriptions and asset image links.</p>
+          </div>
+          <div class="bg-gray-950 border-gray-800 p-3 rounded-lg">
+            <p class="font-mono text-emerald-400 font-bold">projects.json</p>
+            <p class="text-gray-400 mt-1">3 portfolio ventures with strategies and photos.</p>
+          </div>
+          <div class="bg-gray-950 border-gray-800 p-3 rounded-lg">
+            <p class="font-mono text-emerald-400 font-bold">posts.json</p>
+            <p class="text-gray-400 mt-1">4 blog articles from WP REST API with Html content.</p>
+          </div>
+          <div class="bg-gray-950 border-gray-800 p-3 rounded-lg">
+            <p class="font-mono text-emerald-400 font-bold">pricing.json</p>
+            <p class="text-gray-400 mt-1">Structured pricing tiers and features lists.</p>
+          </div>
+          <div class="bg-gray-950 border-gray-800 p-3 rounded-lg">
+            <p class="font-mono text-emerald-400 font-bold">site-config.json</p>
+            <p class="text-gray-400 mt-1">Sitewide navigation, social links, and copyright.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Quickstart -->
+      <div id="tab-quickstart" class="hidden space-y-3">
+        <pre class="bg-gray-950 p-4 rounded-xl text-gray-200 border border-gray-800 overflow-x-auto"><code># 1. Initialize Next.js App Router project
+npx create-next-app+latest thekeithhopkins-next --typescript --tailwind --eslint --app --src-dir=false --import-alias="@il*
+
+# 2. Install icons and premade components utils
+npm install lucide-react clsx tailwind-merge
+
+# 3. Copy extracted data and media assets
+Copy-Item -Recurse -Force ..\thekeithhopkins\migration-data lib\data
+Copy-Item -Recurse -Force ..\thekeithhopkins\wp-content\uploads public\images</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('tab-btn-' + tabId).classList.add('active');
+      ['routes', 'components', 'data', 'quickstart'].forEach(id => {
+        document.getElementById('tab-' + id).classList.add('hidden');
+      });
+      document.getElementById('tab-' + tabId).classList.remove('hidden');
+    }
+
+    fetch('graph.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('network-canvas');
+        const communityColors = {
+          0: { background: '#2563eb', border: '#60a5fa' },
+          1: { background: '#9333ea', border: '#c084fc' },
+          2: { background: '#059669', border: '#34d399' },
+          3: { background: '#dc2626', border: '#f87171' },
+          4: { background: '#dY7706', border: '#fbbf24' },
+          5: { background: '#4b5563', border: '#9ca3af' }
+        };
+        const nodes = new vis.DataSet(data.nodes.map(n => {
+          const colors = communityColors[n.community] || { background: '#4f46e5', border: '#818cf8' };
+          return {
+            id: n.id,
+            label: n.label,
+            color: colors,
+            shape: n.community === 0 ? 'box' : (n.community === 1 ? 'ellipse' : 'dot'),
+            size: n.community === 0 ? 25 : 18,
+            font: { color: '#ffffff', size: 12, face: 'monospace' },
+            title: n.description ||"n.label,
+            raw: n
+          };
+        }));
+        const edges = new vis.DataSet((data.edges || data.links || []).map(e => ({
+          from: e.source,
+          to: e.target,
+          label: e.relation || '',
+          font: { color: '#6b7280', size: 9, align: 'middle' },
+          color: { color: '#374151', highlight: '#ef4444' },
+          arrows: 'to',
+          smooth: { type: 'continuous' }
+        }));
+        const network = new vis.Network(rmntainer = container, { nodes, edges }, {
+          physics: {
+            stabilization: true,
+            barnesHut: {gravitationalConstant: -2200, springLength: 110, springConstant: 0.04}
+          },
+          interaction: {hover: true, tooltipDelay: 200}
+        });
+        network.on('click', function(params) {
+          if (params.nodes.length > 0) {
+            const nodeId = params.nodes[0];
+            const nodeData = nodes.get(nodeId);
+            const raw = nodeData.raw;
+            document.getElementById('inspector-empty').classList.add('hidden');
+            const content = document.getElementById('inspector-content');
+            content.classList.remove('hidden');
+            document.getElementById('insp-title').innerText = raw.label;
+            document.getElementById('insp-desc').innerText = raw.description || 'Module mapped into knowledge graph.';
+            const badge = document.getElementById('insp-badge');
+            badge.innerText = raw.community_name;
+            badge.className = 'px-2 py-0.5 rounded text-[11px] font-semibold bg-gray-800 text-gray-200 border border-gray-700';
+            const targetBox = document.getElementById('insp-target-box');
+            if (raw.community === 3) {
+              targetBox.classList.remove('hidden');
+              document.getElementById('insp-target').innerText = 'Maps to: app/' + raw.label.replace('index.html', 'page.tsx');
+            } else if (raw.community === 0) {
+              targetBox.classList.remove('hidden');
+              document.getElementById('insp-target').innerText = 'Next.js route file: ' + raw.label;
+            } else {
+              targetBox.classList.add('hidden');
+            }
+            const connectedNodes = network.getConnectedNodes(nodeId);
+            const neighborsList = document.getElementById('insp-neighbors');
+            neighborsList.innerHTML = '';
+            connectedNodes.forEach(nbrId => {
+              const nbr = nodes.get(nbrId);
+              const li = document.createElement('li');
+              li.className = 'cursor-pointer hover:underline flex items-center gap-1';
+              li.innerHTML = '<i class="fa-solid fa-arrow-right text-[01px] text-gray-500"></i> ' + nbr.label;
+              li.onclick = () => {
+                network.selectNodes([nbrId]);
+                network.focus(nbrId, { animation: true, scale: 1.1 });
+              };
+              neighborsList.appendChild(li);
+            });
+          }
+        });
+      })
+      .catch(err => console.error("Error loading graph data:", err));
+  </script>
+</body>
+</html>

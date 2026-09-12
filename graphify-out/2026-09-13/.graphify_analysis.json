@@ -1,0 +1,94 @@
+{
+  "communities": {
+    "0": [
+      "comp_footer",
+      "comp_header",
+      "comp_seo_head",
+      "nextjs_globals_css",
+      "nextjs_root_layout",
+      "src_elementor_css"
+    ],
+    "1": [
+      "comp_hero",
+      "comp_image_gallery",
+      "comp_project_showcase",
+      "comp_services_grid",
+      "comp_testimonials",
+      "nextjs_home_page",
+      "src_home_html",
+      "src_images_uploads"
+    ],
+    "2": [
+      "data_types",
+      "lib_data_pricing",
+      "lib_data_services",
+      "wpjson_categories",
+      "wpjson_pages",
+      "wpjson_tags"
+    ],
+    "3": [
+      "nextjs_service_detail",
+      "src_service_artist",
+      "src_service_entertainment",
+      "src_service_media",
+      "src_service_talent",
+      "src_service_ventures"
+    ],
+    "4": [
+      "comp_blog_card",
+      "nextjs_blog_detail",
+      "src_post_ai_photo",
+      "src_post_fonts_colors",
+      "src_post_hello_world",
+      "src_post_robot_user",
+      "wpjson_users"
+    ],
+    "5": [
+      "api_contact_route",
+      "comp_contact_form",
+      "comp_pricing_table",
+      "nextjs_pricing_page",
+      "src_cf7_plugin",
+      "src_pricing_html"
+    ],
+    "6": [
+      "lib_data_projects",
+      "nextjs_project_detail",
+      "src_project_alkaline",
+      "src_project_butter",
+      "src_project_oils"
+    ],
+    "7": [
+      "api_audit_route",
+      "comp_audit_form",
+      "nextjs_fillmypipeline",
+      "src_landing_pipeline"
+    ],
+    "8": [
+      "lib_data_posts",
+      "nextjs_category_archive",
+      "nextjs_tag_archive",
+      "wpjson_posts"
+    ]
+  },
+  "cohesion": {
+    "0": 0.3333333333333333,
+    "1": 0.2857142857142857,
+    "2": 0.4,
+    "3": 0.3333333333333333,
+    "4": 0.2857142857142857,
+    "5": 0.3333333333333333,
+    "6": 0.4,
+    "7": 0.5,
+    "8": 0.5
+  },
+  "gods": [],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "no_signal",
+      "question": null,
+      "why": "Not enough signal to generate questions. This usually means the corpus has no AMBIGUOUS edges, no bridge nodes, no INFERRED relationships, and all communities are tightly cohesive. Add more files or run with --mode deep to extract richer edges."
+    }
+  ]
+}

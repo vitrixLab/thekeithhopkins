@@ -1,0 +1,19 @@
+{
+  "0": "dependencies",
+  "1": "layout.tsx",
+  "2": "page.tsx",
+  "3": "devDependencies",
+  "4": "compilerOptions",
+  "5": "HeroCanvas.tsx",
+  "6": "include",
+  "7": "package.json",
+  "8": "README.md",
+  "9": "This is NOT the Next.js you know",
+  "10": "NEXTJS_MIGRATION_BLUEPRINT.md",
+  "11": "rules/graphify.md",
+  "12": "workflows/graphify.md",
+  "13": "CLAUDE.md",
+  "14": "eslint.config.mjs",
+  "15": "next.config.ts",
+  "16": "postcss.config.mjs"
+}

@@ -1,0 +1,2174 @@
+{
+  "NEXTJS_MIGRATION_BLUEPRINT.md": {
+    "mtime": 1789200512.4837434,
+    "seen": 1789208230.2181056,
+    "ast_hash": "139f47a0810e3ae371393127a3c2b226",
+    "semantic_hash": ""
+  },
+  ".claude/settings.json": {
+    "mtime": 1789247823.5329144,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a1e9093e88adf7af7586e792aae09e35",
+    "semantic_hash": ""
+  },
+  ".codex/hooks.json": {
+    "mtime": 1789247833.3044903,
+    "seen": 1789247926.3501544,
+    "ast_hash": "87a142ed0c3fc147b08f0aa68f767c90",
+    "semantic_hash": ""
+  },
+  "app/layout.tsx": {
+    "mtime": 1789209126.692899,
+    "seen": 1789247926.3501544,
+    "ast_hash": "048c7259d11a1678b473080c030c8c58",
+    "semantic_hash": ""
+  },
+  "app/page.tsx": {
+    "mtime": 1789212771.710621,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a82b8964b6c0010e36d78d8c9d58d4c3",
+    "semantic_hash": ""
+  },
+  "components/home/AboutSection.tsx": {
+    "mtime": 1789212453.7344346,
+    "seen": 1789247926.3501544,
+    "ast_hash": "dcda4e9e24b3ed97ae6cad4615d4827f",
+    "semantic_hash": ""
+  },
+  "components/home/ArtistSection.tsx": {
+    "mtime": 1789212455.4496088,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0fdf18c63676f390612c35556a30eb88",
+    "semantic_hash": ""
+  },
+  "components/home/ContactSection.tsx": {
+    "mtime": 1789212752.88612,
+    "seen": 1789247926.3501544,
+    "ast_hash": "2ec807436fb8f3cd9ddcf5e665607e8e",
+    "semantic_hash": ""
+  },
+  "components/home/HeroSection.tsx": {
+    "mtime": 1789211068.800455,
+    "seen": 1789247926.3501544,
+    "ast_hash": "acff71410c72705d93ff0308a55e04a3",
+    "semantic_hash": ""
+  },
+  "components/home/ServicesSection.tsx": {
+    "mtime": 1789247757.1252153,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f16b6b26b91de7eeac7321eb301c60bc",
+    "semantic_hash": ""
+  },
+  "components/layout/Footer.tsx": {
+    "mtime": 1789204636.4269402,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ca76dce8be14c7180f4dc0897e35d770",
+    "semantic_hash": ""
+  },
+  "components/layout/Header.tsx": {
+    "mtime": 1789204399.3727005,
+    "seen": 1789247926.3501544,
+    "ast_hash": "5b4c20ded6f0676f6372090236bf35c8",
+    "semantic_hash": ""
+  },
+  "components/three/HeroCanvas.tsx": {
+    "mtime": 1789211049.5149822,
+    "seen": 1789247926.3501544,
+    "ast_hash": "2ee15b04dfac15946bda8b22571faf4f",
+    "semantic_hash": ""
+  },
+  "components/three/NeonGrid.tsx": {
+    "mtime": 1789210186.1809309,
+    "seen": 1789247926.3501544,
+    "ast_hash": "b53e136088a1b0d86394c0abcdb6adb6",
+    "semantic_hash": ""
+  },
+  "components/three/ParticleField.tsx": {
+    "mtime": 1789210183.8469975,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a90224fbb63fcb9eb0091b35413eff45",
+    "semantic_hash": ""
+  },
+  "components/three/PostFX.tsx": {
+    "mtime": 1789210187.6107385,
+    "seen": 1789247926.3501544,
+    "ast_hash": "eed05d83ce89e7f4c5d17f0090e7690f",
+    "semantic_hash": ""
+  },
+  "eslint.config.mjs": {
+    "mtime": 1789203223.4086304,
+    "seen": 1789247926.3501544,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": ""
+  },
+  "lib/data/posts.json": {
+    "mtime": 1789200093.4825377,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3e982e29c8717354a88ca4e7b535efa4",
+    "semantic_hash": ""
+  },
+  "lib/data/pricing.json": {
+    "mtime": 1789200093.4825377,
+    "seen": 1789247926.3501544,
+    "ast_hash": "49696ffb326fff2858fae8be702e2c86",
+    "semantic_hash": ""
+  },
+  "lib/data/projects.json": {
+    "mtime": 1789200093.4795818,
+    "seen": 1789247926.3501544,
+    "ast_hash": "04308e233b3fd21fda1e56183a7aa4af",
+    "semantic_hash": ""
+  },
+  "lib/data/services.json": {
+    "mtime": 1789200093.4028075,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0ceaaae2041f66c193a5a39db648d584",
+    "semantic_hash": ""
+  },
+  "lib/data/site-config.json": {
+    "mtime": 1789207449.6142535,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a365778c17391b08acfefe3e01616dc3",
+    "semantic_hash": ""
+  },
+  "lib/types.ts": {
+    "mtime": 1789203817.4229155,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e3f81d6f969f080b7a74ecf2ab0544fa",
+    "semantic_hash": ""
+  },
+  "lib/utils.ts": {
+    "mtime": 1789203842.602228,
+    "seen": 1789247926.3501544,
+    "ast_hash": "533769d0e61883721128c8f52284d9c6",
+    "semantic_hash": ""
+  },
+  "next.config.ts": {
+    "mtime": 1789207261.2854588,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6fcaf6a737e9a5328ea6e1d310118c51",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1789211313.3054438,
+    "seen": 1789247926.3501544,
+    "ast_hash": "deb5b1bebc512535eabfde803b0eb295",
+    "semantic_hash": ""
+  },
+  "postcss.config.mjs": {
+    "mtime": 1789203223.4745448,
+    "seen": 1789247926.3501544,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1789203224.6545548,
+    "seen": 1789247926.3501544,
+    "ast_hash": "02fc19ad21338c2ab820a70136310db4",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1789247827.3992875,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1789247827.3992875,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a831cf3669f1e6ab85d8a80ebe655f99",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1789247833.2984388,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1dce6b8f6d20e9ef41a2a96be5329157",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1789247823.5268688,
+    "seen": 1789247926.3501544,
+    "ast_hash": "b0517ee048d45b5cd5463430230eb52f",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1789203223.2544441,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": ""
+  },
+  "pnpm-workspace.yaml": {
+    "mtime": 1789211097.1377175,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9c040ec7f043595793b754660e467d4a",
+    "semantic_hash": ""
+  },
+  "public/file.svg": {
+    "mtime": 1789203223.491896,
+    "seen": 1789247926.3501544,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": ""
+  },
+  "public/globe.svg": {
+    "mtime": 1789203223.525756,
+    "seen": 1789247926.3501544,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": ""
+  },
+  "public/images/06/1674133646005-1024x536.png": {
+    "mtime": 1789199865.540372,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0799d4436009713bf18781b9200aae50",
+    "semantic_hash": ""
+  },
+  "public/images/06/1674133646005-150x79.png": {
+    "mtime": 1789199865.582344,
+    "seen": 1789247926.3501544,
+    "ast_hash": "70a6cad6050ffab1626e7ef2ef405dbe",
+    "semantic_hash": ""
+  },
+  "public/images/06/1674133646005-300x157.png": {
+    "mtime": 1789199865.6277337,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ae50d55ee6b5e02077df8672c671b7ad",
+    "semantic_hash": ""
+  },
+  "public/images/06/1674133646005-600x314.png": {
+    "mtime": 1789199865.670023,
+    "seen": 1789247926.3501544,
+    "ast_hash": "785da10f6e4c1fd818192f5b580aa0cc",
+    "semantic_hash": ""
+  },
+  "public/images/06/1674133646005-768x402.png": {
+    "mtime": 1789199865.7214236,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0b98fec64a1b6a6c387522e4a82bff9f",
+    "semantic_hash": ""
+  },
+  "public/images/06/1674133646005.png": {
+    "mtime": 1789199865.7722912,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4beda2d10af144898cc7fac66b27857d",
+    "semantic_hash": ""
+  },
+  "public/images/06/1719211981653-1024x585.png": {
+    "mtime": 1789199865.8183646,
+    "seen": 1789247926.3501544,
+    "ast_hash": "153a20da83722ba709b0b5eb4f8a6a1e",
+    "semantic_hash": ""
+  },
+  "public/images/06/1719211981653-150x86.png": {
+    "mtime": 1789199865.8586118,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e8ef413ed0dfadb1075b872b9ca6fc28",
+    "semantic_hash": ""
+  },
+  "public/images/06/1719211981653-300x171.png": {
+    "mtime": 1789199865.901406,
+    "seen": 1789247926.3501544,
+    "ast_hash": "10f9e2a45196f4be523297290e99f1da",
+    "semantic_hash": ""
+  },
+  "public/images/06/1719211981653-600x343.png": {
+    "mtime": 1789199865.9453084,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6ca8614336bfdcce781eec31b7ecafde",
+    "semantic_hash": ""
+  },
+  "public/images/06/1719211981653-768x439.png": {
+    "mtime": 1789199865.9942205,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ede6ee026aacc03fea4d1ef37ceebba9",
+    "semantic_hash": ""
+  },
+  "public/images/06/1719211981653.png": {
+    "mtime": 1789199866.046243,
+    "seen": 1789247926.3501544,
+    "ast_hash": "56ee973b564028e69808311e3999e1c9",
+    "semantic_hash": ""
+  },
+  "public/images/06/64e65f1d28949e1c7c831b90_No-plan-1024x576.jpeg": {
+    "mtime": 1789199866.0880835,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3dfef4f2c0aa89de7b3404e1683227ee",
+    "semantic_hash": ""
+  },
+  "public/images/06/64e65f1d28949e1c7c831b90_No-plan-150x84.jpeg": {
+    "mtime": 1789199866.1325822,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ce7043830be1ddb0bd3f66f912285f22",
+    "semantic_hash": ""
+  },
+  "public/images/06/64e65f1d28949e1c7c831b90_No-plan-300x169.jpeg": {
+    "mtime": 1789199866.2061903,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3e3a8209647dc042af214f66e08679b2",
+    "semantic_hash": ""
+  },
+  "public/images/06/64e65f1d28949e1c7c831b90_No-plan-600x338.jpeg": {
+    "mtime": 1789199866.278247,
+    "seen": 1789247926.3501544,
+    "ast_hash": "5b3029984660e9e136bfa7154abd454a",
+    "semantic_hash": ""
+  },
+  "public/images/06/64e65f1d28949e1c7c831b90_No-plan-768x432.jpeg": {
+    "mtime": 1789199866.3543427,
+    "seen": 1789247926.3501544,
+    "ast_hash": "696418095d6d3919a12dec04718de9f8",
+    "semantic_hash": ""
+  },
+  "public/images/06/64e65f1d28949e1c7c831b90_No-plan.jpeg": {
+    "mtime": 1789199866.4241853,
+    "seen": 1789247926.3501544,
+    "ast_hash": "297312dd6209e6a28e49a9d3b96f5bd8",
+    "semantic_hash": ""
+  },
+  "public/images/06/Artist-management.png": {
+    "mtime": 1789199866.5063708,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6710c7d4998a5b3c91911f5fcd0d7858",
+    "semantic_hash": ""
+  },
+  "public/images/06/Business.png": {
+    "mtime": 1789199866.5762432,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fc20836fd5f1a3fbf704eaf9187b2e6c",
+    "semantic_hash": ""
+  },
+  "public/images/06/Entertainment-Industry-150x100.jpg": {
+    "mtime": 1789199866.6473734,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3c14afc2acd802cbd96f087e960c8bfd",
+    "semantic_hash": ""
+  },
+  "public/images/06/Entertainment-Industry-300x200.jpg": {
+    "mtime": 1789199866.7185516,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8cdb4ba0269e3df7b28981f928e77f72",
+    "semantic_hash": ""
+  },
+  "public/images/06/Entertainment-Industry-600x400.jpg": {
+    "mtime": 1789199866.783472,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1a2065e74444fb15bf51134d3ce5d31a",
+    "semantic_hash": ""
+  },
+  "public/images/06/Entertainment-Industry-768x512.jpg": {
+    "mtime": 1789199866.8542807,
+    "seen": 1789247926.3501544,
+    "ast_hash": "10d6b18a10686625bc6681bf23ed40a4",
+    "semantic_hash": ""
+  },
+  "public/images/06/Entertainment-Industry.jpg": {
+    "mtime": 1789199866.9331386,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e7b4fc57b500c96dd019ab11eff1b7b7",
+    "semantic_hash": ""
+  },
+  "public/images/06/Innovation-Entrepreneurship-Hero-1600x900-1-1024x576.jpeg": {
+    "mtime": 1789199866.9991362,
+    "seen": 1789247926.3501544,
+    "ast_hash": "da1577ee33bc13ec68f45b29e69cd247",
+    "semantic_hash": ""
+  },
+  "public/images/06/Innovation-Entrepreneurship-Hero-1600x900-1-150x84.jpeg": {
+    "mtime": 1789199867.0645318,
+    "seen": 1789247926.3501544,
+    "ast_hash": "05f365838d1664f576d96255d322affe",
+    "semantic_hash": ""
+  },
+  "public/images/06/Innovation-Entrepreneurship-Hero-1600x900-1-1536x864.jpeg": {
+    "mtime": 1789199867.1382346,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1b763f513894b2341804efdbc4c43606",
+    "semantic_hash": ""
+  },
+  "public/images/06/Innovation-Entrepreneurship-Hero-1600x900-1-300x169.jpeg": {
+    "mtime": 1789199867.2050948,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7d1d8964e8c8183796f86d9569c3c8f8",
+    "semantic_hash": ""
+  },
+  "public/images/06/Innovation-Entrepreneurship-Hero-1600x900-1-600x338.jpeg": {
+    "mtime": 1789199867.2751093,
+    "seen": 1789247926.3501544,
+    "ast_hash": "202245c4b5204045686c251f1105c28d",
+    "semantic_hash": ""
+  },
+  "public/images/06/Innovation-Entrepreneurship-Hero-1600x900-1-768x432.jpeg": {
+    "mtime": 1789199867.341365,
+    "seen": 1789247926.3501544,
+    "ast_hash": "504f1a8c76def09854ac9792376f707b",
+    "semantic_hash": ""
+  },
+  "public/images/06/Innovation-Entrepreneurship-Hero-1600x900-1.jpeg": {
+    "mtime": 1789199867.4143143,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6afa533b6c467cd2a08a345ab3d37e7b",
+    "semantic_hash": ""
+  },
+  "public/images/06/Logo-200-x-100-px_20250909_205843_0000-150x75.png": {
+    "mtime": 1789199867.4989908,
+    "seen": 1789247926.3501544,
+    "ast_hash": "5e46f00794a42fd98d9897c04957ad57",
+    "semantic_hash": ""
+  },
+  "public/images/06/Logo-200-x-100-px_20250909_205843_0000.png": {
+    "mtime": 1789199867.5766726,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f53e9dd41e0e60e187df6ced5c287524",
+    "semantic_hash": ""
+  },
+  "public/images/06/Social-Media.png": {
+    "mtime": 1789199867.6498175,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fcd590b6039721d8540e027757f4bcf0",
+    "semantic_hash": ""
+  },
+  "public/images/06/Untitled-design-4.png": {
+    "mtime": 1789199867.7225335,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8ac9c008ea5b312ccdaf573aa1ff22b8",
+    "semantic_hash": ""
+  },
+  "public/images/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-150x85.jpg": {
+    "mtime": 1789199867.7949317,
+    "seen": 1789247926.3501544,
+    "ast_hash": "714e2e8677318df25894d4d874619951",
+    "semantic_hash": ""
+  },
+  "public/images/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-300x170.jpg": {
+    "mtime": 1789199867.862722,
+    "seen": 1789247926.3501544,
+    "ast_hash": "11cf0ec58832707425a40f16e00fcd84",
+    "semantic_hash": ""
+  },
+  "public/images/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-600x341.jpg": {
+    "mtime": 1789199867.928431,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6776e5e8c9ed67af254adb573f4cf762",
+    "semantic_hash": ""
+  },
+  "public/images/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-768x436.jpg": {
+    "mtime": 1789199867.9912674,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e5c29978d07fafc50199a2d7d9da2371",
+    "semantic_hash": ""
+  },
+  "public/images/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1.jpg": {
+    "mtime": 1789199868.069016,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f85ceec85d775478beccd8052f2c5e05",
+    "semantic_hash": ""
+  },
+  "public/images/06/audience-blur-bokeh-976866-1024x683-1-150x100.jpg": {
+    "mtime": 1789199868.1478984,
+    "seen": 1789247926.3501544,
+    "ast_hash": "93a8d6316b1b13f4b1cc9d287f05b9af",
+    "semantic_hash": ""
+  },
+  "public/images/06/audience-blur-bokeh-976866-1024x683-1-300x200.jpg": {
+    "mtime": 1789199868.250149,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f036d06f7f1ead753218a6666614f704",
+    "semantic_hash": ""
+  },
+  "public/images/06/audience-blur-bokeh-976866-1024x683-1-600x400.jpg": {
+    "mtime": 1789199868.3165202,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1397533dab4a6e529d3b9fb09d6b62ce",
+    "semantic_hash": ""
+  },
+  "public/images/06/audience-blur-bokeh-976866-1024x683-1-768x512.jpg": {
+    "mtime": 1789199868.3758557,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fd43f783a536d83914b1ee5d79bcf896",
+    "semantic_hash": ""
+  },
+  "public/images/06/audience-blur-bokeh-976866-1024x683-1.jpg": {
+    "mtime": 1789199868.4223113,
+    "seen": 1789247926.3501544,
+    "ast_hash": "d8a9b6a9729b4a9e56f53d2d532e8bb3",
+    "semantic_hash": ""
+  },
+  "public/images/06/c-g1-150x103.jpg": {
+    "mtime": 1789199868.469264,
+    "seen": 1789247926.3501544,
+    "ast_hash": "41141dd52b7291648c85a1017aa748b5",
+    "semantic_hash": ""
+  },
+  "public/images/06/c-g1-300x205.jpg": {
+    "mtime": 1789199868.519442,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ce51c599936367f02dd89a9b0e0d7ec0",
+    "semantic_hash": ""
+  },
+  "public/images/06/c-g1.jpg": {
+    "mtime": 1789199868.5671096,
+    "seen": 1789247926.3501544,
+    "ast_hash": "cf74d0dd428afd1d62817093422193e7",
+    "semantic_hash": ""
+  },
+  "public/images/06/c-g2-150x103.jpg": {
+    "mtime": 1789199868.610577,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0a384a6e7acab2c12a9939f657a1c3da",
+    "semantic_hash": ""
+  },
+  "public/images/06/c-g2-300x205.jpg": {
+    "mtime": 1789199868.652813,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e9e4e3eef71f5b07b373c50800427428",
+    "semantic_hash": ""
+  },
+  "public/images/06/c-g2.jpg": {
+    "mtime": 1789199868.6972966,
+    "seen": 1789247926.3501544,
+    "ast_hash": "50dc31bdd3882877ff76830d5f4969a6",
+    "semantic_hash": ""
+  },
+  "public/images/06/contact-bg.jpg": {
+    "mtime": 1789199868.7444873,
+    "seen": 1789247926.3501544,
+    "ast_hash": "62b56ae32255d8348e714f5fd14c10c3",
+    "semantic_hash": ""
+  },
+  "public/images/06/creative-services-1024x580.jpg": {
+    "mtime": 1789199868.7854223,
+    "seen": 1789247926.3501544,
+    "ast_hash": "629960c1a0d95a7dd6a6c07f9d184035",
+    "semantic_hash": ""
+  },
+  "public/images/06/creative-services-150x85.jpg": {
+    "mtime": 1789199868.8268433,
+    "seen": 1789247926.3501544,
+    "ast_hash": "b59d8b45df3ab246cc3f5918378bc78b",
+    "semantic_hash": ""
+  },
+  "public/images/06/creative-services-300x170.jpg": {
+    "mtime": 1789199868.8691463,
+    "seen": 1789247926.3501544,
+    "ast_hash": "07a4bdf9f71982def3895365eb0fde9c",
+    "semantic_hash": ""
+  },
+  "public/images/06/creative-services-600x340.jpg": {
+    "mtime": 1789199868.9145014,
+    "seen": 1789247926.3501544,
+    "ast_hash": "43f347d831b0008a85b7efb7acbf766e",
+    "semantic_hash": ""
+  },
+  "public/images/06/creative-services-768x435.jpg": {
+    "mtime": 1789199868.9578874,
+    "seen": 1789247926.3501544,
+    "ast_hash": "63b93598195213eabae7cd4d5ff1d470",
+    "semantic_hash": ""
+  },
+  "public/images/06/creative-services.jpg": {
+    "mtime": 1789199868.9994488,
+    "seen": 1789247926.3501544,
+    "ast_hash": "38881bf88d5bb283c0cadfcf4f69a2ed",
+    "semantic_hash": ""
+  },
+  "public/images/06/cutting-edge-talent-management-150x86.jpg": {
+    "mtime": 1789199869.0427675,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4e42a738d903be09ad88d4f46e324588",
+    "semantic_hash": ""
+  },
+  "public/images/06/cutting-edge-talent-management-300x172.jpg": {
+    "mtime": 1789199869.0836587,
+    "seen": 1789247926.3501544,
+    "ast_hash": "11071efa5c513c9f8c35dbd6c26e3e1b",
+    "semantic_hash": ""
+  },
+  "public/images/06/cutting-edge-talent-management-600x344.jpg": {
+    "mtime": 1789199869.1284626,
+    "seen": 1789247926.3501544,
+    "ast_hash": "947edf49c2a213f95a249b8bd757552f",
+    "semantic_hash": ""
+  },
+  "public/images/06/cutting-edge-talent-management-768x440.jpg": {
+    "mtime": 1789199869.1676495,
+    "seen": 1789247926.3501544,
+    "ast_hash": "24cc693972bb7829b49f985e1130b6f5",
+    "semantic_hash": ""
+  },
+  "public/images/06/cutting-edge-talent-management.jpg": {
+    "mtime": 1789199869.2120018,
+    "seen": 1789247926.3501544,
+    "ast_hash": "86ead2fa3a0935dc23ec5a5e315454fc",
+    "semantic_hash": ""
+  },
+  "public/images/06/innovation_blog_26-october-2022-1024x576.webp": {
+    "mtime": 1789199869.2515783,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1082ef3c53866a14d3cf1acbf2e435b4",
+    "semantic_hash": ""
+  },
+  "public/images/06/innovation_blog_26-october-2022-150x84.webp": {
+    "mtime": 1789199869.2934878,
+    "seen": 1789247926.3501544,
+    "ast_hash": "237c8770471112cd8a52e67534b0bcc7",
+    "semantic_hash": ""
+  },
+  "public/images/06/innovation_blog_26-october-2022-300x169.webp": {
+    "mtime": 1789199869.3433268,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c8c52a863edc3e121bce1bb1d3534295",
+    "semantic_hash": ""
+  },
+  "public/images/06/innovation_blog_26-october-2022-600x337.webp": {
+    "mtime": 1789199869.3838694,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7b4748cffa612660960c5e8df6073f63",
+    "semantic_hash": ""
+  },
+  "public/images/06/innovation_blog_26-october-2022-768x432.webp": {
+    "mtime": 1789199869.4310985,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4d467b622bef3e19455a2b84e5ed284d",
+    "semantic_hash": ""
+  },
+  "public/images/06/innovation_blog_26-october-2022.webp": {
+    "mtime": 1789199869.470074,
+    "seen": 1789247926.3501544,
+    "ast_hash": "56b45679c2f18b644cb9098a479edddb",
+    "semantic_hash": ""
+  },
+  "public/images/06/l-g1-150x103.jpg": {
+    "mtime": 1789199869.511193,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9c39d080ce9050a1a72f6c12159ac485",
+    "semantic_hash": ""
+  },
+  "public/images/06/l-g1-300x205.jpg": {
+    "mtime": 1789199869.549371,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a399ea58acde40d7cd0866a40cfd1b61",
+    "semantic_hash": ""
+  },
+  "public/images/06/l-g1.jpg": {
+    "mtime": 1789199869.5880134,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9971a6799a9a4313896c73c1308c5977",
+    "semantic_hash": ""
+  },
+  "public/images/06/l-g2-150x103.jpg": {
+    "mtime": 1789199869.6267836,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f9d0e86ade91be9302f5795134c0df29",
+    "semantic_hash": ""
+  },
+  "public/images/06/l-g2-300x205.jpg": {
+    "mtime": 1789199869.663019,
+    "seen": 1789247926.3501544,
+    "ast_hash": "250917859cdf353a9c1ed11447f5923b",
+    "semantic_hash": ""
+  },
+  "public/images/06/l-g2.jpg": {
+    "mtime": 1789199869.7154024,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a008cf783d3bcd5a6978816f903cbfde",
+    "semantic_hash": ""
+  },
+  "public/images/06/list-post-1-415x450.jpg": {
+    "mtime": 1789199869.7616553,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4bc756770edd71fe681ae8c545018fe1",
+    "semantic_hash": ""
+  },
+  "public/images/06/list-post-1.jpg": {
+    "mtime": 1789199869.80622,
+    "seen": 1789247926.3501544,
+    "ast_hash": "30b6e526924277eb9f57d5725814d4cd",
+    "semantic_hash": ""
+  },
+  "public/images/06/list-post-2-415x450.jpg": {
+    "mtime": 1789199869.848556,
+    "seen": 1789247926.3501544,
+    "ast_hash": "514b9248e2d0eaea1115fb8890d7daef",
+    "semantic_hash": ""
+  },
+  "public/images/06/list-post-2.jpg": {
+    "mtime": 1789199869.8939393,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f2ff0431dcf0b33cc7e16f16db1f528a",
+    "semantic_hash": ""
+  },
+  "public/images/06/list-post-3.jpg": {
+    "mtime": 1789199869.9357636,
+    "seen": 1789247926.3501544,
+    "ast_hash": "dd0c6042c879650c2433658ec4cd7cb1",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single12-1024x571.jpg": {
+    "mtime": 1789199869.9739866,
+    "seen": 1789247926.3501544,
+    "ast_hash": "91a972d743f470a5e693b7920e15f73c",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single12-150x84.jpg": {
+    "mtime": 1789199870.0146413,
+    "seen": 1789247926.3501544,
+    "ast_hash": "118fa1646d1083b8281ea308e66ffb03",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single12-300x167.jpg": {
+    "mtime": 1789199870.056932,
+    "seen": 1789247926.3501544,
+    "ast_hash": "56572ec7500a6bbee4f8cecdbe98832b",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single12-600x335.jpg": {
+    "mtime": 1789199870.101975,
+    "seen": 1789247926.3501544,
+    "ast_hash": "20af300668e58584ef958425648466c6",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single12-768x428.jpg": {
+    "mtime": 1789199870.1397166,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ba9f5ef4e154affcc88ed5662dd05a98",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single12.jpg": {
+    "mtime": 1789199870.1795478,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0fb1a33a51965684b146a405093ece3e",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single2.jpg": {
+    "mtime": 1789199870.2259417,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fcfac563c732001d3e06060b250b1b89",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single3.jpg": {
+    "mtime": 1789199870.2675927,
+    "seen": 1789247926.3501544,
+    "ast_hash": "81f437261259f9d3bf2091dfcdaaeee9",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single4.jpg": {
+    "mtime": 1789199870.317918,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c111518e697fbd4dc2aa016e16522852",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single8-1024x571.jpg": {
+    "mtime": 1789199870.3571956,
+    "seen": 1789247926.3501544,
+    "ast_hash": "99ba77d8dee3af083db45ba9c299aa64",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single8-150x84.jpg": {
+    "mtime": 1789199870.4011323,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4007c39d0e64a3b2ff98fd79dfd5f619",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single8-300x167.jpg": {
+    "mtime": 1789199870.4406877,
+    "seen": 1789247926.3501544,
+    "ast_hash": "bd8af0f30199b5d42140cc05375ef284",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single8-600x335.jpg": {
+    "mtime": 1789199870.4780524,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ca8b1b0137f0364113512d67ad87df59",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single8-768x428.jpg": {
+    "mtime": 1789199870.5172415,
+    "seen": 1789247926.3501544,
+    "ast_hash": "cafde39cc7d5f1c30605b7764f387b85",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single8.jpg": {
+    "mtime": 1789199870.5594049,
+    "seen": 1789247926.3501544,
+    "ast_hash": "998aea85aed1af75793faab33c216ff4",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single9-1024x571.jpg": {
+    "mtime": 1789199870.6054406,
+    "seen": 1789247926.3501544,
+    "ast_hash": "22989497d533093de71d8c6d092953b7",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single9-150x84.jpg": {
+    "mtime": 1789199870.6458972,
+    "seen": 1789247926.3501544,
+    "ast_hash": "80551ce6d8e011512985b68ade03488b",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single9-300x167.jpg": {
+    "mtime": 1789199870.6859393,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7a32c71da375c671aade1aa60ff5011f",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single9-600x335.jpg": {
+    "mtime": 1789199870.7263436,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3ab26e0fbe49bd38efa355464f31d17f",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single9-768x428.jpg": {
+    "mtime": 1789199870.7668893,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3d3202b5c07569e49071f47c7dbe5fd3",
+    "semantic_hash": ""
+  },
+  "public/images/06/project-single9.jpg": {
+    "mtime": 1789199870.8171039,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1dc142802a051e8cc753ddb749cce2a7",
+    "semantic_hash": ""
+  },
+  "public/images/06/services-1.jpg": {
+    "mtime": 1789199870.8574018,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ef3d8285b5a84e5611077a074d16f2e5",
+    "semantic_hash": ""
+  },
+  "public/images/06/services-2.jpg": {
+    "mtime": 1789199870.896534,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9105f9df20b6a92681b813ceaf963cae",
+    "semantic_hash": ""
+  },
+  "public/images/06/services-6.jpg": {
+    "mtime": 1789199870.9434357,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c1214fff2b1892d603aeb7ee24adaada",
+    "semantic_hash": ""
+  },
+  "public/images/06/sin-1-150x94.jpg": {
+    "mtime": 1789199870.9846294,
+    "seen": 1789247926.3501544,
+    "ast_hash": "279c051fa849241e2adaa65d60e52088",
+    "semantic_hash": ""
+  },
+  "public/images/06/sin-1-300x188.jpg": {
+    "mtime": 1789199871.0255666,
+    "seen": 1789247926.3501544,
+    "ast_hash": "18f7fd8ea9047be364f90811bf135162",
+    "semantic_hash": ""
+  },
+  "public/images/06/sin-1.jpg": {
+    "mtime": 1789199871.0639431,
+    "seen": 1789247926.3501544,
+    "ast_hash": "74ff7f006f608f266a6f329814034ee9",
+    "semantic_hash": ""
+  },
+  "public/images/06/sin-2-150x94.jpg": {
+    "mtime": 1789199871.1072736,
+    "seen": 1789247926.3501544,
+    "ast_hash": "809dbe7eee318e44e29020d1f1c90e4a",
+    "semantic_hash": ""
+  },
+  "public/images/06/sin-2-300x188.jpg": {
+    "mtime": 1789199871.1508508,
+    "seen": 1789247926.3501544,
+    "ast_hash": "cba5e0f7d6e9dd7ec2ca603432980d4d",
+    "semantic_hash": ""
+  },
+  "public/images/06/sin-2.jpg": {
+    "mtime": 1789199871.2409797,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1165e8f7b9e16594788f76edfddb770c",
+    "semantic_hash": ""
+  },
+  "public/images/06/skill-bg.jpg": {
+    "mtime": 1789199871.2939034,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ab6aec9007217b5e5fab6a700d14a62d",
+    "semantic_hash": ""
+  },
+  "public/images/06/testimonial1.jpg": {
+    "mtime": 1789199871.3422797,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e5260506d4805efa977acc7fd1ae6280",
+    "semantic_hash": ""
+  },
+  "public/images/06/testimonial2.jpg": {
+    "mtime": 1789199871.3835828,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6b62d9e99311f32a2861a3e22f6c21f6",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1674133646005-1024x536.png": {
+    "mtime": 1789199865.540372,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0799d4436009713bf18781b9200aae50",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1674133646005-150x79.png": {
+    "mtime": 1789199865.582344,
+    "seen": 1789247926.3501544,
+    "ast_hash": "70a6cad6050ffab1626e7ef2ef405dbe",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1674133646005-300x157.png": {
+    "mtime": 1789199865.6277337,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ae50d55ee6b5e02077df8672c671b7ad",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1674133646005-600x314.png": {
+    "mtime": 1789199865.670023,
+    "seen": 1789247926.3501544,
+    "ast_hash": "785da10f6e4c1fd818192f5b580aa0cc",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1674133646005-768x402.png": {
+    "mtime": 1789199865.7214236,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0b98fec64a1b6a6c387522e4a82bff9f",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1674133646005.png": {
+    "mtime": 1789199865.7722912,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4beda2d10af144898cc7fac66b27857d",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1719211981653-1024x585.png": {
+    "mtime": 1789199865.8183646,
+    "seen": 1789247926.3501544,
+    "ast_hash": "153a20da83722ba709b0b5eb4f8a6a1e",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1719211981653-150x86.png": {
+    "mtime": 1789199865.8586118,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e8ef413ed0dfadb1075b872b9ca6fc28",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1719211981653-300x171.png": {
+    "mtime": 1789199865.901406,
+    "seen": 1789247926.3501544,
+    "ast_hash": "10f9e2a45196f4be523297290e99f1da",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1719211981653-600x343.png": {
+    "mtime": 1789199865.9453084,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6ca8614336bfdcce781eec31b7ecafde",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1719211981653-768x439.png": {
+    "mtime": 1789199865.9942205,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ede6ee026aacc03fea4d1ef37ceebba9",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/1719211981653.png": {
+    "mtime": 1789199866.046243,
+    "seen": 1789247926.3501544,
+    "ast_hash": "56ee973b564028e69808311e3999e1c9",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/64e65f1d28949e1c7c831b90_No-plan-1024x576.jpeg": {
+    "mtime": 1789199866.0880835,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3dfef4f2c0aa89de7b3404e1683227ee",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/64e65f1d28949e1c7c831b90_No-plan-150x84.jpeg": {
+    "mtime": 1789199866.1325822,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ce7043830be1ddb0bd3f66f912285f22",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/64e65f1d28949e1c7c831b90_No-plan-300x169.jpeg": {
+    "mtime": 1789199866.2061903,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3e3a8209647dc042af214f66e08679b2",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/64e65f1d28949e1c7c831b90_No-plan-600x338.jpeg": {
+    "mtime": 1789199866.278247,
+    "seen": 1789247926.3501544,
+    "ast_hash": "5b3029984660e9e136bfa7154abd454a",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/64e65f1d28949e1c7c831b90_No-plan-768x432.jpeg": {
+    "mtime": 1789199866.3543427,
+    "seen": 1789247926.3501544,
+    "ast_hash": "696418095d6d3919a12dec04718de9f8",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/64e65f1d28949e1c7c831b90_No-plan.jpeg": {
+    "mtime": 1789199866.4241853,
+    "seen": 1789247926.3501544,
+    "ast_hash": "297312dd6209e6a28e49a9d3b96f5bd8",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Artist-management.png": {
+    "mtime": 1789199866.5063708,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6710c7d4998a5b3c91911f5fcd0d7858",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Business.png": {
+    "mtime": 1789199866.5762432,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fc20836fd5f1a3fbf704eaf9187b2e6c",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Entertainment-Industry-150x100.jpg": {
+    "mtime": 1789199866.6473734,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3c14afc2acd802cbd96f087e960c8bfd",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Entertainment-Industry-300x200.jpg": {
+    "mtime": 1789199866.7185516,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8cdb4ba0269e3df7b28981f928e77f72",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Entertainment-Industry-600x400.jpg": {
+    "mtime": 1789199866.783472,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1a2065e74444fb15bf51134d3ce5d31a",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Entertainment-Industry-768x512.jpg": {
+    "mtime": 1789199866.8542807,
+    "seen": 1789247926.3501544,
+    "ast_hash": "10d6b18a10686625bc6681bf23ed40a4",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Entertainment-Industry.jpg": {
+    "mtime": 1789199866.9331386,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e7b4fc57b500c96dd019ab11eff1b7b7",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Innovation-Entrepreneurship-Hero-1600x900-1-1024x576.jpeg": {
+    "mtime": 1789199866.9991362,
+    "seen": 1789247926.3501544,
+    "ast_hash": "da1577ee33bc13ec68f45b29e69cd247",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Innovation-Entrepreneurship-Hero-1600x900-1-150x84.jpeg": {
+    "mtime": 1789199867.0645318,
+    "seen": 1789247926.3501544,
+    "ast_hash": "05f365838d1664f576d96255d322affe",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Innovation-Entrepreneurship-Hero-1600x900-1-1536x864.jpeg": {
+    "mtime": 1789199867.1382346,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1b763f513894b2341804efdbc4c43606",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Innovation-Entrepreneurship-Hero-1600x900-1-300x169.jpeg": {
+    "mtime": 1789199867.2050948,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7d1d8964e8c8183796f86d9569c3c8f8",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Innovation-Entrepreneurship-Hero-1600x900-1-600x338.jpeg": {
+    "mtime": 1789199867.2751093,
+    "seen": 1789247926.3501544,
+    "ast_hash": "202245c4b5204045686c251f1105c28d",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Innovation-Entrepreneurship-Hero-1600x900-1-768x432.jpeg": {
+    "mtime": 1789199867.341365,
+    "seen": 1789247926.3501544,
+    "ast_hash": "504f1a8c76def09854ac9792376f707b",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Innovation-Entrepreneurship-Hero-1600x900-1.jpeg": {
+    "mtime": 1789199867.4143143,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6afa533b6c467cd2a08a345ab3d37e7b",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Logo-200-x-100-px_20250909_205843_0000-150x75.png": {
+    "mtime": 1789199867.4989908,
+    "seen": 1789247926.3501544,
+    "ast_hash": "5e46f00794a42fd98d9897c04957ad57",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Logo-200-x-100-px_20250909_205843_0000.png": {
+    "mtime": 1789199867.5766726,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f53e9dd41e0e60e187df6ced5c287524",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Social-Media.png": {
+    "mtime": 1789199867.6498175,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fcd590b6039721d8540e027757f4bcf0",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/Untitled-design-4.png": {
+    "mtime": 1789199867.7225335,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8ac9c008ea5b312ccdaf573aa1ff22b8",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-150x85.jpg": {
+    "mtime": 1789199867.7949317,
+    "seen": 1789247926.3501544,
+    "ast_hash": "714e2e8677318df25894d4d874619951",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-300x170.jpg": {
+    "mtime": 1789199867.862722,
+    "seen": 1789247926.3501544,
+    "ast_hash": "11cf0ec58832707425a40f16e00fcd84",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-600x341.jpg": {
+    "mtime": 1789199867.928431,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6776e5e8c9ed67af254adb573f4cf762",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1-768x436.jpg": {
+    "mtime": 1789199867.9912674,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e5c29978d07fafc50199a2d7d9da2371",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/alphagamma-5-mistakes-you-should-avoid-when-starting-your-business-entrepreneurship-1021x580-1.jpg": {
+    "mtime": 1789199868.069016,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f85ceec85d775478beccd8052f2c5e05",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/audience-blur-bokeh-976866-1024x683-1-150x100.jpg": {
+    "mtime": 1789199868.1478984,
+    "seen": 1789247926.3501544,
+    "ast_hash": "93a8d6316b1b13f4b1cc9d287f05b9af",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/audience-blur-bokeh-976866-1024x683-1-300x200.jpg": {
+    "mtime": 1789199868.250149,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f036d06f7f1ead753218a6666614f704",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/audience-blur-bokeh-976866-1024x683-1-600x400.jpg": {
+    "mtime": 1789199868.3165202,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1397533dab4a6e529d3b9fb09d6b62ce",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/audience-blur-bokeh-976866-1024x683-1-768x512.jpg": {
+    "mtime": 1789199868.3758557,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fd43f783a536d83914b1ee5d79bcf896",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/audience-blur-bokeh-976866-1024x683-1.jpg": {
+    "mtime": 1789199868.4223113,
+    "seen": 1789247926.3501544,
+    "ast_hash": "d8a9b6a9729b4a9e56f53d2d532e8bb3",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/c-g1-150x103.jpg": {
+    "mtime": 1789199868.469264,
+    "seen": 1789247926.3501544,
+    "ast_hash": "41141dd52b7291648c85a1017aa748b5",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/c-g1-300x205.jpg": {
+    "mtime": 1789199868.519442,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ce51c599936367f02dd89a9b0e0d7ec0",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/c-g1.jpg": {
+    "mtime": 1789199868.5671096,
+    "seen": 1789247926.3501544,
+    "ast_hash": "cf74d0dd428afd1d62817093422193e7",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/c-g2-150x103.jpg": {
+    "mtime": 1789199868.610577,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0a384a6e7acab2c12a9939f657a1c3da",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/c-g2-300x205.jpg": {
+    "mtime": 1789199868.652813,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e9e4e3eef71f5b07b373c50800427428",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/c-g2.jpg": {
+    "mtime": 1789199868.6972966,
+    "seen": 1789247926.3501544,
+    "ast_hash": "50dc31bdd3882877ff76830d5f4969a6",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/contact-bg.jpg": {
+    "mtime": 1789199868.7444873,
+    "seen": 1789247926.3501544,
+    "ast_hash": "62b56ae32255d8348e714f5fd14c10c3",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/creative-services-1024x580.jpg": {
+    "mtime": 1789199868.7854223,
+    "seen": 1789247926.3501544,
+    "ast_hash": "629960c1a0d95a7dd6a6c07f9d184035",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/creative-services-150x85.jpg": {
+    "mtime": 1789199868.8268433,
+    "seen": 1789247926.3501544,
+    "ast_hash": "b59d8b45df3ab246cc3f5918378bc78b",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/creative-services-300x170.jpg": {
+    "mtime": 1789199868.8691463,
+    "seen": 1789247926.3501544,
+    "ast_hash": "07a4bdf9f71982def3895365eb0fde9c",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/creative-services-600x340.jpg": {
+    "mtime": 1789199868.9145014,
+    "seen": 1789247926.3501544,
+    "ast_hash": "43f347d831b0008a85b7efb7acbf766e",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/creative-services-768x435.jpg": {
+    "mtime": 1789199868.9578874,
+    "seen": 1789247926.3501544,
+    "ast_hash": "63b93598195213eabae7cd4d5ff1d470",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/creative-services.jpg": {
+    "mtime": 1789199868.9994488,
+    "seen": 1789247926.3501544,
+    "ast_hash": "38881bf88d5bb283c0cadfcf4f69a2ed",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/cutting-edge-talent-management-150x86.jpg": {
+    "mtime": 1789199869.0427675,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4e42a738d903be09ad88d4f46e324588",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/cutting-edge-talent-management-300x172.jpg": {
+    "mtime": 1789199869.0836587,
+    "seen": 1789247926.3501544,
+    "ast_hash": "11071efa5c513c9f8c35dbd6c26e3e1b",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/cutting-edge-talent-management-600x344.jpg": {
+    "mtime": 1789199869.1284626,
+    "seen": 1789247926.3501544,
+    "ast_hash": "947edf49c2a213f95a249b8bd757552f",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/cutting-edge-talent-management-768x440.jpg": {
+    "mtime": 1789199869.1676495,
+    "seen": 1789247926.3501544,
+    "ast_hash": "24cc693972bb7829b49f985e1130b6f5",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/cutting-edge-talent-management.jpg": {
+    "mtime": 1789199869.2120018,
+    "seen": 1789247926.3501544,
+    "ast_hash": "86ead2fa3a0935dc23ec5a5e315454fc",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/innovation_blog_26-october-2022-1024x576.webp": {
+    "mtime": 1789199869.2515783,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1082ef3c53866a14d3cf1acbf2e435b4",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/innovation_blog_26-october-2022-150x84.webp": {
+    "mtime": 1789199869.2934878,
+    "seen": 1789247926.3501544,
+    "ast_hash": "237c8770471112cd8a52e67534b0bcc7",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/innovation_blog_26-october-2022-300x169.webp": {
+    "mtime": 1789199869.3433268,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c8c52a863edc3e121bce1bb1d3534295",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/innovation_blog_26-october-2022-600x337.webp": {
+    "mtime": 1789199869.3838694,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7b4748cffa612660960c5e8df6073f63",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/innovation_blog_26-october-2022-768x432.webp": {
+    "mtime": 1789199869.4310985,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4d467b622bef3e19455a2b84e5ed284d",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/innovation_blog_26-october-2022.webp": {
+    "mtime": 1789199869.470074,
+    "seen": 1789247926.3501544,
+    "ast_hash": "56b45679c2f18b644cb9098a479edddb",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/l-g1-150x103.jpg": {
+    "mtime": 1789199869.511193,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9c39d080ce9050a1a72f6c12159ac485",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/l-g1-300x205.jpg": {
+    "mtime": 1789199869.549371,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a399ea58acde40d7cd0866a40cfd1b61",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/l-g1.jpg": {
+    "mtime": 1789199869.5880134,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9971a6799a9a4313896c73c1308c5977",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/l-g2-150x103.jpg": {
+    "mtime": 1789199869.6267836,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f9d0e86ade91be9302f5795134c0df29",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/l-g2-300x205.jpg": {
+    "mtime": 1789199869.663019,
+    "seen": 1789247926.3501544,
+    "ast_hash": "250917859cdf353a9c1ed11447f5923b",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/l-g2.jpg": {
+    "mtime": 1789199869.7154024,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a008cf783d3bcd5a6978816f903cbfde",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/list-post-1-415x450.jpg": {
+    "mtime": 1789199869.7616553,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4bc756770edd71fe681ae8c545018fe1",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/list-post-1.jpg": {
+    "mtime": 1789199869.80622,
+    "seen": 1789247926.3501544,
+    "ast_hash": "30b6e526924277eb9f57d5725814d4cd",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/list-post-2-415x450.jpg": {
+    "mtime": 1789199869.848556,
+    "seen": 1789247926.3501544,
+    "ast_hash": "514b9248e2d0eaea1115fb8890d7daef",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/list-post-2.jpg": {
+    "mtime": 1789199869.8939393,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f2ff0431dcf0b33cc7e16f16db1f528a",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/list-post-3.jpg": {
+    "mtime": 1789199869.9357636,
+    "seen": 1789247926.3501544,
+    "ast_hash": "dd0c6042c879650c2433658ec4cd7cb1",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single12-1024x571.jpg": {
+    "mtime": 1789199869.9739866,
+    "seen": 1789247926.3501544,
+    "ast_hash": "91a972d743f470a5e693b7920e15f73c",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single12-150x84.jpg": {
+    "mtime": 1789199870.0146413,
+    "seen": 1789247926.3501544,
+    "ast_hash": "118fa1646d1083b8281ea308e66ffb03",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single12-300x167.jpg": {
+    "mtime": 1789199870.056932,
+    "seen": 1789247926.3501544,
+    "ast_hash": "56572ec7500a6bbee4f8cecdbe98832b",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single12-600x335.jpg": {
+    "mtime": 1789199870.101975,
+    "seen": 1789247926.3501544,
+    "ast_hash": "20af300668e58584ef958425648466c6",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single12-768x428.jpg": {
+    "mtime": 1789199870.1397166,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ba9f5ef4e154affcc88ed5662dd05a98",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single12.jpg": {
+    "mtime": 1789199870.1795478,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0fb1a33a51965684b146a405093ece3e",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single2.jpg": {
+    "mtime": 1789199870.2259417,
+    "seen": 1789247926.3501544,
+    "ast_hash": "fcfac563c732001d3e06060b250b1b89",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single3.jpg": {
+    "mtime": 1789199870.2675927,
+    "seen": 1789247926.3501544,
+    "ast_hash": "81f437261259f9d3bf2091dfcdaaeee9",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single4.jpg": {
+    "mtime": 1789199870.317918,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c111518e697fbd4dc2aa016e16522852",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single8-1024x571.jpg": {
+    "mtime": 1789199870.3571956,
+    "seen": 1789247926.3501544,
+    "ast_hash": "99ba77d8dee3af083db45ba9c299aa64",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single8-150x84.jpg": {
+    "mtime": 1789199870.4011323,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4007c39d0e64a3b2ff98fd79dfd5f619",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single8-300x167.jpg": {
+    "mtime": 1789199870.4406877,
+    "seen": 1789247926.3501544,
+    "ast_hash": "bd8af0f30199b5d42140cc05375ef284",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single8-600x335.jpg": {
+    "mtime": 1789199870.4780524,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ca8b1b0137f0364113512d67ad87df59",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single8-768x428.jpg": {
+    "mtime": 1789199870.5172415,
+    "seen": 1789247926.3501544,
+    "ast_hash": "cafde39cc7d5f1c30605b7764f387b85",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single8.jpg": {
+    "mtime": 1789199870.5594049,
+    "seen": 1789247926.3501544,
+    "ast_hash": "998aea85aed1af75793faab33c216ff4",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single9-1024x571.jpg": {
+    "mtime": 1789199870.6054406,
+    "seen": 1789247926.3501544,
+    "ast_hash": "22989497d533093de71d8c6d092953b7",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single9-150x84.jpg": {
+    "mtime": 1789199870.6458972,
+    "seen": 1789247926.3501544,
+    "ast_hash": "80551ce6d8e011512985b68ade03488b",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single9-300x167.jpg": {
+    "mtime": 1789199870.6859393,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7a32c71da375c671aade1aa60ff5011f",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single9-600x335.jpg": {
+    "mtime": 1789199870.7263436,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3ab26e0fbe49bd38efa355464f31d17f",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single9-768x428.jpg": {
+    "mtime": 1789199870.7668893,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3d3202b5c07569e49071f47c7dbe5fd3",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/project-single9.jpg": {
+    "mtime": 1789199870.8171039,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1dc142802a051e8cc753ddb749cce2a7",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/services-1.jpg": {
+    "mtime": 1789199870.8574018,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ef3d8285b5a84e5611077a074d16f2e5",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/services-2.jpg": {
+    "mtime": 1789199870.896534,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9105f9df20b6a92681b813ceaf963cae",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/services-6.jpg": {
+    "mtime": 1789199870.9434357,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c1214fff2b1892d603aeb7ee24adaada",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/sin-1-150x94.jpg": {
+    "mtime": 1789199870.9846294,
+    "seen": 1789247926.3501544,
+    "ast_hash": "279c051fa849241e2adaa65d60e52088",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/sin-1-300x188.jpg": {
+    "mtime": 1789199871.0255666,
+    "seen": 1789247926.3501544,
+    "ast_hash": "18f7fd8ea9047be364f90811bf135162",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/sin-1.jpg": {
+    "mtime": 1789199871.0639431,
+    "seen": 1789247926.3501544,
+    "ast_hash": "74ff7f006f608f266a6f329814034ee9",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/sin-2-150x94.jpg": {
+    "mtime": 1789199871.1072736,
+    "seen": 1789247926.3501544,
+    "ast_hash": "809dbe7eee318e44e29020d1f1c90e4a",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/sin-2-300x188.jpg": {
+    "mtime": 1789199871.1508508,
+    "seen": 1789247926.3501544,
+    "ast_hash": "cba5e0f7d6e9dd7ec2ca603432980d4d",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/sin-2.jpg": {
+    "mtime": 1789199871.2409797,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1165e8f7b9e16594788f76edfddb770c",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/skill-bg.jpg": {
+    "mtime": 1789199871.2939034,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ab6aec9007217b5e5fab6a700d14a62d",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/testimonial1.jpg": {
+    "mtime": 1789199871.3422797,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e5260506d4805efa977acc7fd1ae6280",
+    "semantic_hash": ""
+  },
+  "public/images/2024/06/testimonial2.jpg": {
+    "mtime": 1789199871.3835828,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6b62d9e99311f32a2861a3e22f6c21f6",
+    "semantic_hash": ""
+  },
+  "public/images/2025/08/ABOUT-uS-iMAGE.png": {
+    "mtime": 1789199871.434095,
+    "seen": 1789247926.3501544,
+    "ast_hash": "37ca80b3f8d10b1444fa70d77accc30c",
+    "semantic_hash": ""
+  },
+  "public/images/2025/08/cropped-ABOUT-uS-iMAGE-180x180.png": {
+    "mtime": 1789199871.4740698,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7b9390a44f961f57e7a5746e2f222583",
+    "semantic_hash": ""
+  },
+  "public/images/2025/08/cropped-ABOUT-uS-iMAGE-192x192.png": {
+    "mtime": 1789199871.5207043,
+    "seen": 1789247926.3501544,
+    "ast_hash": "677aff8c78df793c45f0b580d4cbf1fb",
+    "semantic_hash": ""
+  },
+  "public/images/2025/08/cropped-ABOUT-uS-iMAGE-32x32.png": {
+    "mtime": 1789199871.5621705,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8d9b9e0c8afced301afae25e3223c2fc",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/Untitled-design-1-2.png": {
+    "mtime": 1789199871.6069639,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8cf000efd0fe1a6f9ec63453f29f3ff5",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/Untitled-design-2-1.png": {
+    "mtime": 1789199871.6468287,
+    "seen": 1789247926.3501544,
+    "ast_hash": "bcdcbc48034a4c1ca70a99b9398fb317",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/Untitled-design-3.png": {
+    "mtime": 1789199871.6858373,
+    "seen": 1789247926.3501544,
+    "ast_hash": "6ee84a9db89149853c273584b3236397",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.50-PM.jpeg": {
+    "mtime": 1789199871.7290456,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8710e689532f392b6d52342d76d349ae",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.52-PM-1.jpeg": {
+    "mtime": 1789199871.773673,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c8c0605f6e06a983a496244094c38028",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.52-PM-2.jpeg": {
+    "mtime": 1789199871.8171039,
+    "seen": 1789247926.3501544,
+    "ast_hash": "ef6bcdb00ec727455e4b513d341a0ffa",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.52-PM.jpeg": {
+    "mtime": 1789199871.8638463,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8b5d7529d851958ec212de8cd8be12e9",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.59-PM-1024x700.jpeg": {
+    "mtime": 1789199871.908656,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1b7be0e98a59d6a7c4388d59fed13663",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.59-PM-150x103.jpeg": {
+    "mtime": 1789199871.9505231,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8dca696652bb448188a1a8748b0e1a9b",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.59-PM-300x205.jpeg": {
+    "mtime": 1789199871.990889,
+    "seen": 1789247926.3501544,
+    "ast_hash": "9966f0136cd588e33f1068cd7c96a2b6",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.59-PM-600x410.jpeg": {
+    "mtime": 1789199872.0326407,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0a594e32df1d2c0e7dc09d98806c58fc",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.59-PM-768x525.jpeg": {
+    "mtime": 1789199872.0760953,
+    "seen": 1789247926.3501544,
+    "ast_hash": "42bd097ec010cfe6bc2bf9fffcf46053",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.53.59-PM.jpeg": {
+    "mtime": 1789199872.116881,
+    "seen": 1789247926.3501544,
+    "ast_hash": "b92da9361d1fc8052ff28ea49b3b6ee4",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.00-PM-1.jpeg": {
+    "mtime": 1789199872.1578007,
+    "seen": 1789247926.3501544,
+    "ast_hash": "198ee1b1ac26ed72fcd8f0bea802c28e",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.00-PM-2.jpeg": {
+    "mtime": 1789199872.1956625,
+    "seen": 1789247926.3501544,
+    "ast_hash": "218eab1e12b86455a741c84cd6bb00d3",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.00-PM.jpeg": {
+    "mtime": 1789199872.238436,
+    "seen": 1789247926.3501544,
+    "ast_hash": "eeba34803808fd7ef710a6d70769d906",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.24-PM-1.jpeg": {
+    "mtime": 1789199872.2803783,
+    "seen": 1789247926.3501544,
+    "ast_hash": "239f4e3ad19a98f6bc6cb923104b7c4f",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.24-PM.jpeg": {
+    "mtime": 1789199872.3257337,
+    "seen": 1789247926.3501544,
+    "ast_hash": "063ecb85d3b45c6e65730c35b86c46b9",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.25-PM-150x150.jpeg": {
+    "mtime": 1789199872.366489,
+    "seen": 1789247926.3501544,
+    "ast_hash": "05d2fdc580bf1c29ed6405920df5f23a",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.25-PM-300x300.jpeg": {
+    "mtime": 1789199872.410665,
+    "seen": 1789247926.3501544,
+    "ast_hash": "e7d4ba952578cf733e1134f0eb87b692",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.25-PM.jpeg": {
+    "mtime": 1789199872.4505749,
+    "seen": 1789247926.3501544,
+    "ast_hash": "35480677fd7238919de7b3e0d374e58c",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.26-PM-1.jpeg": {
+    "mtime": 1789199872.4924688,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1f0c232a442e3480eb18e0c4dcb633ca",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.26-PM-2.jpeg": {
+    "mtime": 1789199872.5349958,
+    "seen": 1789247926.3501544,
+    "ast_hash": "16a93a56567c23cd85b9f3ed6435b951",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-11.54.26-PM.jpeg": {
+    "mtime": 1789199872.5755873,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f2b3570b536b0cf3cfbb22df89c2c4fb",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-7.35.17-PM-148x150.jpeg": {
+    "mtime": 1789199872.6232693,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3b77848ea2211cd0c5c502609184a1d1",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-7.35.17-PM-296x300.jpeg": {
+    "mtime": 1789199872.664403,
+    "seen": 1789247926.3501544,
+    "ast_hash": "5731a3fa50d32250613a73a5a9a73d7e",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-7.35.17-PM-600x608.jpeg": {
+    "mtime": 1789199872.7085083,
+    "seen": 1789247926.3501544,
+    "ast_hash": "f3f00b6c2ae7afbfedc9ced2b886d7b2",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-02-at-7.35.17-PM.jpeg": {
+    "mtime": 1789199872.7509584,
+    "seen": 1789247926.3501544,
+    "ast_hash": "81d66ddf6f514fbe8223b01da0e7295c",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-03-at-1.11.41-AM-1.jpeg": {
+    "mtime": 1789199872.793324,
+    "seen": 1789247926.3501544,
+    "ast_hash": "29bb8a0732b26f29f1e840dcb469e8d9",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/WhatsApp-Image-2025-09-03-at-1.11.41-AM.jpeg": {
+    "mtime": 1789199872.8405476,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1f5a6ce2209e87d52da1c066be6f7188",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-1-150x150.jpg": {
+    "mtime": 1789199872.8786235,
+    "seen": 1789247926.3501544,
+    "ast_hash": "cc618cb72170d5afe2f4edc9cf180fdb",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-1.jpg": {
+    "mtime": 1789199872.9230745,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1a766e7e544da09e2e0c9759808f72ea",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-2-150x150.jpg": {
+    "mtime": 1789199872.9652982,
+    "seen": 1789247926.3501544,
+    "ast_hash": "d99ddf7bd4f28d4e0604adf6f5e5df73",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-2.jpg": {
+    "mtime": 1789199873.0069036,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4e2bdffec6133cc36fab3d02857c86b4",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-3-150x150.jpg": {
+    "mtime": 1789199873.0457814,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c8a1b8415f35691e9f0acd551401484e",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-3.jpg": {
+    "mtime": 1789199873.0852385,
+    "seen": 1789247926.3501544,
+    "ast_hash": "dd1e5a1f41bb60d58266bcb2dba7a567",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-4-150x150.jpg": {
+    "mtime": 1789199873.1291776,
+    "seen": 1789247926.3501544,
+    "ast_hash": "4911c9a885d6d37a395a53f89bead94f",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-4.jpg": {
+    "mtime": 1789199873.1690147,
+    "seen": 1789247926.3501544,
+    "ast_hash": "042fe61eda0cf7b94feb4838a6aa141b",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-5-150x150.jpg": {
+    "mtime": 1789199873.2169213,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0f789eec85d75fdd864c9423289536d6",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-5.jpg": {
+    "mtime": 1789199873.2611217,
+    "seen": 1789247926.3501544,
+    "ast_hash": "97e42001480c633edf824840e56e0690",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-6-150x150.jpg": {
+    "mtime": 1789199873.307852,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1d1756f3c6569b20b058ab7b1ff2b79a",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/gallery-images-6.jpg": {
+    "mtime": 1789199873.3573208,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7b7e3418166c74378cc1b8d2080b72c3",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/header_logo_MC-Copy.webp": {
+    "mtime": 1789199873.3992696,
+    "seen": 1789247926.3501544,
+    "ast_hash": "548286c15769581eb603cb8491b68ad5",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/preloader.png": {
+    "mtime": 1789199873.4428942,
+    "seen": 1789247926.3501544,
+    "ast_hash": "182f88a08a8de8b436b048bcdd7b4c05",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-1-150x90.jpg": {
+    "mtime": 1789199873.4851134,
+    "seen": 1789247926.3501544,
+    "ast_hash": "1579120346265e1d0c2e9b3f3aa4ad2c",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-1-300x180.jpg": {
+    "mtime": 1789199873.5265467,
+    "seen": 1789247926.3501544,
+    "ast_hash": "51e2287804273be9bd59eba8aed44359",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-1-600x360.jpg": {
+    "mtime": 1789199873.566939,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7b933113de252147fd4e1fc04a60a3e1",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-1-768x461.jpg": {
+    "mtime": 1789199873.6223807,
+    "seen": 1789247926.3501544,
+    "ast_hash": "0252569426f4a632717fe8d80fef7c8f",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-1.jpg": {
+    "mtime": 1789199873.664693,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c3b4cf782e2599097a91401e44c91cbb",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-2-150x90.jpg": {
+    "mtime": 1789199873.7123334,
+    "seen": 1789247926.3501544,
+    "ast_hash": "7a737807471750ff15e86bf8d6dd7e91",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-2-300x180.jpg": {
+    "mtime": 1789199873.7514877,
+    "seen": 1789247926.3501544,
+    "ast_hash": "c102066d275536aaf4dc106881b16324",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-2-600x360.jpg": {
+    "mtime": 1789199873.7917764,
+    "seen": 1789247926.3501544,
+    "ast_hash": "2e6cf45db6c1738dcf467cae8e771da7",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-2-768x461.jpg": {
+    "mtime": 1789199873.8325632,
+    "seen": 1789247926.3501544,
+    "ast_hash": "bd5fa7fffb5554a801c71627d1d21b6e",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-2.jpg": {
+    "mtime": 1789199873.8725586,
+    "seen": 1789247926.3501544,
+    "ast_hash": "b0642c43a6460b925c391e1bdd91978d",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-5-150x90.jpg": {
+    "mtime": 1789199873.9172597,
+    "seen": 1789247926.3501544,
+    "ast_hash": "18109a327ae557c8dbe817b4009fa773",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-5-300x180.jpg": {
+    "mtime": 1789199873.954647,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a80b5b345f6cb4dd646555302702537c",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-5-600x360.jpg": {
+    "mtime": 1789199873.9917898,
+    "seen": 1789247926.3501544,
+    "ast_hash": "b469f017bd79d3f9b597aa46e0f04f82",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-5-768x461.jpg": {
+    "mtime": 1789199874.030141,
+    "seen": 1789247926.3501544,
+    "ast_hash": "a3602a917a17750db1c8441aa04f54a8",
+    "semantic_hash": ""
+  },
+  "public/images/2025/09/product-5.jpg": {
+    "mtime": 1789199874.0710523,
+    "seen": 1789247926.3501544,
+    "ast_hash": "8ad40f0d3a117a3679a424a289b4007e",
+    "semantic_hash": ""
+  },
+  "public/images/2026/03/WhatsApp-Image-2026-03-18-at-6.13.33-AM-1.jpeg": {
+    "mtime": 1789199874.1105068,
+    "seen": 1789247926.3501544,
+    "ast_hash": "3e231884269ffd70b8c057a61ecb55f8",
+    "semantic_hash": ""
+  },
+  "public/images/2026/03/WhatsApp-Image-2026-03-18-at-6.13.33-AM.jpeg": {
+    "mtime": 1789199874.155119,
+    "seen": 1789247926.3501544,
+    "ast_hash": "21f059b381eff36a47c71c1b058d8173",
+    "semantic_hash": ""
+  },
+  "public/images/2026/03/WhatsApp-Image-2026-03-18-at-6.13.34-AM-1.jpeg": {
+    "mtime": 1789199874.1939158,
+    "seen": 1789247926.351151,
+    "ast_hash": "ea6a85f6e152ffb3d03eea1afad9802b",
+    "semantic_hash": ""
+  },
+  "public/images/2026/03/WhatsApp-Image-2026-03-18-at-6.13.34-AM.jpeg": {
+    "mtime": 1789199874.2384114,
+    "seen": 1789247926.351151,
+    "ast_hash": "f0dab3939e8786fdeec3e40886988753",
+    "semantic_hash": ""
+  },
+  "public/images/2026/03/corporate_footer_bg-scaled-1.jpg": {
+    "mtime": 1789199874.2803686,
+    "seen": 1789247926.351151,
+    "ast_hash": "a9563819bcbd96bb932ca0f03e5d1b55",
+    "semantic_hash": ""
+  },
+  "public/images/2026/04/1.png": {
+    "mtime": 1789199874.327348,
+    "seen": 1789247926.351151,
+    "ast_hash": "62ac927554d253a17679c2049eea7476",
+    "semantic_hash": ""
+  },
+  "public/images/2026/04/2.png": {
+    "mtime": 1789199874.3668573,
+    "seen": 1789247926.351151,
+    "ast_hash": "6d723087b78b7ce624f1aad9ddfe7c43",
+    "semantic_hash": ""
+  },
+  "public/images/2026/04/3.png": {
+    "mtime": 1789199874.4075801,
+    "seen": 1789247926.351151,
+    "ast_hash": "6ef2bab56425a3246c59acecc611f1e1",
+    "semantic_hash": ""
+  },
+  "public/images/2026/04/logo-voxturr.png": {
+    "mtime": 1789199874.4490032,
+    "seen": 1789247926.351151,
+    "ast_hash": "1c8c27709f058973cef4379d26d7500e",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/Untitleddesign13-rbum8lr4fzv9mk8h0e9gcwpbai4chreffcyrsztrjg.webp": {
+    "mtime": 1789199874.9371452,
+    "seen": 1789247926.351151,
+    "ast_hash": "9b2931734ea5d0f6693e5f62b8bfab14",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.53.50-PM-rb7e8di1ci3d1fkoy70059xq99rn7kq1bf1oxch8d0.jpeg": {
+    "mtime": 1789199874.9751973,
+    "seen": 1789247926.351151,
+    "ast_hash": "be275190456e6246f8ebc0aad616c3a3",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.53.52-PM-1-rb7e80caotlciw3t31b86d99xvki7t9sllww7h0qs4.jpeg": {
+    "mtime": 1789199875.0131366,
+    "seen": 1789247926.351151,
+    "ast_hash": "7958466c5be4c72b2ce2ecc814006a66",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.53.52-PM-2-rb7e7up9jtdml8bzzyvgreoidkcaxmnektzzbt93tg.jpeg": {
+    "mtime": 1789199875.0497382,
+    "seen": 1789247926.351151,
+    "ast_hash": "a625533a34318f4162fa1b3ec037bd58",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.53.52-PM-rb7e87v07hvn3rsvv4k8qbcyoyjfxe3nan4s1oplec.jpeg": {
+    "mtime": 1789199875.086838,
+    "seen": 1789247926.351151,
+    "ast_hash": "eedb9848832daec3ea20015394beec0f",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.00-PM-1-rb7exa82gg6wpfe5hym37zngyuzt6tlyqpewrbjnh0.jpeg": {
+    "mtime": 1789199875.1235209,
+    "seen": 1789247926.351151,
+    "ast_hash": "5132a89184ae9c499013992245411e69",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.00-PM-2-rb7exndt44ox7yv1d4av6wbxa96y6l27gijph7051w.jpeg": {
+    "mtime": 1789199875.1595287,
+    "seen": 1789247926.351151,
+    "ast_hash": "cc0e8a4d481c26fe697531fea82fda4b",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.00-PM-rb7exex9emdcbh7bqin82ggrxscn9b4mfcoc5pcolw.jpeg": {
+    "mtime": 1789199875.195686,
+    "seen": 1789247926.351151,
+    "ast_hash": "35576cb905d0aa30695ecebfb04177d1",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.24-PM-1-rb7f2dilh55tldzwrnuc87ecszwdvstmfwmlc9zvro.jpeg": {
+    "mtime": 1789199875.2365594,
+    "seen": 1789247926.351151,
+    "ast_hash": "49204a06eb690e76fa4259b01848ff4c",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.24-PM-rb7f2i7sfbc97ft307vh2o7nrx97yaca4jw0qnswwk.jpeg": {
+    "mtime": 1789199875.2835093,
+    "seen": 1789247926.351151,
+    "ast_hash": "f4d4c425ddc3102f48a951b142952b9c",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.26-PM-1-rb7f2rm6bnp4fjffhbxqrlu9pryw39dlhuevjfez6c.jpeg": {
+    "mtime": 1789199875.328857,
+    "seen": 1789247926.351151,
+    "ast_hash": "860c60fdc3df2d4b7af02a4218916bd4",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.26-PM-2-rb7f2l1aztg469ozjr3cs5i1k2vbldnh4xuh6hoqdw.jpeg": {
+    "mtime": 1789199875.3675883,
+    "seen": 1789247926.351151,
+    "ast_hash": "cc1f43859d789daa89eabac7c1eed42d",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-02-at-11.54.26-PM-rb7f27vkc4y3nq83olekt8tl8oo6lm78f4pogm88t0.jpeg": {
+    "mtime": 1789199875.405266,
+    "seen": 1789247926.351151,
+    "ast_hash": "2607551ea3e3da178b9a99aeedb118da",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-03-at-1.11.41-AM-1-rb7oc43o1i0vt581yx7oizk5s2y0uzqozraxj35qj8.jpeg": {
+    "mtime": 1789199875.4426706,
+    "seen": 1789247926.351151,
+    "ast_hash": "f5d5acadc7f64174571fef4ca117db91",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2025-09-03-at-1.11.41-AM-rb7ocaojdc9w2eyhwi22ifwdxs1lcvgtcnvbw0vzbo.jpeg": {
+    "mtime": 1789199875.4790769,
+    "seen": 1789247926.351151,
+    "ast_hash": "841923e13000cddd1719699f820cf59e",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2026-03-18-at-6.13.33-AM-1-rkp2mpfmr4qy23ka0qzn0lgm7daynap5ptckw81ggw.jpeg": {
+    "mtime": 1789199875.522126,
+    "seen": 1789247926.351151,
+    "ast_hash": "ec2d7ba52defd7ed54ca9591bb0151d5",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2026-03-18-at-6.13.33-AM-1-rkp2mpfnyzj3ft1v9mikv4dz1saho3xaav6u1596z8.jpeg": {
+    "mtime": 1789199875.559678,
+    "seen": 1789247926.351151,
+    "ast_hash": "7afcf94db2e4ce287aaa222e468e223d",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2026-03-18-at-6.13.33-AM-rkp2mnjydgodevn0bq6dvlxp0lk87whp1k1lxo48tc.jpeg": {
+    "mtime": 1789199875.5963066,
+    "seen": 1789247926.351151,
+    "ast_hash": "0e188d7bd0a942dbdc380b1c6c761f26",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2026-03-18-at-6.13.33-AM-rkp2mnjzlbgisl4lklpbq4v1v0jr8pptmlvv2lbzbo.jpeg": {
+    "mtime": 1789199875.6383834,
+    "seen": 1789247926.351151,
+    "ast_hash": "a26f95d991cfd88e08b54648b7ddfdcc",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2026-03-18-at-6.13.34-AM-1-rkp2mnjydgodevn0bq6dvlxp0lk87whp1k1lxo48tc.jpeg": {
+    "mtime": 1789199875.6758535,
+    "seen": 1789247926.351151,
+    "ast_hash": "202c2b41a6c770ad8ed82147392e59e9",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2026-03-18-at-6.13.34-AM-1-rkp2mnjzlbgisl4lklpbq4v1v0jr8pptmlvv2lbzbo.jpeg": {
+    "mtime": 1789199875.7162557,
+    "seen": 1789247926.351151,
+    "ast_hash": "09bbc3674a365f0303e79cd8f2746ea3",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/WhatsApp-Image-2026-03-18-at-6.13.34-AM-rkp2mohts5ht4738f43yammigef4getjyqjcjval5g.jpeg": {
+    "mtime": 1789199875.7589521,
+    "seen": 1789247926.351151,
+    "ast_hash": "780bdd5bdcc7050e63716cff99df5cdf",
+    "semantic_hash": ""
+  },
+  "public/images/elementor/thumbs/digital-marketing-1-1600x984-1-rbumazafpx4cz2s84x8i5t49ckeqy7u034byh6axt8.jpg": {
+    "mtime": 1789199875.7982378,
+    "seen": 1789247926.351151,
+    "ast_hash": "1c1d3fbcb95effd923f7d169de4284e3",
+    "semantic_hash": ""
+  },
+  "public/next.svg": {
+    "mtime": 1789203223.5437095,
+    "seen": 1789247926.351151,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": ""
+  },
+  "public/vercel.svg": {
+    "mtime": 1789203223.5756524,
+    "seen": 1789247926.351151,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": ""
+  },
+  "public/window.svg": {
+    "mtime": 1789203223.593966,
+    "seen": 1789247926.351151,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  }
+}

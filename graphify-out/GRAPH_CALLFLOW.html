@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>thekeithhopkins — Complete Call Flow &amp; Architecture Documentation</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+:root {
+  --bg: #0f172a; --surface: #1e293b; --border: #334155;
+  --text: #e2e8f0; --muted: #94a3b8; --accent: #38bdf8;
+  --warn: #fbbf24; --err: #f87171; --ok: #34d399;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+h1 { font-size: 2.4rem; margin-bottom: 8px; background: linear-gradient(135deg, var(--accent), #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { font-size: 1.7rem; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+h3 { font-size: 1.25rem; margin: 32px 0 12px; color: var(--accent); }
+h4 { font-size: 1.05rem; margin: 20px 0 8px; color: var(--warn); }
+p { margin: 8px 0; color: var(--muted); }
+.subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 32px; }
+.mermaid { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 20px 0; overflow-x: auto; position: relative; }
+.mermaid.is-enhanced { padding: 0; overflow: hidden; min-height: 260px; }
+.mermaid-viewport { padding: 54px 24px 24px; overflow: hidden; cursor: grab; touch-action: none; min-height: 260px; }
+.mermaid-viewport.is-dragging { cursor: grabbing; }
+.mermaid-viewport svg { max-width: none !important; height: auto; transform-origin: 0 0; transition: transform 120ms ease; }
+.mermaid-toolbar { position: absolute; top: 10px; right: 10px; z-index: 3; display: flex; align-items: center; gap: 6px; padding: 6px; background: rgba(15,23,42,0.92); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+.mermaid-toolbar button, .mermaid-toolbar .zoom-level { height: 28px; min-width: 32px; border: 1px solid var(--border); border-radius: 6px; background: #1e293b; color: var(--text); font: 600 0.78rem system-ui, sans-serif; display: inline-flex; align-items: center; justify-content: center; }
+.mermaid-toolbar button { cursor: pointer; }
+.mermaid-toolbar button:hover { border-color: var(--accent); color: var(--accent); }
+.mermaid-toolbar .zoom-level { min-width: 52px; color: var(--muted); background: transparent; }
+.call-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92rem; }
+.call-table th { background: #1a2744; color: var(--accent); text-align: left; padding: 10px 14px; border: 1px solid var(--border); }
+.call-table td { padding: 8px 14px; border: 1px solid var(--border); vertical-align: top; }
+.call-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.tag-async { background: #7c3aed33; color: #a78bfa; }
+.tag-class { background: #05966933; color: var(--ok); }
+.tag-func { background: #2563eb33; color: var(--accent); }
+.tag-cmd { background: #d9770633; color: var(--warn); }
+.tag-endpoint { background: #dc262633; color: var(--err); }
+.tag-hook { background: #db277733; color: #f472b6; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin: 16px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; margin: 16px 0; }
+.arrow-chain { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent); padding: 10px; background: rgba(56,189,248,0.06); border-radius: 6px; }
+code { font-family: 'Fira Code', 'Cascadia Code', monospace; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 3px; font-size: 0.88em; }
+ul, ol { margin: 8px 0 8px 24px; color: var(--muted); }
+li { margin: 4px 0; }
+a { color: var(--accent); }
+hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+.nav { position: sticky; top: 0; background: var(--bg); z-index: 10; padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.9rem; }
+.nav a { text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+@media (max-width: 768px) { .container { padding: 16px; } h1 { font-size: 1.8rem; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>thekeithhopkins — Complete Call Flow &amp; Architecture Documentation</h1>
+<p class="subtitle">Generated from graphify knowledge graph: 52 nodes, 60 edges, 9 communities. Commit: 27dc631</p>
+
+<div class="nav">
+    <a href="#overview">Architecture Overview</a>
+    <a href="#build-graph">Graph Build</a>
+    <a href="#outputs-docs">Outputs &amp; Docs</a>
+    <a href="#app-layout-tsx">app/layout.tsx</a>
+    <a href="#service-slug-page-tsx">service/[slug]/page.tsx</a>
+    <a href="#project-slug-page-tsx">project/[slug]/page.tsx</a>
+</div>
+
+<!-- ====== Architecture Overview ====== -->
+<h2 id="overview">1. Architecture Overview</h2>
+
+<div class="mermaid">
+
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>17 nodes</small>")
+    class BUILD_GRAPH_321CBB04 module;
+    OUTPUTS_DOCS_ED82387C("Outputs &amp; Docs<br/><small>18 nodes</small>")
+    class OUTPUTS_DOCS_ED82387C module;
+    APP_LAYOUT_TSX_7D95A41E("app/layout.tsx<br/><small>6 nodes</small>")
+    class APP_LAYOUT_TSX_7D95A41E module;
+    SERVICE_SLUG_PAGE_TSX_06D43774("service/[slug]/page.tsx<br/><small>6 nodes</small>")
+    class SERVICE_SLUG_PAGE_TSX_06D43774 module;
+    PROJECT_SLUG_PAGE_TSX_D89E9AA3("project/[slug]/page.tsx<br/><small>5 nodes</small>")
+    class PROJECT_SLUG_PAGE_TSX_D89E9AA3 module;
+    OUTPUTS_DOCS_ED82387C -->|reads data x4| BUILD_GRAPH_321CBB04
+    SERVICE_SLUG_PAGE_TSX_06D43774 -->|renders x2| OUTPUTS_DOCS_ED82387C
+    PROJECT_SLUG_PAGE_TSX_D89E9AA3 -->|renders x2| OUTPUTS_DOCS_ED82387C
+    APP_LAYOUT_TSX_7D95A41E -->|supplies thumbnails| OUTPUTS_DOCS_ED82387C
+    OUTPUTS_DOCS_ED82387C -->|reads data| PROJECT_SLUG_PAGE_TSX_D89E9AA3
+    BUILD_GRAPH_321CBB04 -->|implements schema| PROJECT_SLUG_PAGE_TSX_D89E9AA3
+    SERVICE_SLUG_PAGE_TSX_06D43774 -->|generates static params| BUILD_GRAPH_321CBB04
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h4>Architecture Layers</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
+      <tr><td>Graph Build</td><td>17</td><td><code>4, 2, 8</code></td></tr><tr><td>Outputs &amp; Docs</td><td>18</td><td><code>1, 5, 7</code></td></tr><tr><td>app/layout.tsx</td><td>6</td><td><code>0</code></td></tr><tr><td>service/[slug]/page.tsx</td><td>6</td><td><code>3</code></td></tr><tr><td>project/[slug]/page.tsx</td><td>5</td><td><code>6</code></td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Core Flow</h4>
+    <div class="arrow-chain">app/layout.tsx -&gt; Outputs &amp; Docs -&gt; Graph Build -&gt; project/[slug]/page.tsx -&gt; service/[slug]/page.tsx</div>
+  </div>
+</div>
+<div class="grid">
+  <div class="card">
+    <h4>Graph Report Highlights</h4>
+    <ul>
+      <li>52 nodes · 60 edges · 9 communities</li>
+      <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS</li>
+      <li>Token cost: 0 input · 0 output</li>
+    </ul>
+  </div>
+</div>
+<hr>
+<!-- ====== 2. Graph Build ====== -->
+<h2 id="build-graph">2. Graph Build</h2>
+<p>Graph Build groups implementation around json, slug, pagetsx, data, mostly in BlogPostCard.tsx, wp/v2/users, hello-world. This section covers 17 nodes and 17 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Graph Build (17 nodes, 17 edges)
+    comp_blog_card_32ba84c2("BlogPostCard.tsx")
+    nextjs_blog_detail_d5d0b273("page.tsx")
+    nextjs_category_archive_cfa66f1a("page.tsx")
+    src_post_fonts_colors_8ea2fef8("choose-fonts-and-colors-that-complement")
+    src_post_hello_world_d6b6a641("hello-world")
+    src_post_ai_photo_34c4c513("how-can-you-generate-perfect-ai-photo")
+    lib_data_posts_e6eaf160("posts.ts")
+    lib_data_pricing_19ad7028("pricing.ts")
+    lib_data_services_9cc055a9("services.ts")
+    data_types_551bdf19("types.ts")
+    src_post_robot_user_d4add45b("next-generation-will-be-the-robot-user")
+    nextjs_tag_archive_ba237787("page.tsx")
+    wpjson_categories_567cfb97("wp-json/wp/v2/categories")
+    wpjson_pages_05e66e9d("wp-json/wp/v2/pages")
+    wpjson_posts_4085ce5f("wp-json/wp/v2/posts")
+    wpjson_tags_cf04ac4f("wp-json/wp/v2/tags")
+    wpjson_users_cec50863("wp-json/wp/v2/users")
+    lib_data_services_9cc055a9 -->|hydrates into| wpjson_pages_05e66e9d
+    lib_data_pricing_19ad7028 -->|hydrates into| wpjson_pages_05e66e9d
+    data_types_551bdf19 -->|implements schema| lib_data_posts_e6eaf160
+    data_types_551bdf19 -->|implements schema| lib_data_pricing_19ad7028
+    data_types_551bdf19 -->|implements schema| lib_data_services_9cc055a9
+    data_types_551bdf19 -->|provides taxonomy| wpjson_categories_567cfb97
+    data_types_551bdf19 -->|provides taxonomy| wpjson_tags_cf04ac4f
+    comp_blog_card_32ba84c2 -->|provides author info| wpjson_users_cec50863
+    nextjs_blog_detail_d5d0b273 -->|generates static params| lib_data_posts_e6eaf160
+    nextjs_blog_detail_d5d0b273 -->|migrates to| src_post_ai_photo_34c4c513
+    nextjs_blog_detail_d5d0b273 -->|migrates to| src_post_fonts_colors_8ea2fef8
+    nextjs_blog_detail_d5d0b273 -->|migrates to| src_post_hello_world_d6b6a641
+    nextjs_blog_detail_d5d0b273 -->|migrates to| src_post_robot_user_d4add45b
+    nextjs_blog_detail_d5d0b273 -->|renders related| comp_blog_card_32ba84c2
+    nextjs_category_archive_cfa66f1a -->|filters| lib_data_posts_e6eaf160
+    lib_data_posts_e6eaf160 -->|hydrates into| wpjson_posts_4085ce5f
+    nextjs_tag_archive_ba237787 -->|filters| lib_data_posts_e6eaf160
+    class comp_blog_card_32ba84c2 ui;
+    class nextjs_blog_detail_d5d0b273 ui;
+    class nextjs_category_archive_cfa66f1a ui;
+    class src_post_fonts_colors_8ea2fef8 function;
+    class src_post_hello_world_d6b6a641 function;
+    class src_post_ai_photo_34c4c513 function;
+    class lib_data_posts_e6eaf160 module;
+    class lib_data_pricing_19ad7028 module;
+    class lib_data_services_9cc055a9 module;
+    class data_types_551bdf19 module;
+    class src_post_robot_user_d4add45b function;
+    class nextjs_tag_archive_ba237787 ui;
+    class wpjson_categories_567cfb97 function;
+    class wpjson_pages_05e66e9d function;
+    class wpjson_posts_4085ce5f function;
+    class wpjson_tags_cf04ac4f function;
+    class wpjson_users_cec50863 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>BlogPostCard.tsx</code><br><small style="color:var(--muted)">BlogPostCard.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in BlogPostCard.tsx.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>wp-json/wp/v2/users</code><br><small style="color:var(--muted)">wp/v2/users</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>wp-json/wp/v2/users node in wp/v2/users.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>hello-world</code><br><small style="color:var(--muted)">hello-world</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>hello-world node in hello-world.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>blog/[slug]/page.tsx</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in blog/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>how-can-you-generate-perfect-ai-photo</code><br><small style="color:var(--muted)">how-can-you-generate-perfect-ai-photo</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>how-can-you-generate-perfect-ai-photo node in how-can-you-generate-perfect-ai-photo.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>choose-fonts-and-colors-that-complement</code><br><small style="color:var(--muted)">choose-fonts-and-colors-that-complement</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>choose-fonts-and-colors-that-complement node in choose-fonts-and-colors-that-complement.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>next-generation-will-be-the-robot-user</code><br><small style="color:var(--muted)">next-generation-will-be-the-robot-user</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>next-generation-will-be-the-robot-user node in next-generation-will-be-the-robot-user.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>wp-json/wp/v2/pages</code><br><small style="color:var(--muted)">wp/v2/pages</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>lib/data/services.ts</code><br><small style="color:var(--muted)">lib/data/services.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in lib/data/services.ts.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>lib/data/pricing.ts</code><br><small style="color:var(--muted)">lib/data/pricing.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in lib/data/pricing.ts.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>wp-json/wp/v2/categories</code><br><small style="color:var(--muted)">wp/v2/categories</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>wp-json/wp/v2/categories node in wp/v2/categories.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>wp-json/wp/v2/tags</code><br><small style="color:var(--muted)">wp/v2/tags</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>wp-json/wp/v2/tags node in wp/v2/tags.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>lib/types.ts</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in lib/types.ts.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>category/[slug]/page.tsx</code><br><small style="color:var(--muted)">category/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in category/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>lib/data/posts.ts</code><br><small style="color:var(--muted)">lib/data/posts.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in lib/data/posts.ts.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>wp-json/wp/v2/posts</code><br><small style="color:var(--muted)">wp/v2/posts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>wp-json/wp/v2/posts node in wp/v2/posts.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>tag/[slug]/page.tsx</code><br><small style="color:var(--muted)">tag/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in tag/[slug]/page.tsx.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>BlogPostCard.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>blog/[slug]/page.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>category/[slug]/page.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>tag/[slug]/page.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>choose-fonts-and-colors-that-complement</code></td><td>1 nodes</td></tr>
+<tr><td><code>hello-world</code></td><td>1 nodes</td></tr>
+<tr><td><code>how-can-you-generate-perfect-ai-photo</code></td><td>1 nodes</td></tr>
+<tr><td><code>lib/data/posts.ts</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: migrates to x4, hydrates into x3, implements schema x3, provides taxonomy x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 3. Outputs & Docs ====== -->
+<h2 id="outputs-docs">3. Outputs &amp; Docs</h2>
+<p>Outputs &amp; Docs groups implementation around app, pagetsx, indexhtml, contact, mostly in wp-content/uploads/ (Media), Testimonials.tsx, ServicesGrid.tsx. This section covers 18 nodes and 17 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Outputs &amp; Docs (18 nodes, 17 edges)
+    comp_audit_form_4c75b33b("AuditLeadForm.tsx")
+    comp_contact_form_d7f92da4("ContactForm.tsx")
+    comp_hero_a65619f4("HeroSection.tsx")
+    comp_image_gallery_86c29cf6("ImageGallery.tsx")
+    comp_pricing_table_6c1738e1("PricingTable.tsx")
+    comp_project_showcase_1a2d0593("ProjectShowcase.tsx")
+    comp_services_grid_d917541e("ServicesGrid.tsx")
+    comp_testimonials_cc7fcf75("Testimonials.tsx")
+    api_audit_route_21375476("route.ts")
+    api_contact_route_adc3589a("route.ts")
+    nextjs_fillmypipeline_c7bb4010("page.tsx")
+    nextjs_home_page_253e9b6f("page.tsx")
+    nextjs_pricing_page_dcd325d1("page.tsx")
+    src_cf7_plugin_e8ca19ea("contact-form-7/js &amp; css")
+    src_landing_pipeline_bc2bc38a("fillmypipeline/index.html")
+    src_home_html_baffa6d6("index.html")
+    src_pricing_html_d938b7e9("pricing/index.html")
+    src_images_uploads_0bd99b8c("wp-content/uploads/ (Media)")
+    comp_hero_a65619f4 -->|supplies images| src_images_uploads_0bd99b8c
+    nextjs_home_page_253e9b6f -->|migrates to| src_home_html_baffa6d6
+    nextjs_home_page_253e9b6f -->|renders| comp_contact_form_d7f92da4
+    nextjs_home_page_253e9b6f -->|renders| comp_hero_a65619f4
+    nextjs_home_page_253e9b6f -->|renders| comp_project_showcase_1a2d0593
+    nextjs_home_page_253e9b6f -->|renders| comp_services_grid_d917541e
+    nextjs_home_page_253e9b6f -->|renders| comp_testimonials_cc7fcf75
+    comp_image_gallery_86c29cf6 -->|supplies images| src_images_uploads_0bd99b8c
+    comp_project_showcase_1a2d0593 -->|supplies images| src_images_uploads_0bd99b8c
+    comp_contact_form_d7f92da4 -->|replaces with react hook form| src_cf7_plugin_e8ca19ea
+    comp_contact_form_d7f92da4 -->|submits inquiry| api_contact_route_adc3589a
+    nextjs_pricing_page_dcd325d1 -->|migrates to| src_pricing_html_d938b7e9
+    nextjs_pricing_page_dcd325d1 -->|renders| comp_contact_form_d7f92da4
+    nextjs_pricing_page_dcd325d1 -->|renders| comp_pricing_table_6c1738e1
+    nextjs_fillmypipeline_c7bb4010 -->|migrates to| src_landing_pipeline_bc2bc38a
+    nextjs_fillmypipeline_c7bb4010 -->|renders| comp_audit_form_4c75b33b
+    nextjs_fillmypipeline_c7bb4010 -->|submits lead| api_audit_route_21375476
+    class comp_audit_form_4c75b33b ui;
+    class comp_contact_form_d7f92da4 ui;
+    class comp_hero_a65619f4 ui;
+    class comp_image_gallery_86c29cf6 ui;
+    class comp_pricing_table_6c1738e1 ui;
+    class comp_project_showcase_1a2d0593 ui;
+    class comp_services_grid_d917541e ui;
+    class comp_testimonials_cc7fcf75 test;
+    class api_audit_route_21375476 api;
+    class api_contact_route_adc3589a api;
+    class nextjs_fillmypipeline_c7bb4010 ui;
+    class nextjs_home_page_253e9b6f ui;
+    class nextjs_pricing_page_dcd325d1 ui;
+    class src_cf7_plugin_e8ca19ea function;
+    class src_landing_pipeline_bc2bc38a function;
+    class src_home_html_baffa6d6 function;
+    class src_pricing_html_d938b7e9 function;
+    class src_images_uploads_0bd99b8c function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>wp-content/uploads/ (Media)</code><br><small style="color:var(--muted)">wp-content/uploads/ (Media)</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>wp-content/uploads/ (Media) node in wp-content/uploads/ (Media).</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>Testimonials.tsx</code><br><small style="color:var(--muted)">Testimonials.tsx</small></td>
+  <td><span class="tag tag-func">Test</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in Testimonials.tsx.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>ServicesGrid.tsx</code><br><small style="color:var(--muted)">ServicesGrid.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in ServicesGrid.tsx.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>HeroSection.tsx</code><br><small style="color:var(--muted)">HeroSection.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in HeroSection.tsx.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>app/page.tsx</code><br><small style="color:var(--muted)">app/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in app/page.tsx.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>ImageGallery.tsx</code><br><small style="color:var(--muted)">ImageGallery.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in ImageGallery.tsx.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>ProjectShowcase.tsx</code><br><small style="color:var(--muted)">ProjectShowcase.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in ProjectShowcase.tsx.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>index.html</code><br><small style="color:var(--muted)">index.html</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Exports documentation data to a target format.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>contact-form-7/js &amp; css</code><br><small style="color:var(--muted)">contact-form-7/js &amp; css</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>contact-form-7/js &amp; css node in contact-form-7/js &amp; css.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>ContactForm.tsx</code><br><small style="color:var(--muted)">ContactForm.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in ContactForm.tsx.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>pricing/page.tsx</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in app/pricing/page.tsx.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>PricingTable.tsx</code><br><small style="color:var(--muted)">PricingTable.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in PricingTable.tsx.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>contact/route.ts</code><br><small style="color:var(--muted)">api/contact/route.ts</small></td>
+  <td><span class="tag tag-endpoint">API</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in api/contact/route.ts.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>pricing/index.html</code><br><small style="color:var(--muted)">pricing/index.html</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Exports documentation data to a target format.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>fillmypipeline/page.tsx</code><br><small style="color:var(--muted)">app/fillmypipeline/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in app/fillmypipeline/page.tsx.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>AuditLeadForm.tsx</code><br><small style="color:var(--muted)">AuditLeadForm.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in AuditLeadForm.tsx.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>audit-lead/route.ts</code><br><small style="color:var(--muted)">api/audit-lead/route.ts</small></td>
+  <td><span class="tag tag-endpoint">API</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in api/audit-lead/route.ts.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>fillmypipeline/index.html</code><br><small style="color:var(--muted)">fillmypipeline/index.html</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Exports documentation data to a target format.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>AuditLeadForm.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>ContactForm.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>HeroSection.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>ImageGallery.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>PricingTable.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>ProjectShowcase.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>ServicesGrid.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>Testimonials.tsx</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: renders x8, supplies images x3, migrates to x3, replaces with react hook form x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 4. app/layout.tsx ====== -->
+<h2 id="app-layout-tsx">4. app/layout.tsx</h2>
+<p>app/layout.tsx groups implementation around app, content, uploads, elementor, mostly in uploads/elementor/css, SEOMetadata.ts, app/layout.tsx. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: app/layout.tsx (6 nodes, 5 edges)
+    comp_footer_d14d41fa("Footer.tsx")
+    comp_header_a11f63a3("Header.tsx")
+    comp_seo_head_3ef67965("SEOMetadata.ts")
+    nextjs_globals_css_df188e23("app/globals.css")
+    nextjs_root_layout_f77c4500("layout.tsx")
+    src_elementor_css_ca7dfb87("wp-content/uploads/elementor/css")
+    nextjs_root_layout_f77c4500 -->|applies style| nextjs_globals_css_df188e23
+    nextjs_root_layout_f77c4500 -->|configures| comp_seo_head_3ef67965
+    nextjs_root_layout_f77c4500 -->|renders| comp_footer_d14d41fa
+    nextjs_root_layout_f77c4500 -->|renders| comp_header_a11f63a3
+    nextjs_globals_css_df188e23 -->|replaces with tailwind| src_elementor_css_ca7dfb87
+    class comp_footer_d14d41fa ui;
+    class comp_header_a11f63a3 ui;
+    class comp_seo_head_3ef67965 klass;
+    class nextjs_globals_css_df188e23 function;
+    class nextjs_root_layout_f77c4500 ui;
+    class src_elementor_css_ca7dfb87 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>wp-content/uploads/elementor/css</code><br><small style="color:var(--muted)">uploads/elementor/css</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>wp-content/uploads/elementor/css node in uploads/elementor/css.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>SEOMetadata.ts</code><br><small style="color:var(--muted)">SEOMetadata.ts</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in SEOMetadata.ts.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>app/layout.tsx</code><br><small style="color:var(--muted)">app/layout.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in app/layout.tsx.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Footer.tsx</code><br><small style="color:var(--muted)">Footer.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in Footer.tsx.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Header.tsx</code><br><small style="color:var(--muted)">Header.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in Header.tsx.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>app/globals.css</code><br><small style="color:var(--muted)">app/globals.css</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>app/globals.css node in app/globals.css.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>Footer.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>Header.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>SEOMetadata.ts</code></td><td>1 nodes</td></tr>
+<tr><td><code>app/globals.css</code></td><td>1 nodes</td></tr>
+<tr><td><code>app/layout.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>uploads/elementor/css</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: renders x2, applies style x1, configures x1, replaces with tailwind x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 5. service/[slug]/page.tsx ====== -->
+<h2 id="service-slug-page-tsx">5. service/[slug]/page.tsx</h2>
+<p>service/[slug]/page.tsx groups implementation around service, artist, management, creative, mostly in service/artist-management, service/creative-digital-media-services, service/[slug]/page.tsx. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: service/[slug]/page.tsx (6 nodes, 5 edges)
+    nextjs_service_detail_cfeb0eaa("page.tsx")
+    src_service_artist_c0c5f3ad("service/artist-management")
+    src_service_media_6d44cf68("service/creative-digital-media-services")
+    src_service_entertainment_1c04fd81("service/entertainment")
+    src_service_ventures_ed3e4d50("service/specialized-ventures-business-i...<br/><small>service/specialized-ventures-business-innovations</small>")
+    src_service_talent_dce33894("service/talent")
+    nextjs_service_detail_cfeb0eaa -->|migrates to| src_service_artist_c0c5f3ad
+    nextjs_service_detail_cfeb0eaa -->|migrates to| src_service_entertainment_1c04fd81
+    nextjs_service_detail_cfeb0eaa -->|migrates to| src_service_media_6d44cf68
+    nextjs_service_detail_cfeb0eaa -->|migrates to| src_service_talent_dce33894
+    nextjs_service_detail_cfeb0eaa -->|migrates to| src_service_ventures_ed3e4d50
+    class nextjs_service_detail_cfeb0eaa ui;
+    class src_service_artist_c0c5f3ad function;
+    class src_service_media_6d44cf68 function;
+    class src_service_entertainment_1c04fd81 function;
+    class src_service_ventures_ed3e4d50 test;
+    class src_service_talent_dce33894 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>service/artist-management</code><br><small style="color:var(--muted)">service/artist-management</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>service/artist-management node in service/artist-management.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>service/creative-digital-media-services</code><br><small style="color:var(--muted)">service/creative-digital-media-services</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Turns a local path or remote repository into analysis context.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>service/[slug]/page.tsx</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in service/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>service/entertainment</code><br><small style="color:var(--muted)">service/entertainment</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>service/entertainment node in service/entertainment.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>service/specialized-ventures-business-innovations</code><br><small style="color:var(--muted)">service/specialized-ventures-business-innovations</small></td>
+  <td><span class="tag tag-func">Test</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>service/specialized-ventures-business-innovations node in service/specialized-ventures-business-innovations.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>service/talent</code><br><small style="color:var(--muted)">service/talent</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>service/talent node in service/talent.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>service/[slug]/page.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>service/artist-management</code></td><td>1 nodes</td></tr>
+<tr><td><code>service/creative-digital-media-services</code></td><td>1 nodes</td></tr>
+<tr><td><code>service/entertainment</code></td><td>1 nodes</td></tr>
+<tr><td><code>service/specialized-ventures-business-innovations</code></td><td>1 nodes</td></tr>
+<tr><td><code>service/talent</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: migrates to x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 6. project/[slug]/page.tsx ====== -->
+<h2 id="project-slug-page-tsx">6. project/[slug]/page.tsx</h2>
+<p>project/[slug]/page.tsx groups implementation around project, alkaline, water, machines, mostly in project/alkaline-water-machines, project/body-butter-made-with-love, project/[slug]/page.tsx. This section covers 5 nodes and 4 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: project/[slug]/page.tsx (5 nodes, 4 edges)
+    lib_data_projects_d0aadf14("projects.ts")
+    nextjs_project_detail_b4fdd868("page.tsx")
+    src_project_alkaline_babf8b16("project/alkaline-water-machines")
+    src_project_butter_1199045a("project/body-butter-made-with-love")
+    src_project_oils_a8cdcd32("project/young-living-essential-oils")
+    nextjs_project_detail_b4fdd868 -->|generates static params| lib_data_projects_d0aadf14
+    nextjs_project_detail_b4fdd868 -->|migrates to| src_project_alkaline_babf8b16
+    nextjs_project_detail_b4fdd868 -->|migrates to| src_project_butter_1199045a
+    nextjs_project_detail_b4fdd868 -->|migrates to| src_project_oils_a8cdcd32
+    class lib_data_projects_d0aadf14 module;
+    class nextjs_project_detail_b4fdd868 ui;
+    class src_project_alkaline_babf8b16 function;
+    class src_project_butter_1199045a function;
+    class src_project_oils_a8cdcd32 async;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>project/alkaline-water-machines</code><br><small style="color:var(--muted)">project/alkaline-water-machines</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>project/alkaline-water-machines node in project/alkaline-water-machines.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>project/body-butter-made-with-love</code><br><small style="color:var(--muted)">project/body-butter-made-with-love</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>project/body-butter-made-with-love node in project/body-butter-made-with-love.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>project/[slug]/page.tsx</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in project/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>lib/data/projects.ts</code><br><small style="color:var(--muted)">lib/data/projects.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Module file in lib/data/projects.ts.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>project/young-living-essential-oils</code><br><small style="color:var(--muted)">project/young-living-essential-oils</small></td>
+  <td><span class="tag tag-async">Async</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>project/young-living-essential-oils node in project/young-living-essential-oils.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>project/[slug]/page.tsx</code></td><td>1 nodes</td></tr>
+<tr><td><code>lib/data/projects.ts</code></td><td>1 nodes</td></tr>
+<tr><td><code>project/alkaline-water-machines</code></td><td>1 nodes</td></tr>
+<tr><td><code>project/body-butter-made-with-love</code></td><td>1 nodes</td></tr>
+<tr><td><code>project/young-living-essential-oils</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: migrates to x3, generates static params x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<h2 id="stats">Project Statistics</h2>
+
+<div class="grid">
+  <div class="card">
+    <h4>Graph</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><td>Nodes</td><td>52</td></tr>
+      <tr><td>Edges</td><td>60</td></tr>
+      <tr><td>Hyperedges</td><td>0</td></tr>
+      <tr><td>Communities</td><td>9</td></tr>
+      <tr><td>Documented Sections</td><td>5</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Edge Confidence</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><td>EXTRACTED</td><td>60</td></tr>
+      <tr><td>INFERRED</td><td>0</td></tr>
+      <tr><td>AMBIGUOUS</td><td>0</td></tr>
+    </table>
+  </div>
+</div>
+
+<div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
+  <p>thekeithhopkins — Architecture Documentation</p>
+  <p>Generated: 2026-09-12 08:01 UTC · graphify callflow-html</p>
+</div>
+
+</div><!-- .container -->
+
+<script>
+(function () {
+  const mermaidConfig = {
+    startOnLoad: false,
+    theme: 'dark',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true },
+    themeVariables: {
+      primaryColor: '#1e293b',
+      primaryTextColor: '#e2e8f0',
+      primaryBorderColor: '#38bdf8',
+      secondaryColor: '#0f172a',
+      tertiaryColor: '#334155',
+      lineColor: '#64748b',
+      textColor: '#e2e8f0',
+    }
+  };
+
+  mermaid.initialize(mermaidConfig);
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function enhanceMermaidDiagrams() {
+    document.querySelectorAll('.mermaid').forEach((container) => {
+      if (container.dataset.zoomReady === 'true') return;
+      const svg = container.querySelector('svg');
+      if (!svg) return;
+
+      container.dataset.zoomReady = 'true';
+      container.classList.add('is-enhanced');
+
+      const viewport = document.createElement('div');
+      viewport.className = 'mermaid-viewport';
+      svg.parentNode.insertBefore(viewport, svg);
+      viewport.appendChild(svg);
+
+      const toolbar = document.createElement('div');
+      toolbar.className = 'mermaid-toolbar';
+      toolbar.innerHTML = [
+        '<button type="button" data-action="zoom-out" title="Zoom out">-</button>',
+        '<span class="zoom-level" data-role="level">100%</span>',
+        '<button type="button" data-action="zoom-in" title="Zoom in">+</button>',
+        '<button type="button" data-action="fit" title="Fit width">Fit</button>',
+        '<button type="button" data-action="reset" title="Reset view">Reset</button>'
+      ].join('');
+      container.insertBefore(toolbar, viewport);
+
+      const state = { scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0, originX: 0, originY: 0 };
+      const level = toolbar.querySelector('[data-role="level"]');
+
+      function applyTransform() {
+        svg.style.transform = `translate(${state.x}px, ${state.y}px) scale(${state.scale})`;
+        level.textContent = `${Math.round(state.scale * 100)}%`;
+      }
+
+      function zoomBy(delta) {
+        state.scale = clamp(state.scale + delta, 0.25, 3);
+        applyTransform();
+      }
+
+      function reset() {
+        state.scale = 1;
+        state.x = 0;
+        state.y = 0;
+        applyTransform();
+      }
+
+      function fitWidth() {
+        const rawWidth = svg.viewBox && svg.viewBox.baseVal && svg.viewBox.baseVal.width
+          ? svg.viewBox.baseVal.width
+          : svg.getBoundingClientRect().width / state.scale;
+        if (!rawWidth) {
+          reset();
+          return;
+        }
+        state.scale = clamp((viewport.clientWidth - 48) / rawWidth, 0.25, 1.4);
+        state.x = 0;
+        state.y = 0;
+        applyTransform();
+      }
+
+      toolbar.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-action]');
+        if (!button) return;
+        const action = button.dataset.action;
+        if (action === 'zoom-in') zoomBy(0.15);
+        if (action === 'zoom-out') zoomBy(-0.15);
+        if (action === 'fit') fitWidth();
+        if (action === 'reset') reset();
+      });
+
+      viewport.addEventListener('wheel', (event) => {
+        if (!event.ctrlKey && !event.metaKey) return;
+        event.preventDefault();
+        zoomBy(event.deltaY < 0 ? 0.1 : -0.1);
+      }, { passive: false });
+
+      viewport.addEventListener('pointerdown', (event) => {
+        if (event.button !== 0) return;
+        state.dragging = true;
+        state.startX = event.clientX;
+        state.startY = event.clientY;
+        state.originX = state.x;
+        state.originY = state.y;
+        viewport.classList.add('is-dragging');
+        viewport.setPointerCapture(event.pointerId);
+      });
+
+      viewport.addEventListener('pointermove', (event) => {
+        if (!state.dragging) return;
+        state.x = state.originX + event.clientX - state.startX;
+        state.y = state.originY + event.clientY - state.startY;
+        applyTransform();
+      });
+
+      function endDrag(event) {
+        if (!state.dragging) return;
+        state.dragging = false;
+        viewport.classList.remove('is-dragging');
+        if (viewport.hasPointerCapture(event.pointerId)) {
+          viewport.releasePointerCapture(event.pointerId);
+        }
+      }
+
+      viewport.addEventListener('pointerup', endDrag);
+      viewport.addEventListener('pointercancel', endDrag);
+      applyTransform();
+    });
+  }
+
+  function renderMermaid() {
+    const result = mermaid.run
+      ? mermaid.run({ querySelector: '.mermaid' })
+      : Promise.resolve();
+    Promise.resolve(result)
+      .then(enhanceMermaidDiagrams)
+      .catch((error) => {
+        console.error('Mermaid render failed:', error);
+        enhanceMermaidDiagrams();
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMermaid);
+  } else {
+    renderMermaid();
+  }
+})();
+</script>
+
+</body>
+</html>
