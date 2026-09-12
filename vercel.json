@@ -1,12 +1,6 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" }
-      ]
-    }
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/next" }
   ]
 }
