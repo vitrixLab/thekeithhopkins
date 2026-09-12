@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    // Allow next/image to serve from the public/images directory
+    unoptimized: false,
+    // Remote patterns can be added later for any external image URLs
+  },
 };
 
 export default nextConfig;

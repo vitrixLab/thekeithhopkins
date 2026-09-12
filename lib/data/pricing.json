@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Basic",
+    "price": "$29",
+    "period": "per month",
+    "description": "Essential consulting & advisory support for emerging leaders.",
+    "features": [
+      "1 Monthly Strategy Session",
+      "Email Advisory Support",
+      "Market Assessment Brief",
+      "Action Plan Review"
+    ]
+  },
+  {
+    "name": "Startup / Standard",
+    "price": "$99",
+    "period": "per month",
+    "description": "Comprehensive acceleration for ventures and growth-stage brands.",
+    "features": [
+      "Bi-weekly Strategic Consultations",
+      "Operational Risk Audit",
+      "Digital Marketing Roadmap",
+      "Direct Messaging Access"
+    ]
+  },
+  {
+    "name": "Professional / Business",
+    "price": "$249",
+    "period": "per month",
+    "popular": true,
+    "description": "Full-stack commercial operations, media management, and talent advisory.",
+    "features": [
+      "Weekly Executive Advisory",
+      "Brand & Digital Media Strategy",
+      "Commercial Operations Alignment",
+      "Venture Partner Introductions",
+      "Priority Support"
+    ]
+  },
+  {
+    "name": "Corporate / Enterprise",
+    "price": "Custom",
+    "period": "retainer",
+    "description": "Dedicated executive advisory and specialized venture scaling.",
+    "features": [
+      "Bespoke Operations Deployment",
+      "Dedicated On-call Advisory",
+      "Full Commercial & Risk Oversight",
+      "Strategic Contract Negotiations"
+    ]
+  }
+]

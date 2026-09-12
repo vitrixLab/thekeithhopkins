@@ -1,0 +1,83 @@
+{
+  "brand_name": "Keith Hopkins",
+  "tagline": "Commercial Operations, Risk Assessment & Strategic Consulting",
+  "hero_title": "Let's grow together",
+  "metrics": [
+    {
+      "value": "15+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "5/5",
+      "label": "Client Satisfaction"
+    },
+    {
+      "value": "10+",
+      "label": "Enterprise Ventures"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Services",
+      "href": "/service",
+      "children": [
+        {
+          "label": "Artist Management",
+          "href": "/service/artist-management"
+        },
+        {
+          "label": "Talent",
+          "href": "/service/talent"
+        },
+        {
+          "label": "Entertainment",
+          "href": "/service/entertainment"
+        },
+        {
+          "label": "Creative & Digital Media",
+          "href": "/service/creative-digital-media-services"
+        },
+        {
+          "label": "Specialized Ventures & Business",
+          "href": "/service/specialized-ventures-business-innovations"
+        }
+      ]
+    },
+    {
+      "label": "Portfolio",
+      "href": "/project",
+      "children": [
+        {
+          "label": "Alkaline Water Machines",
+          "href": "/project/alkaline-water-machines"
+        },
+        {
+          "label": "Body Butter Made With Love",
+          "href": "/project/body-butter-made-with-love"
+        },
+        {
+          "label": "Young Living Essential Oils",
+          "href": "/project/young-living-essential-oils"
+        }
+      ]
+    },
+    {
+      "label": "Pricing",
+      "href": "/pricing"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "Free AI Audit",
+      "href": "/fillmypipeline",
+      "cta": true
+    }
+  ],
+  "copyright": "\u00a9 2025-2026 Keith Hopkins. All Rights Reserved."
+}
