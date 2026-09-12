@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
+import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import type { SiteConfig } from '@/lib/types';
@@ -45,6 +46,12 @@ export default function RootLayout({
           brandName={siteConfig.brand_name}
           tagline={siteConfig.tagline}
           copyright={siteConfig.copyright}
+        />
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6aa386ac4d7ca2bf0f542535"
+          strategy="lazyOnload"
         />
       </body>
     </html>
