@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const schema = z.object({
@@ -27,6 +27,7 @@ const PARTNERS = [
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -36,11 +37,27 @@ export default function ContactSection() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
-    // TODO: wire to API route / GHL webhook
-    await new Promise((r) => setTimeout(r, 800));
-    console.log('Contact form:', data);
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        throw new Error('Failed to send message. Please try again.');
+      }
+
+      setSubmitted(true);
+      reset();
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setSubmitError(err.message);
+      } else {
+        setSubmitError('An unexpected error occurred.');
+      }
+    }
   };
 
   return (
@@ -132,6 +149,13 @@ export default function ContactSection() {
                   noValidate
                   className="space-y-5"
                 >
+                  {submitError && (
+                    <div className="flex items-center gap-3 rounded-lg border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-400">
+                      <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                      <span>{submitError}</span>
+                    </div>
+                  )}
+
                   {/* Name + Email */}
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>

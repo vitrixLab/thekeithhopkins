@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import type { SiteConfig } from '@/lib/types';
 
 // Dynamically import the WebGL canvas — never SSR it
@@ -70,12 +71,12 @@ export default function HeroSection({ config }: HeroSectionProps) {
 
         {/* CTA buttons */}
         <div className="animate-fade-up animation-delay-4 mt-4 flex flex-wrap justify-center gap-4">
-          <a href="/service" className="btn-primary">
+          <Link href="/service" className="btn-primary">
             View Services
-          </a>
-          <a href="/fillmypipeline" className="btn-ghost">
+          </Link>
+          <Link href="/fillmypipeline" className="btn-ghost">
             Free AI Audit
-          </a>
+          </Link>
         </div>
       </div>
 
