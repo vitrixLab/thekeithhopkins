@@ -2178,9 +2178,9 @@
     "semantic_hash": ""
   },
   "app/api/contact/route.ts": {
-    "mtime": 1789439228.9297993,
-    "seen": 1789440357.5938368,
-    "ast_hash": "488dede714bfb37c6d3f542bf7a99aa5",
+    "mtime": 1789293258.7038715,
+    "seen": 1789317512.8158276,
+    "ast_hash": "5d54564d67cacbd9644cddcf7085dbc1",
     "semantic_hash": ""
   },
   "app/blog/[slug]/page.tsx": {
@@ -2331,12 +2331,6 @@
     "mtime": 1789293258.7498975,
     "seen": 1789317512.8160033,
     "ast_hash": "18e16cc2855285777be0fbc8bb7397e6",
-    "semantic_hash": ""
-  },
-  "lib/ghl-api.ts": {
-    "mtime": 1789440268.5542376,
-    "seen": 1789440357.5938368,
-    "ast_hash": "e625888cf2df984e340e4d29ba6e2886",
     "semantic_hash": ""
   }
 }

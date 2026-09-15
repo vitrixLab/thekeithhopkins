@@ -1,11 +1,11 @@
 {
   "0": "dependencies",
   "1": "layout.tsx",
-  "2": "types.ts",
+  "2": "app/page.tsx",
   "3": "devDependencies",
   "4": "compilerOptions",
   "5": "HeroCanvas.tsx",
-  "6": "utils.ts",
+  "6": "types.ts",
   "7": "main.js",
   "8": "README.md",
   "9": "This is NOT the Next.js you know",
@@ -20,7 +20,6 @@
   "18": "AMIX Three.js Design & Architecture Analysis",
   "19": "opengraph-image.tsx",
   "20": "audit-lead/route.ts",
-  "21": "ghl-api.ts",
-  "22": "robots.ts",
-  "23": "blog/[slug]/page.tsx"
+  "21": "contact/route.ts",
+  "22": "robots.ts"
 }
