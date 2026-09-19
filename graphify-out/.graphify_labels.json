@@ -9,7 +9,7 @@
   "7": "main.js",
   "8": "README.md",
   "9": "This is NOT the Next.js you know",
-  "10": "NEXTJS_MIGRATION_BLUEPRINT.md",
+  "10": "Next.js Migration Blueprint — thekeithhopkins.com",
   "11": "rules/graphify.md",
   "12": "workflows/graphify.md",
   "13": "CLAUDE.md",
@@ -22,5 +22,5 @@
   "20": "audit-lead/route.ts",
   "21": "ghl-api.ts",
   "22": "robots.ts",
-  "23": "blog/[slug]/page.tsx"
+  "23": "Frontend Excellence"
 }

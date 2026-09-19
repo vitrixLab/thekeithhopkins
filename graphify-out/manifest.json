@@ -1,8 +1,8 @@
 {
   "NEXTJS_MIGRATION_BLUEPRINT.md": {
-    "mtime": 1789200512.4837434,
-    "seen": 1789208230.2181056,
-    "ast_hash": "139f47a0810e3ae371393127a3c2b226",
+    "mtime": 1789465920.0842752,
+    "seen": 1789465938.5857587,
+    "ast_hash": "e3e1ebaee0e508d02b806198080e1470",
     "semantic_hash": ""
   },
   ".claude/settings.json": {
@@ -2337,6 +2337,12 @@
     "mtime": 1789440268.5542376,
     "seen": 1789440357.5938368,
     "ast_hash": "e625888cf2df984e340e4d29ba6e2886",
+    "semantic_hash": ""
+  },
+  ".agents/skills/frontend-excellence/SKILL.md": {
+    "mtime": 1789443624.5542169,
+    "seen": 1789465938.5857587,
+    "ast_hash": "7f976fed046f1ac37ccaefa2047522b1",
     "semantic_hash": ""
   }
 }

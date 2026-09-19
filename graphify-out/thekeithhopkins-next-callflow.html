@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>thekeithhopkins-next — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 312 nodes, 398 edges, 24 communities. Commit: e0f73ee</p>
+<p class="subtitle">Generated from graphify knowledge graph: 355 nodes, 440 edges, 24 communities. Commit: 370a5db</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -69,15 +69,15 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#serve-api">Serving API</a>
     <a href="#types-ts">types.ts</a>
     <a href="#utils-ts">utils.ts</a>
+    <a href="#next-js-migration-blueprint-thekeithhopkins-com">Next.js Migration Blueprint — thekeithhopkins.com</a>
     <a href="#layout-tsx">layout.tsx</a>
-    <a href="#blog-slug-page-tsx">blog/[slug]/page.tsx</a>
     <a href="#amix-three-js-design-architecture-analysis">AMIX Three.js Design &amp; Architecture Analysis</a>
-    <a href="#nextjs-migration-blueprint-md">NEXTJS_MIGRATION_BLUEPRINT.md</a>
     <a href="#herocanvas-tsx">HeroCanvas.tsx</a>
     <a href="#opengraph-image-tsx">opengraph-image.tsx</a>
     <a href="#readme-md">README.md</a>
     <a href="#this-is-not-the-next-js-you-know">This is NOT the Next.js you know</a>
     <a href="#rules-graphify-md">rules/graphify.md</a>
+    <a href="#workflows-graphify-md">workflows/graphify.md</a>
     <a href="#other">Other</a>
 </div>
 
@@ -88,24 +88,22 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    BUILD_GRAPH_321CBB04("Graph Build<br/><small>101 nodes</small>")
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>110 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>39 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>76 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
     SERVE_API_35EC8E86("Serving API<br/><small>15 nodes</small>")
     class SERVE_API_35EC8E86 module;
-    TYPES_TS_0918B311("types.ts<br/><small>36 nodes</small>")
+    TYPES_TS_0918B311("types.ts<br/><small>34 nodes</small>")
     class TYPES_TS_0918B311 module;
-    UTILS_TS_C293D13F("utils.ts<br/><small>23 nodes</small>")
+    UTILS_TS_C293D13F("utils.ts<br/><small>33 nodes</small>")
     class UTILS_TS_C293D13F module;
+    NEXT_JS_MIGRATION_BLUEPRINT_THEKEITHHOPKINS_COM_9DBC7A28("Next.js Migration Blueprint — thekeithhopkins.com<br/><small>19 nodes</small>")
+    class NEXT_JS_MIGRATION_BLUEPRINT_THEKEITHHOPKINS_COM_9DBC7A28 module;
     LAYOUT_TSX_1561C0B8("layout.tsx<br/><small>17 nodes</small>")
     class LAYOUT_TSX_1561C0B8 module;
-    BLOG_SLUG_PAGE_TSX_D3500D44("blog/[slug]/page.tsx<br/><small>17 nodes</small>")
-    class BLOG_SLUG_PAGE_TSX_D3500D44 module;
     AMIX_THREE_JS_DESIGN_ARCHITECTURE_ANALYSIS_58E5D2C9("AMIX Three.js Design &amp; Architecture Analysis<br/><small>14 nodes</small>")
     class AMIX_THREE_JS_DESIGN_ARCHITECTURE_ANALYSIS_58E5D2C9 module;
-    NEXTJS_MIGRATION_BLUEPRINT_MD_5A5F0518("NEXTJS_MIGRATION_BLUEPRINT.md<br/><small>13 nodes</small>")
-    class NEXTJS_MIGRATION_BLUEPRINT_MD_5A5F0518 module;
     HEROCANVAS_TSX_74CFD3B8("HeroCanvas.tsx<br/><small>12 nodes</small>")
     class HEROCANVAS_TSX_74CFD3B8 module;
     OPENGRAPH_IMAGE_TSX_76DD7FB5("opengraph-image.tsx<br/><small>6 nodes</small>")
@@ -116,20 +114,20 @@ flowchart LR
     class THIS_IS_NOT_THE_NEXT_JS_YOU_KNOW_9FDDD28B module;
     RULES_GRAPHIFY_MD_3459230E("rules/graphify.md<br/><small>2 nodes</small>")
     class RULES_GRAPHIFY_MD_3459230E module;
-    OTHER_D0941E68("Other<br/><small>10 nodes</small>")
+    WORKFLOWS_GRAPHIFY_MD_C6A40BAC("workflows/graphify.md<br/><small>2 nodes</small>")
+    class WORKFLOWS_GRAPHIFY_MD_C6A40BAC module;
+    OTHER_D0941E68("Other<br/><small>8 nodes</small>")
     class OTHER_D0941E68 module;
-    TYPES_TS_0918B311 -->|imports x4| BUILD_GRAPH_321CBB04
+    UTILS_TS_C293D13F -->|imports x10| TYPES_TS_0918B311
     LAYOUT_TSX_1561C0B8 -->|imports x4| TYPES_TS_0918B311
-    BLOG_SLUG_PAGE_TSX_D3500D44 -->|imports x4| TYPES_TS_0918B311
-    UTILS_TS_C293D13F -->|imports x4| TYPES_TS_0918B311
-    BLOG_SLUG_PAGE_TSX_D3500D44 -->|imports x3| UTILS_TS_C293D13F
+    BUILD_GRAPH_321CBB04 -->|imports x3| UTILS_TS_C293D13F
+    TYPES_TS_0918B311 -->|imports x3| BUILD_GRAPH_321CBB04
     LAYOUT_TSX_1561C0B8 -->|calls x2| BUILD_GRAPH_321CBB04
-    BUILD_GRAPH_321CBB04 -->|imports x2| UTILS_TS_C293D13F
+    BUILD_GRAPH_321CBB04 -->|imports x2| TYPES_TS_0918B311
     TYPES_TS_0918B311 -->|contains x2| HEROCANVAS_TSX_74CFD3B8
-    TYPES_TS_0918B311 -->|imports x2| UTILS_TS_C293D13F
     LAYOUT_TSX_1561C0B8 -->|imports| UTILS_TS_C293D13F
-    TYPES_TS_0918B311 -->|contains| BLOG_SLUG_PAGE_TSX_D3500D44
     TYPES_TS_0918B311 -->|contains| LAYOUT_TSX_1561C0B8
+    UTILS_TS_C293D13F -->|contains| BUILD_GRAPH_321CBB04
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -146,85 +144,90 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Graph Build</td><td>101</td><td><code>0, 4, 3, 17</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>39</td><td><code>7, 13</code></td></tr><tr><td>Serving API</td><td>15</td><td><code>21, 20</code></td></tr><tr><td>types.ts</td><td>36</td><td><code>2</code></td></tr><tr><td>utils.ts</td><td>23</td><td><code>6</code></td></tr><tr><td>layout.tsx</td><td>17</td><td><code>1</code></td></tr><tr><td>blog/[slug]/page.tsx</td><td>17</td><td><code>23</code></td></tr><tr><td>AMIX Three.js Design &amp; Architecture Analysis</td><td>14</td><td><code>18</code></td></tr><tr><td>NEXTJS_MIGRATION_BLUEPRINT.md</td><td>13</td><td><code>10</code></td></tr><tr><td>HeroCanvas.tsx</td><td>12</td><td><code>5</code></td></tr><tr><td>opengraph-image.tsx</td><td>6</td><td><code>19</code></td></tr><tr><td>README.md</td><td>4</td><td><code>8</code></td></tr><tr><td>This is NOT the Next.js you know</td><td>3</td><td><code>9</code></td></tr><tr><td>rules/graphify.md</td><td>2</td><td><code>11</code></td></tr><tr><td>Other</td><td>10</td><td><code>12, 14, 15, 16, 22</code></td></tr>
+      <tr><td>Graph Build</td><td>110</td><td><code>0, 4, 3, 17</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>76</td><td><code>23, 7, 13</code></td></tr><tr><td>Serving API</td><td>15</td><td><code>21, 20</code></td></tr><tr><td>types.ts</td><td>34</td><td><code>2</code></td></tr><tr><td>utils.ts</td><td>33</td><td><code>6</code></td></tr><tr><td>Next.js Migration Blueprint — thekeithhopkins.com</td><td>19</td><td><code>10</code></td></tr><tr><td>layout.tsx</td><td>17</td><td><code>1</code></td></tr><tr><td>AMIX Three.js Design &amp; Architecture Analysis</td><td>14</td><td><code>18</code></td></tr><tr><td>HeroCanvas.tsx</td><td>12</td><td><code>5</code></td></tr><tr><td>opengraph-image.tsx</td><td>6</td><td><code>19</code></td></tr><tr><td>README.md</td><td>4</td><td><code>8</code></td></tr><tr><td>This is NOT the Next.js you know</td><td>3</td><td><code>9</code></td></tr><tr><td>rules/graphify.md</td><td>2</td><td><code>11</code></td></tr><tr><td>workflows/graphify.md</td><td>2</td><td><code>12</code></td></tr><tr><td>Other</td><td>8</td><td><code>14, 15, 16, 22</code></td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Core Flow</h4>
-    <div class="arrow-chain">CLI &amp; Skill Installers -&gt; Graph Build -&gt; utils.ts -&gt; types.ts -&gt; HeroCanvas.tsx -&gt; Serving API -&gt; layout.tsx</div>
+    <div class="arrow-chain">CLI &amp; Skill Installers -&gt; Graph Build -&gt; utils.ts -&gt; types.ts -&gt; HeroCanvas.tsx -&gt; Serving API -&gt; Next.js Migration Blueprint — thekeithhopkins.com</div>
   </div>
 </div>
 <div class="grid">
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>312 nodes · 398 edges · 24 communities (15 shown, 8 thin omitted)</li>
+      <li>355 nodes · 440 edges · 24 communities (15 shown, 8 thin omitted)</li>
       <li>Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `compilerOptions` - 16 edges</li>
-      <li>2. `initGL()` - 9 edges</li>
-      <li>3. `cn()` - 9 edges</li>
+      <li>2. `Frontend Excellence` - 13 edges</li>
+      <li>3. `initGL()` - 9 edges</li>
     </ul>
   </div>
 </div>
 <hr>
 <!-- ====== 2. Graph Build ====== -->
 <h2 id="build-graph">2. Graph Build</h2>
-<p>Graph Build groups implementation around packagejson, tsconfigjson, react, three, mostly in package.json, tsconfig.json, components/home/ContactSection.tsx. This section covers 101 nodes and 101 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Graph Build groups implementation around packagejson, tsconfigjson, react, components, mostly in package.json, tsconfig.json, components/home/ContactSection.tsx. This section covers 110 nodes and 114 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Graph Build (101 nodes, 101 edges)
+    %% Section: Graph Build (110 nodes, 114 edges)
     subgraph build_graph_package_json_4e40bfbd["package.json"]
         package_dependencies_clsx_4bc09135("clsx<br/><small>package.json</small>")
-        package_dependencies_hookform_resolvers_44db6972("@hookform/resolvers<br/><small>package.json</small>")
-        package_dependencies_lucide_react_17f0074f("lucide-react<br/><small>package.json</small>")
         clsx_ed67b7e7("clsx<br/><small>package.json</small>")
+        package_dependencies_hookform_resolvers_44db6972("@hookform/resolvers<br/><small>package.json</small>")
         hookform_resolvers_b0335fd5("@hookform/resolvers<br/><small>package.json</small>")
+        package_dependencies_lucide_react_17f0074f("lucide-react<br/><small>package.json</small>")
         lucide_react_0d541e45("lucide-react<br/><small>package.json</small>")
         package_dependencies_next_e23f1ebc("next<br/><small>package.json</small>")
         next_edee9402("next<br/><small>package.json</small>")
         package_dependencies_postprocessing_5e172fbe("postprocessing<br/><small>package.json</small>")
         postprocessing_fb3cf847("postprocessing<br/><small>package.json</small>")
-        package_dependencies_react_a04d7d7e("react<br/><small>package.json</small>")
-        react_6b810c90("react<br/><small>package.json</small>")
-        package_dependencies_react_dom_87814871("react-dom<br/><small>package.json</small>")
     end
     subgraph build_graph_components_home_ContactSection_tsx_93100e72["components/home/ContactSection.tsx"]
         components_home_contactsection_41e85edb("ContactSection.tsx")
         components_home_contactsection_contactsection_ded882bb("ContactSection()<br/><small>components/home/ContactSection.tsx</small>")
     end
+    subgraph build_graph_components_ui_PricingTable_tsx_11d649bd["components/ui/PricingTable.tsx"]
+        components_ui_pricingtable_56ec5472("PricingTable.tsx")
+        components_ui_pricingtable_pricingtable_4df015b4("PricingTable()<br/><small>components/ui/PricingTable.tsx</small>")
+    end
     app_fillmypipeline_page_8b55badf("page.tsx")
+    app_pricing_page_2f3b6d2d("page.tsx")
     components_ui_auditleadform_auditleadform_9565ba44("AuditLeadForm()<br/><small>components/ui/AuditLeadForm.tsx</small>")
     lib_utils_cn_b8743bb6("cn()<br/><small>lib/utils.ts</small>")
     components_home_contactsection_contactsection_ded882bb -->|calls| lib_utils_cn_b8743bb6
     components_ui_auditleadform_auditleadform_9565ba44 -->|calls| lib_utils_cn_b8743bb6
+    components_ui_pricingtable_pricingtable_4df015b4 -->|calls| lib_utils_cn_b8743bb6
     package_dependencies_clsx_4bc09135 -->|imports| clsx_ed67b7e7
     package_dependencies_hookform_resolvers_44db6972 -->|imports| hookform_resolvers_b0335fd5
     package_dependencies_lucide_react_17f0074f -->|imports| lucide_react_0d541e45
     package_dependencies_next_e23f1ebc -->|imports| next_edee9402
     package_dependencies_postprocessing_5e172fbe -->|imports| postprocessing_fb3cf847
-    package_dependencies_react_a04d7d7e -->|imports| react_6b810c90
     app_fillmypipeline_page_8b55badf -->|imports| components_ui_auditleadform_auditleadform_9565ba44
+    app_pricing_page_2f3b6d2d -->|imports| components_ui_pricingtable_pricingtable_4df015b4
+    app_pricing_page_2f3b6d2d -->|imports| components_ui_pricingtable_56ec5472
     components_home_contactsection_41e85edb -->|imports| lib_utils_cn_b8743bb6
-    %% Omitted for readability: 83 nodes, 0 edges
+    components_ui_pricingtable_56ec5472 -->|imports| lib_utils_cn_b8743bb6
+    %% Omitted for readability: 92 nodes, 0 edges
     class package_dependencies_clsx_4bc09135 function;
-    class package_dependencies_hookform_resolvers_44db6972 ui;
-    class package_dependencies_lucide_react_17f0074f function;
     class clsx_ed67b7e7 function;
+    class package_dependencies_hookform_resolvers_44db6972 ui;
     class hookform_resolvers_b0335fd5 ui;
+    class package_dependencies_lucide_react_17f0074f function;
     class lucide_react_0d541e45 function;
     class package_dependencies_next_e23f1ebc function;
     class next_edee9402 function;
     class package_dependencies_postprocessing_5e172fbe function;
     class postprocessing_fb3cf847 function;
-    class package_dependencies_react_a04d7d7e function;
-    class react_6b810c90 function;
-    class package_dependencies_react_dom_87814871 function;
     class components_home_contactsection_41e85edb ui;
     class components_home_contactsection_contactsection_ded882bb ui;
+    class components_ui_pricingtable_56ec5472 ui;
+    class components_ui_pricingtable_pricingtable_4df015b4 ui;
     class app_fillmypipeline_page_8b55badf ui;
+    class app_pricing_page_2f3b6d2d ui;
     class components_ui_auditleadform_auditleadform_9565ba44 ui;
     class lib_utils_cn_b8743bb6 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
@@ -498,26 +501,28 @@ flowchart LR
       <tr><td><code>package.json</code></td><td>57 nodes</td></tr>
 <tr><td><code>tsconfig.json</code></td><td>29 nodes</td></tr>
 <tr><td><code>app/fillmypipeline/page.tsx</code></td><td>5 nodes</td></tr>
+<tr><td><code>app/pricing/page.tsx</code></td><td>5 nodes</td></tr>
 <tr><td><code>components/home/ContactSection.tsx</code></td><td>5 nodes</td></tr>
 <tr><td><code>components/ui/AuditLeadForm.tsx</code></td><td>4 nodes</td></tr>
-<tr><td><code>lib/utils.ts</code></td><td>1 nodes</td></tr>
+<tr><td><code>components/ui/PricingTable.tsx</code></td><td>3 nodes</td></tr>
+<tr><td><code>lib/types.ts</code></td><td>1 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x62, imports x26, extends x10, calls x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x68, imports x30, extends x10, calls x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 3. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">3. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around mainjs, docs, inspiration, amix, mostly in amix-threejs/js/main.js, CLAUDE.md. This section covers 39 nodes and 67 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around frontend, skillmd, excellence, threejs, mostly in skills/frontend-excellence/SKILL.md, amix-threejs/js/main.js, CLAUDE.md. This section covers 76 nodes and 103 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (39 nodes, 67 edges)
+    %% Section: CLI &amp; Skill Installers (76 nodes, 103 edges)
     docs_inspiration_amix_threejs_js_main_initgl_57c91c34("initGL()<br/><small>amix-threejs/js/main.js</small>")
     docs_inspiration_amix_threejs_js_main_buildworld_d853eab5("buildWorld()<br/><small>amix-threejs/js/main.js</small>")
     docs_inspiration_amix_threejs_js_main_buildcabin_31e197d0("buildCabinet()<br/><small>amix-threejs/js/main.js</small>")
@@ -560,7 +565,7 @@ flowchart LR
     docs_inspiration_amix_threejs_js_main_makesignte_2b096318 -->|calls| docs_inspiration_amix_threejs_js_main_drawsign_fb8b35ee
     docs_inspiration_amix_threejs_js_main_makesignte_2b096318 -->|calls| docs_inspiration_amix_threejs_js_main_makecanvas_7e78d112
     docs_inspiration_amix_threejs_js_main_makewindow_57f22509 -->|calls| docs_inspiration_amix_threejs_js_main_makecanvas_7e78d112
-    %% Omitted for readability: 21 nodes, 4 edges
+    %% Omitted for readability: 58 nodes, 4 edges
     class docs_inspiration_amix_threejs_js_main_initgl_57c91c34 function;
     class docs_inspiration_amix_threejs_js_main_buildworld_d853eab5 function;
     class docs_inspiration_amix_threejs_js_main_buildcabin_31e197d0 function;
@@ -602,243 +607,243 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>applyModeClass()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>SKILL.md</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>applyModeClass() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing SKILL.md.</td>
 </tr>
 <tr>
   <td>2</td>
-  <td><code>buildCabinet()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>makeCrtMaterial()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>makeGlowTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>makeMarqueeTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br>+2 more</td>
-  <td>buildCabinet() node in amix-threejs/js/main.js.</td>
+  <td><code>1. Customer experience and journey</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 1. Customer experience and journey.</td>
 </tr>
 <tr>
   <td>3</td>
-  <td><code>buildCamPoses()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
+  <td><code>2. Frontend design and art direction</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>buildCamPoses() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing 2. Frontend design and art direction.</td>
 </tr>
 <tr>
   <td>4</td>
-  <td><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>buildCabinet()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>drawSign()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>makeCanvasTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br>+3 more</td>
-  <td>buildWorld() node in amix-threejs/js/main.js.</td>
+  <td><code>3. UI visual systems</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 3. UI visual systems.</td>
 </tr>
 <tr>
   <td>5</td>
-  <td><code>collectGames()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
+  <td><code>4. Accessibility and interaction</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>collectGames() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing 4. Accessibility and interaction.</td>
 </tr>
 <tr>
   <td>6</td>
-  <td><code>drawSign()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>makeSignTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br>+1 more</td>
+  <td><code>5. Responsive and adaptive layout</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>drawSign() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing 5. Responsive and adaptive layout.</td>
 </tr>
 <tr>
   <td>7</td>
-  <td><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>startGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>buildCamPoses()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>collectGames()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br>+4 more</td>
-  <td>initGL() node in amix-threejs/js/main.js.</td>
+  <td><code>6. Motion and physics</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 6. Motion and physics.</td>
 </tr>
 <tr>
   <td>8</td>
-  <td><code>makeCanvasTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>makeGlowTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>makeMarqueeTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br>+3 more</td>
+  <td><code>7. Performance</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>makeCanvasTexture() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing 7. Performance.</td>
 </tr>
 <tr>
   <td>9</td>
-  <td><code>makeCrtMaterial()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildCabinet()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
+  <td><code>8. Visual and behavioral QA</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>makeCrtMaterial() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing 8. Visual and behavioral QA.</td>
 </tr>
 <tr>
   <td>10</td>
-  <td><code>makeGlowTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildCabinet()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>makeCanvasTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>makeGlowTexture() node in amix-threejs/js/main.js.</td>
+  <td><code>Anti-patterns</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Anti-patterns.</td>
 </tr>
 <tr>
   <td>11</td>
-  <td><code>makeMarqueeTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildCabinet()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>makeCanvasTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>makeMarqueeTexture() node in amix-threejs/js/main.js.</td>
+  <td><code>Art-direction rules</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Art-direction rules.</td>
 </tr>
 <tr>
   <td>12</td>
-  <td><code>makeSideArtTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildCabinet()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>makeCanvasTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>makeSideArtTexture() node in amix-threejs/js/main.js.</td>
+  <td><code>Audit questions</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Audit questions.</td>
 </tr>
 <tr>
   <td>13</td>
-  <td><code>makeSignTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Audit report format</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
-  <td><code>drawSign()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>makeCanvasTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>makeSignTexture() node in amix-threejs/js/main.js.</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Audit report format.</td>
 </tr>
 <tr>
   <td>14</td>
-  <td><code>makeWindowsTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>makeCanvasTexture()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>makeWindowsTexture() node in amix-threejs/js/main.js.</td>
+  <td><code>Color</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Color.</td>
 </tr>
 <tr>
   <td>15</td>
-  <td><code>measureKeyframes()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
+  <td><code>Composition principles</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>measureKeyframes() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Composition principles.</td>
 </tr>
 <tr>
   <td>16</td>
-  <td><code>neonColor()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>buildCabinet()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>buildWorld()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
+  <td><code>Container-query preference</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>neonColor() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Container-query preference.</td>
 </tr>
 <tr>
   <td>17</td>
-  <td><code>poseAtScroll()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>startGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>smoothstep()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>poseAtScroll() node in amix-threejs/js/main.js.</td>
+  <td><code>Content structure</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Content structure.</td>
 </tr>
 <tr>
   <td>18</td>
-  <td><code>smoothstep()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>poseAtScroll()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>tick()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
+  <td><code>Core Web Vitals</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>smoothstep() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Core Web Vitals.</td>
 </tr>
 <tr>
   <td>19</td>
-  <td><code>startGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Design read</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
-  <td><code>initGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>poseAtScroll()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>tick()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>startGL() node in amix-threejs/js/main.js.</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Design read.</td>
 </tr>
 <tr>
   <td>20</td>
-  <td><code>stopGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Final delivery gate</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>stopGL() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Final delivery gate.</td>
 </tr>
 <tr>
   <td>21</td>
-  <td><code>tick()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>startGL()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><code>drawSign()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small><br><code>smoothstep()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td>tick() node in amix-threejs/js/main.js.</td>
+  <td><code>Forms and asynchronous feedback</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Forms and asynchronous feedback.</td>
 </tr>
 <tr>
   <td>22</td>
-  <td><code>updateProgress()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Frontend Excellence</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>updateProgress() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Frontend Excellence.</td>
 </tr>
 <tr>
   <td>23</td>
-  <td><code>webglAvailable()</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Implementation rules</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>webglAvailable() node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Implementation rules.</td>
 </tr>
 <tr>
   <td>24</td>
-  <td><code>main.js</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-class">Module</span></td>
+  <td><code>Keyboard and focus checks</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>main.js node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Keyboard and focus checks.</td>
 </tr>
 <tr>
   <td>25</td>
-  <td><code>cabinets</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Layout checks</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>cabinets node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Layout checks.</td>
 </tr>
 <tr>
   <td>26</td>
-  <td><code>camPoses</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Motion and sensory checks</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>camPoses node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Motion and sensory checks.</td>
 </tr>
 <tr>
   <td>27</td>
-  <td><code>camState</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Motion decision</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>camState node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Motion decision.</td>
 </tr>
 <tr>
   <td>28</td>
-  <td><code>canvas</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Next.js and React checks</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>canvas node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Next.js and React checks.</td>
 </tr>
 <tr>
   <td>29</td>
-  <td><code>comingMats</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Repository-specific constraints</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>comingMats node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Repository-specific constraints.</td>
 </tr>
 <tr>
   <td>30</td>
-  <td><code>crtMats</code><br><small style="color:var(--muted)">amix-threejs/js/main.js</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Required journey map</code><br><small style="color:var(--muted)">skills/frontend-excellence/SKILL.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>crtMats node in amix-threejs/js/main.js.</td>
+  <td>Documentation node describing Required journey map.</td>
 </tr>
 </table>
 
@@ -847,13 +852,14 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>amix-threejs/js/main.js</code></td><td>37 nodes</td></tr>
+      <tr><td><code>skills/frontend-excellence/SKILL.md</code></td><td>37 nodes</td></tr>
+<tr><td><code>amix-threejs/js/main.js</code></td><td>37 nodes</td></tr>
 <tr><td><code>CLAUDE.md</code></td><td>2 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x37, calls x30. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x73, calls x30. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1072,21 +1078,23 @@ flowchart LR
 
 <!-- ====== 5. types.ts ====== -->
 <h2 id="types-ts">5. types.ts</h2>
-<p>types.ts groups implementation around pagetsx, components, app, home, mostly in lib/types.ts, app/page.tsx, app/pricing/page.tsx. This section covers 36 nodes and 53 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>types.ts groups implementation around app, components, home, pagetsx, mostly in lib/types.ts, app/page.tsx, app/service/page.tsx. This section covers 34 nodes and 49 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: types.ts (36 nodes, 53 edges)
+    %% Section: types.ts (34 nodes, 49 edges)
     subgraph types_ts_lib_types_ts_1e9eff86["lib/types.ts"]
         lib_types_service_81db8516("Service<br/><small>lib/types.ts</small>")
         lib_types_siteconfig_2d03e847("SiteConfig<br/><small>lib/types.ts</small>")
         lib_types_84a2a139("types.ts")
-        lib_types_pricingtier_f3904b0c("PricingTier<br/><small>lib/types.ts</small>")
+        lib_types_post_6441fd3b("Post<br/><small>lib/types.ts</small>")
+        lib_types_project_823fef19("Project<br/><small>lib/types.ts</small>")
     end
     subgraph types_ts_app_page_tsx_0ecb6237["app/page.tsx"]
         app_page_c77e992c("page.tsx")
         app_page_homepage_3744d325("HomePage()<br/><small>app/page.tsx</small>")
+        app_page_metadata_bc769b33("metadata<br/><small>app/page.tsx</small>")
     end
     subgraph types_ts_components_home_AboutSection_tsx_958c741f["components/home/AboutSection.tsx"]
         components_home_aboutsection_aboutsection_2bee2ef9("AboutSection()<br/><small>components/home/AboutSection.tsx</small>")
@@ -1104,12 +1112,8 @@ flowchart LR
         components_home_servicessection_3de9cc38("ServicesSection.tsx")
         components_home_servicessection_servicessection_ffb6e2de("ServicesSection()<br/><small>components/home/ServicesSection.tsx</small>")
     end
-    subgraph types_ts_components_ui_PricingTable_tsx_7a9502b1["components/ui/PricingTable.tsx"]
-        components_ui_pricingtable_56ec5472("PricingTable.tsx")
-        components_ui_pricingtable_pricingtable_4df015b4("PricingTable()<br/><small>components/ui/PricingTable.tsx</small>")
-    end
-    app_pricing_page_2f3b6d2d("page.tsx")
     app_service_page_c3155552("page.tsx")
+    app_sitemap_40cfcec7("sitemap.ts")
     app_page_c77e992c -->|imports| lib_types_service_81db8516
     app_page_c77e992c -->|imports| lib_types_siteconfig_2d03e847
     app_page_c77e992c -->|imports| components_home_herosection_herosection_ee6f86ba
@@ -1121,25 +1125,25 @@ flowchart LR
     app_page_c77e992c -->|imports| components_home_aboutsection_8db73010
     app_page_c77e992c -->|imports| components_home_servicessection_3de9cc38
     app_page_c77e992c -->|imports| components_home_artistsection_7ab1f355
-    app_pricing_page_2f3b6d2d -->|imports| lib_types_pricingtier_f3904b0c
-    app_pricing_page_2f3b6d2d -->|imports| components_ui_pricingtable_pricingtable_4df015b4
-    app_pricing_page_2f3b6d2d -->|imports| lib_types_84a2a139
-    app_pricing_page_2f3b6d2d -->|imports| components_ui_pricingtable_56ec5472
     app_service_page_c3155552 -->|imports| lib_types_service_81db8516
     app_service_page_c3155552 -->|imports| lib_types_84a2a139
+    app_sitemap_40cfcec7 -->|imports| lib_types_post_6441fd3b
+    app_sitemap_40cfcec7 -->|imports| lib_types_project_823fef19
+    app_sitemap_40cfcec7 -->|imports| lib_types_service_81db8516
+    app_sitemap_40cfcec7 -->|imports| lib_types_84a2a139
     components_home_herosection_4311589f -->|imports| lib_types_siteconfig_2d03e847
     components_home_herosection_4311589f -->|imports| lib_types_84a2a139
     components_home_servicessection_3de9cc38 -->|imports| lib_types_service_81db8516
     components_home_servicessection_3de9cc38 -->|imports| lib_types_84a2a139
-    components_ui_pricingtable_56ec5472 -->|imports| lib_types_pricingtier_f3904b0c
-    components_ui_pricingtable_56ec5472 -->|imports| lib_types_84a2a139
-    %% Omitted for readability: 18 nodes, 0 edges
+    %% Omitted for readability: 16 nodes, 0 edges
     class lib_types_service_81db8516 klass;
     class lib_types_siteconfig_2d03e847 klass;
     class lib_types_84a2a139 module;
-    class lib_types_pricingtier_f3904b0c klass;
+    class lib_types_post_6441fd3b klass;
+    class lib_types_project_823fef19 klass;
     class app_page_c77e992c ui;
     class app_page_homepage_3744d325 ui;
+    class app_page_metadata_bc769b33 ui;
     class components_home_aboutsection_aboutsection_2bee2ef9 ui;
     class components_home_aboutsection_8db73010 ui;
     class components_home_artistsection_artistsection_28f687a2 ui;
@@ -1148,10 +1152,8 @@ flowchart LR
     class components_home_herosection_herosection_ee6f86ba ui;
     class components_home_servicessection_3de9cc38 async;
     class components_home_servicessection_servicessection_ffb6e2de async;
-    class components_ui_pricingtable_56ec5472 ui;
-    class components_ui_pricingtable_pricingtable_4df015b4 ui;
-    class app_pricing_page_2f3b6d2d ui;
     class app_service_page_c3155552 ui;
+    class app_sitemap_40cfcec7 module;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1191,14 +1193,6 @@ flowchart LR
 </tr>
 <tr>
   <td>3</td>
-  <td><code>PricingTableProps</code><br><small style="color:var(--muted)">components/ui/PricingTable.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>PricingTableProps node in components/ui/PricingTable.tsx.</td>
-</tr>
-<tr>
-  <td>4</td>
   <td><code>Metric</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
@@ -1206,18 +1200,26 @@ flowchart LR
   <td>Metric node in lib/types.ts.</td>
 </tr>
 <tr>
-  <td>5</td>
-  <td><code>PricingTier</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
+  <td>4</td>
+  <td><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
   <td><span class="tag tag-class">Class</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small><br><code>PricingTable.tsx</code><br><small style="color:var(--muted)">components/ui/PricingTable.tsx</small></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/blog/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small><br><code>sitemap.ts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
   <td>No direct outbound edge</td>
-  <td>PricingTier node in lib/types.ts.</td>
+  <td>Post node in lib/types.ts.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>Project</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/project/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small><br><code>sitemap.ts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
+  <td>No direct outbound edge</td>
+  <td>Project node in lib/types.ts.</td>
 </tr>
 <tr>
   <td>6</td>
   <td><code>Service</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
   <td><span class="tag tag-class">Class</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/service/page.tsx</small><br>+2 more</td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/service/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/page.tsx</small><br>+2 more</td>
   <td>No direct outbound edge</td>
   <td>Service node in lib/types.ts.</td>
 </tr>
@@ -1239,7 +1241,7 @@ flowchart LR
 </tr>
 <tr>
   <td>9</td>
-  <td><code>PricingPage()</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small></td>
+  <td><code>ServicesIndexPage()</code><br><small style="color:var(--muted)">app/service/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
@@ -1247,11 +1249,11 @@ flowchart LR
 </tr>
 <tr>
   <td>10</td>
-  <td><code>ServicesIndexPage()</code><br><small style="color:var(--muted)">app/service/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>sitemap()</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Organizes documentation pages, navigation, or content lookup.</td>
+  <td>sitemap() node in app/sitemap.ts.</td>
 </tr>
 <tr>
   <td>11</td>
@@ -1287,14 +1289,6 @@ flowchart LR
 </tr>
 <tr>
   <td>15</td>
-  <td><code>PricingTable()</code><br><small style="color:var(--muted)">components/ui/PricingTable.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small></td>
-  <td><code>cn()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
-  <td>PricingTable() node in components/ui/PricingTable.tsx.</td>
-</tr>
-<tr>
-  <td>16</td>
   <td><code>app/page.tsx</code><br><small style="color:var(--muted)">app/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1302,7 +1296,7 @@ flowchart LR
   <td>Module file in app/page.tsx.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>16</td>
   <td><code>metadata</code><br><small style="color:var(--muted)">app/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1310,7 +1304,7 @@ flowchart LR
   <td>metadata node in app/page.tsx.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>17</td>
   <td><code>services</code><br><small style="color:var(--muted)">app/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1318,7 +1312,7 @@ flowchart LR
   <td>services node in app/page.tsx.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>18</td>
   <td><code>siteConfig</code><br><small style="color:var(--muted)">app/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1326,39 +1320,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>20</td>
-  <td><code>pricing/page.tsx</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>PricingTable()</code><br><small style="color:var(--muted)">components/ui/PricingTable.tsx</small><br><code>PricingTable.tsx</code><br><small style="color:var(--muted)">components/ui/PricingTable.tsx</small><br><code>PricingTier</code><br><small style="color:var(--muted)">lib/types.ts</small><br>+1 more</td>
-  <td>Module file in app/pricing/page.tsx.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>FAQS</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>FAQS node in app/pricing/page.tsx.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>metadata</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>metadata node in app/pricing/page.tsx.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>pricingTiers</code><br><small style="color:var(--muted)">app/pricing/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>pricingTiers node in app/pricing/page.tsx.</td>
-</tr>
-<tr>
-  <td>24</td>
+  <td>19</td>
   <td><code>service/page.tsx</code><br><small style="color:var(--muted)">app/service/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1366,7 +1328,7 @@ flowchart LR
   <td>Module file in app/service/page.tsx.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>20</td>
   <td><code>ICONS</code><br><small style="color:var(--muted)">app/service/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1374,7 +1336,7 @@ flowchart LR
   <td>ICONS node in app/service/page.tsx.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>21</td>
   <td><code>metadata</code><br><small style="color:var(--muted)">app/service/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1382,7 +1344,7 @@ flowchart LR
   <td>metadata node in app/service/page.tsx.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>22</td>
   <td><code>services</code><br><small style="color:var(--muted)">app/service/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1390,7 +1352,39 @@ flowchart LR
   <td>services node in app/service/page.tsx.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>23</td>
+  <td><code>sitemap.ts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>Project</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>Service</code><br><small style="color:var(--muted)">lib/types.ts</small><br>+1 more</td>
+  <td>Module file in app/sitemap.ts.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>posts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>posts node in app/sitemap.ts.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>projects</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>projects node in app/sitemap.ts.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>services</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>services node in app/sitemap.ts.</td>
+</tr>
+<tr>
+  <td>27</td>
   <td><code>AboutSection.tsx</code><br><small style="color:var(--muted)">components/home/AboutSection.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>page.tsx</code><br><small style="color:var(--muted)">app/page.tsx</small></td>
@@ -1398,7 +1392,7 @@ flowchart LR
   <td>Module file in components/home/AboutSection.tsx.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>28</td>
   <td><code>PILLARS</code><br><small style="color:var(--muted)">components/home/AboutSection.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1406,12 +1400,20 @@ flowchart LR
   <td>PILLARS node in components/home/AboutSection.tsx.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>29</td>
   <td><code>ArtistSection.tsx</code><br><small style="color:var(--muted)">components/home/ArtistSection.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>page.tsx</code><br><small style="color:var(--muted)">app/page.tsx</small></td>
   <td>No direct outbound edge</td>
   <td>Module file in components/home/ArtistSection.tsx.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>ARTISTS</code><br><small style="color:var(--muted)">components/home/ArtistSection.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>ARTISTS node in components/home/ArtistSection.tsx.</td>
 </tr>
 </table>
 
@@ -1420,10 +1422,10 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>app/page.tsx</code></td><td>5 nodes</td></tr>
-<tr><td><code>app/pricing/page.tsx</code></td><td>5 nodes</td></tr>
+      <tr><td><code>lib/types.ts</code></td><td>6 nodes</td></tr>
+<tr><td><code>app/page.tsx</code></td><td>5 nodes</td></tr>
 <tr><td><code>app/service/page.tsx</code></td><td>5 nodes</td></tr>
-<tr><td><code>lib/types.ts</code></td><td>5 nodes</td></tr>
+<tr><td><code>app/sitemap.ts</code></td><td>5 nodes</td></tr>
 <tr><td><code>components/home/ServicesSection.tsx</code></td><td>4 nodes</td></tr>
 <tr><td><code>components/home/AboutSection.tsx</code></td><td>3 nodes</td></tr>
 <tr><td><code>components/home/ArtistSection.tsx</code></td><td>3 nodes</td></tr>
@@ -1432,26 +1434,24 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x27, imports x12, imports x11, references x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x26, imports x12, imports x9, references x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 6. utils.ts ====== -->
 <h2 id="utils-ts">6. utils.ts</h2>
-<p>utils.ts groups implementation around pagetsx, app, slug, project, mostly in service/[slug]/page.tsx, project/[slug]/page.tsx, app/project/page.tsx. This section covers 23 nodes and 30 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>utils.ts groups implementation around pagetsx, app, slug, blog, mostly in service/[slug]/page.tsx, blog/[slug]/page.tsx, project/[slug]/page.tsx. This section covers 33 nodes and 43 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: utils.ts (23 nodes, 30 edges)
-    subgraph utils_ts_project_slug_page_tsx_17d65494["project/[slug]/page.tsx"]
-        app_project_slug_page_e1ab119d("page.tsx")
-        app_project_slug_page_projectdetailpage_796f46a1("ProjectDetailPage()<br/><small>project/[slug]/page.tsx</small>")
-        app_project_slug_page_projectpageprops_0faef27e("ProjectPageProps<br/><small>project/[slug]/page.tsx</small>")
-        app_project_slug_page_generatemetadata_0fd5d957("generateMetadata()<br/><small>project/[slug]/page.tsx</small>")
-        app_project_slug_page_generatestaticparams_0fe760ff("generateStaticParams()<br/><small>project/[slug]/page.tsx</small>")
-        app_project_slug_page_projects_7ca53a54("projects<br/><small>project/[slug]/page.tsx</small>")
+    %% Section: utils.ts (33 nodes, 43 edges)
+    subgraph utils_ts_app_blog_page_tsx_e2613088["app/blog/page.tsx"]
+        app_blog_page_6bbe2be6("page.tsx")
+        app_blog_page_blogindexpage_5c9b9325("BlogIndexPage()<br/><small>app/blog/page.tsx</small>")
+        app_blog_page_metadata_7dd0d07a("metadata<br/><small>app/blog/page.tsx</small>")
+        app_blog_page_posts_7686534d("posts<br/><small>app/blog/page.tsx</small>")
     end
     subgraph utils_ts_app_project_page_tsx_4883a8f7["app/project/page.tsx"]
         app_project_page_c0e33bd2("page.tsx")
@@ -1459,50 +1459,56 @@ flowchart LR
         app_project_page_metadata_da987010("metadata<br/><small>app/project/page.tsx</small>")
         app_project_page_projects_e7530e40("projects<br/><small>app/project/page.tsx</small>")
     end
-    subgraph utils_ts_components_ui_ImageGallery_tsx_f2d0f738["components/ui/ImageGallery.tsx"]
-        components_ui_imagegallery_c4e878da("ImageGallery.tsx")
-        components_ui_imagegallery_imagegallery_596add1c("ImageGallery()<br/><small>components/ui/ImageGallery.tsx</small>")
-        components_ui_imagegallery_imagegalleryprops_c8d5f1ec("ImageGalleryProps<br/><small>components/ui/ImageGallery.tsx</small>")
+    subgraph utils_ts_blog_slug_page_tsx_4213ef4d["blog/[slug]/page.tsx"]
+        app_blog_slug_page_67a87133("page.tsx")
+        app_blog_slug_page_blogpostpage_895f867e("BlogPostPage()<br/><small>blog/[slug]/page.tsx</small>")
+        app_blog_slug_page_postpageprops_482e2de5("PostPageProps<br/><small>blog/[slug]/page.tsx</small>")
     end
     subgraph utils_ts_lib_utils_ts_20f9d706["lib/utils.ts"]
+        lib_utils_formatdate_f6b8182a("formatDate()<br/><small>lib/utils.ts</small>")
         lib_utils_resolveimagepath_13adc8a5("resolveImagePath()<br/><small>lib/utils.ts</small>")
         lib_utils_ee1a3a1b("utils.ts")
     end
-    subgraph utils_ts_service_slug_page_tsx_3fcb939b["service/[slug]/page.tsx"]
-        app_service_slug_page_ca666a0d("page.tsx")
-        app_service_slug_page_icons_fc745546("ICONS<br/><small>service/[slug]/page.tsx</small>")
+    subgraph utils_ts_components_ui_ImageGallery_tsx_f2d0f738["components/ui/ImageGallery.tsx"]
+        components_ui_imagegallery_c4e878da("ImageGallery.tsx")
+        components_ui_imagegallery_imagegallery_596add1c("ImageGallery()<br/><small>components/ui/ImageGallery.tsx</small>")
     end
-    lib_types_project_823fef19("Project<br/><small>lib/types.ts</small>")
+    app_project_slug_page_e1ab119d("page.tsx")
+    app_service_slug_page_ca666a0d("page.tsx")
+    app_blog_page_blogindexpage_5c9b9325 -->|calls| lib_utils_formatdate_f6b8182a
+    app_blog_slug_page_blogpostpage_895f867e -->|calls| lib_utils_formatdate_f6b8182a
     app_project_page_projectsindexpage_0ffedce1 -->|calls| lib_utils_resolveimagepath_13adc8a5
-    app_project_page_c0e33bd2 -->|imports| lib_types_project_823fef19
+    app_blog_page_6bbe2be6 -->|imports| lib_utils_formatdate_f6b8182a
+    app_blog_page_6bbe2be6 -->|imports| lib_utils_ee1a3a1b
+    app_blog_slug_page_67a87133 -->|imports| lib_utils_formatdate_f6b8182a
+    app_blog_slug_page_67a87133 -->|imports| lib_utils_ee1a3a1b
     app_project_page_c0e33bd2 -->|imports| lib_utils_resolveimagepath_13adc8a5
     app_project_page_c0e33bd2 -->|imports| lib_utils_ee1a3a1b
-    app_project_slug_page_e1ab119d -->|imports| lib_types_project_823fef19
     app_project_slug_page_e1ab119d -->|imports| components_ui_imagegallery_imagegallery_596add1c
     app_project_slug_page_e1ab119d -->|imports| components_ui_imagegallery_c4e878da
     app_service_slug_page_ca666a0d -->|imports| lib_utils_resolveimagepath_13adc8a5
     app_service_slug_page_ca666a0d -->|imports| lib_utils_ee1a3a1b
     components_ui_imagegallery_c4e878da -->|imports| lib_utils_resolveimagepath_13adc8a5
     components_ui_imagegallery_c4e878da -->|imports| lib_utils_ee1a3a1b
-    %% Omitted for readability: 5 nodes, 0 edges
-    class app_project_slug_page_e1ab119d ui;
-    class app_project_slug_page_projectdetailpage_796f46a1 ui;
-    class app_project_slug_page_projectpageprops_0faef27e ui;
-    class app_project_slug_page_generatemetadata_0fd5d957 ui;
-    class app_project_slug_page_generatestaticparams_0fe760ff ui;
-    class app_project_slug_page_projects_7ca53a54 ui;
+    %% Omitted for readability: 15 nodes, 0 edges
+    class app_blog_page_6bbe2be6 ui;
+    class app_blog_page_blogindexpage_5c9b9325 ui;
+    class app_blog_page_metadata_7dd0d07a ui;
+    class app_blog_page_posts_7686534d ui;
     class app_project_page_c0e33bd2 ui;
     class app_project_page_projectsindexpage_0ffedce1 ui;
     class app_project_page_metadata_da987010 ui;
     class app_project_page_projects_e7530e40 ui;
-    class components_ui_imagegallery_c4e878da ui;
-    class components_ui_imagegallery_imagegallery_596add1c ui;
-    class components_ui_imagegallery_imagegalleryprops_c8d5f1ec ui;
+    class app_blog_slug_page_67a87133 ui;
+    class app_blog_slug_page_blogpostpage_895f867e ui;
+    class app_blog_slug_page_postpageprops_482e2de5 ui;
+    class lib_utils_formatdate_f6b8182a function;
     class lib_utils_resolveimagepath_13adc8a5 function;
     class lib_utils_ee1a3a1b module;
+    class components_ui_imagegallery_c4e878da ui;
+    class components_ui_imagegallery_imagegallery_596add1c ui;
+    class app_project_slug_page_e1ab119d ui;
     class app_service_slug_page_ca666a0d ui;
-    class app_service_slug_page_icons_fc745546 ui;
-    class lib_types_project_823fef19 klass;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1526,7 +1532,7 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>ProjectPageProps</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
+  <td><code>PostPageProps</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
@@ -1534,7 +1540,7 @@ flowchart LR
 </tr>
 <tr>
   <td>2</td>
-  <td><code>ServicePageProps</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
+  <td><code>ProjectPageProps</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
@@ -1542,6 +1548,14 @@ flowchart LR
 </tr>
 <tr>
   <td>3</td>
+  <td><code>ServicePageProps</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>4</td>
   <td><code>ImageGalleryProps</code><br><small style="color:var(--muted)">components/ui/ImageGallery.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1549,15 +1563,39 @@ flowchart LR
   <td>ImageGalleryProps node in components/ui/ImageGallery.tsx.</td>
 </tr>
 <tr>
-  <td>4</td>
-  <td><code>Project</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/project/page.tsx</small><br><code>sitemap.ts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
-  <td>No direct outbound edge</td>
-  <td>Project node in lib/types.ts.</td>
+  <td>5</td>
+  <td><code>BlogIndexPage()</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>6</td>
+  <td><code>BlogPostPage()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>generateMetadata()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>generateMetadata() node in blog/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>generateStaticParams()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Verifies imports, entry points, or version behavior.</td>
+</tr>
+<tr>
+  <td>9</td>
   <td><code>ProjectsIndexPage()</code><br><small style="color:var(--muted)">app/project/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1565,7 +1603,7 @@ flowchart LR
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>10</td>
   <td><code>generateMetadata()</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1573,7 +1611,7 @@ flowchart LR
   <td>generateMetadata() node in project/[slug]/page.tsx.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>11</td>
   <td><code>generateStaticParams()</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1581,7 +1619,7 @@ flowchart LR
   <td>Verifies imports, entry points, or version behavior.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>12</td>
   <td><code>ProjectDetailPage()</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1589,7 +1627,7 @@ flowchart LR
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>13</td>
   <td><code>generateMetadata()</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1597,7 +1635,7 @@ flowchart LR
   <td>generateMetadata() node in service/[slug]/page.tsx.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>14</td>
   <td><code>generateStaticParams()</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1605,7 +1643,7 @@ flowchart LR
   <td>Verifies imports, entry points, or version behavior.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>15</td>
   <td><code>ServiceDetailPage()</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1613,7 +1651,7 @@ flowchart LR
   <td>Organizes documentation pages, navigation, or content lookup.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>16</td>
   <td><code>ImageGallery()</code><br><small style="color:var(--muted)">components/ui/ImageGallery.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>page.tsx</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
@@ -1621,15 +1659,63 @@ flowchart LR
   <td>ImageGallery() node in components/ui/ImageGallery.tsx.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>17</td>
+  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BlogIndexPage()</code><br><small style="color:var(--muted)">app/blog/page.tsx</small><br><code>BlogPostPage()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/blog/page.tsx</small><br>+1 more</td>
+  <td>No direct outbound edge</td>
+  <td>formatDate() node in lib/utils.ts.</td>
+</tr>
+<tr>
+  <td>18</td>
   <td><code>resolveImagePath()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
   <td><span class="tag tag-func">Function</span></td>
-  <td><code>ImageGallery()</code><br><small style="color:var(--muted)">components/ui/ImageGallery.tsx</small><br><code>ImageGallery.tsx</code><br><small style="color:var(--muted)">components/ui/ImageGallery.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small><br>+3 more</td>
+  <td><code>ImageGallery()</code><br><small style="color:var(--muted)">components/ui/ImageGallery.tsx</small><br><code>ImageGallery.tsx</code><br><small style="color:var(--muted)">components/ui/ImageGallery.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/project/page.tsx</small><br>+3 more</td>
   <td>No direct outbound edge</td>
   <td>resolveImagePath() node in lib/utils.ts.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>19</td>
+  <td><code>blog/page.tsx</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small><br><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>types.ts</code><br><small style="color:var(--muted)">lib/types.ts</small><br>+1 more</td>
+  <td>Module file in app/blog/page.tsx.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>metadata</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>metadata node in app/blog/page.tsx.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>posts</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>posts node in app/blog/page.tsx.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>blog/[slug]/page.tsx</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small><br><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>types.ts</code><br><small style="color:var(--muted)">lib/types.ts</small><br>+1 more</td>
+  <td>Module file in blog/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>posts</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>posts node in blog/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>24</td>
   <td><code>project/page.tsx</code><br><small style="color:var(--muted)">app/project/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1637,7 +1723,7 @@ flowchart LR
   <td>Module file in app/project/page.tsx.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>25</td>
   <td><code>metadata</code><br><small style="color:var(--muted)">app/project/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1645,7 +1731,7 @@ flowchart LR
   <td>metadata node in app/project/page.tsx.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>26</td>
   <td><code>projects</code><br><small style="color:var(--muted)">app/project/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1653,7 +1739,7 @@ flowchart LR
   <td>projects node in app/project/page.tsx.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>27</td>
   <td><code>project/[slug]/page.tsx</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1661,7 +1747,7 @@ flowchart LR
   <td>Module file in project/[slug]/page.tsx.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>28</td>
   <td><code>projects</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1669,7 +1755,7 @@ flowchart LR
   <td>projects node in project/[slug]/page.tsx.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>29</td>
   <td><code>service/[slug]/page.tsx</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1677,36 +1763,12 @@ flowchart LR
   <td>Module file in service/[slug]/page.tsx.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>30</td>
   <td><code>ICONS</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
   <td>ICONS node in service/[slug]/page.tsx.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>services</code><br><small style="color:var(--muted)">service/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>services node in service/[slug]/page.tsx.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>ImageGallery.tsx</code><br><small style="color:var(--muted)">components/ui/ImageGallery.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">project/[slug]/page.tsx</small></td>
-  <td><code>resolveImagePath()</code><br><small style="color:var(--muted)">lib/utils.ts</small><br><code>utils.ts</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
-  <td>Module file in components/ui/ImageGallery.tsx.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>utils.ts</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>AuditLeadForm.tsx</code><br><small style="color:var(--muted)">components/ui/AuditLeadForm.tsx</small><br><code>ContactSection.tsx</code><br><small style="color:var(--muted)">components/home/ContactSection.tsx</small><br><code>Header.tsx</code><br><small style="color:var(--muted)">components/layout/Header.tsx</small><br>+6 more</td>
-  <td>No direct outbound edge</td>
-  <td>Module file in lib/utils.ts.</td>
 </tr>
 </table>
 
@@ -1716,22 +1778,275 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>service/[slug]/page.tsx</code></td><td>7 nodes</td></tr>
+<tr><td><code>blog/[slug]/page.tsx</code></td><td>6 nodes</td></tr>
 <tr><td><code>project/[slug]/page.tsx</code></td><td>6 nodes</td></tr>
+<tr><td><code>app/blog/page.tsx</code></td><td>4 nodes</td></tr>
 <tr><td><code>app/project/page.tsx</code></td><td>4 nodes</td></tr>
 <tr><td><code>components/ui/ImageGallery.tsx</code></td><td>3 nodes</td></tr>
-<tr><td><code>lib/utils.ts</code></td><td>2 nodes</td></tr>
-<tr><td><code>lib/types.ts</code></td><td>1 nodes</td></tr>
+<tr><td><code>lib/utils.ts</code></td><td>3 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x17, imports x6, imports x4, indirect call x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x26, imports x6, imports x6, calls x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
-<!-- ====== 7. layout.tsx ====== -->
-<h2 id="layout-tsx">7. layout.tsx</h2>
+<!-- ====== 7. Next.js Migration Blueprint — thekeithhopkins.com ====== -->
+<h2 id="next-js-migration-blueprint-thekeithhopkins-com">7. Next.js Migration Blueprint — thekeithhopkins.com</h2>
+<p>Next.js Migration Blueprint — thekeithhopkins.com groups implementation around migration, nextjs, blueprintmd, phase, mostly in NEXTJS_MIGRATION_BLUEPRINT.md. This section covers 19 nodes and 18 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Next.js Migration Blueprint — thekeithhopkins.com (19 nodes, 18 edges)
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5("Next.js Migration Blueprint — thekeithh...<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a("Phase 5 — Polish, QA &amp; Launch (CURRENT...<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_migration_phases_0247bbc7("Migration Phases<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_03fa3e81("NEXTJS MIGRATION BLUEPRINT.md<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_overview_0d5e892e("Overview<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_phase_1_scaffold_comp_7e47623a("✅ Phase 1 — Scaffold (COMPLETE)<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_5a_frontend_qa_fronte_2e744b48("5a — Frontend QA (frontend-excellence a...<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_5b_content_data_qa_de5976fc("5b — Content &amp; Data QA<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_5c_api_crm_integratio_03067956("5c — API &amp; CRM Integration Validation<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_5d_performance_27b6cfdf("5d — Performance<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_5e_deployment_dns_0799cc8f("5e — Deployment &amp; DNS<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_data_layer_type_defin_67b2e348("Data Layer — Type Definitions (lib/type...<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_key_notes_487a92c9("Key Notes<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_project_file_structur_505768b1("Project File Structure (actual as of 20...<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_route_mapping_matrix_3dd03895("Route Mapping Matrix<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_stack_ec87e833("Stack<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_phase_2_core_pages_co_86f33832("✅ Phase 2 — Core Pages (COMPLETE)<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_phase_3_interactive_f_c443be72("✅ Phase 3 — Interactive, Forms &amp; Three....<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
+    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5
+    nextjs_migration_blueprint_migration_phases_0247bbc7 -->|contains| nextjs_migration_blueprint_phase_1_scaffold_comp_7e47623a
+    nextjs_migration_blueprint_migration_phases_0247bbc7 -->|contains| nextjs_migration_blueprint_phase_2_core_pages_co_86f33832
+    nextjs_migration_blueprint_migration_phases_0247bbc7 -->|contains| nextjs_migration_blueprint_phase_3_interactive_f_c443be72
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 -->|contains| nextjs_migration_blueprint_data_layer_type_defin_67b2e348
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 -->|contains| nextjs_migration_blueprint_migration_phases_0247bbc7
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 -->|contains| nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 -->|contains| nextjs_migration_blueprint_key_notes_487a92c9
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 -->|contains| nextjs_migration_blueprint_route_mapping_matrix_3dd03895
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 -->|contains| nextjs_migration_blueprint_project_file_structur_505768b1
+    nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 -->|contains| nextjs_migration_blueprint_overview_0d5e892e
+    nextjs_migration_blueprint_overview_0d5e892e -->|contains| nextjs_migration_blueprint_stack_ec87e833
+    nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a -->|contains| nextjs_migration_blueprint_5a_frontend_qa_fronte_2e744b48
+    nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a -->|contains| nextjs_migration_blueprint_5b_content_data_qa_de5976fc
+    nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a -->|contains| nextjs_migration_blueprint_5c_api_crm_integratio_03067956
+    nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a -->|contains| nextjs_migration_blueprint_5d_performance_27b6cfdf
+    nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a -->|contains| nextjs_migration_blueprint_5e_deployment_dns_0799cc8f
+    %% Omitted for readability: 1 nodes, 0 edges
+    class nextjs_migration_blueprint_next_js_migration_blu_5d3bf0e5 concept;
+    class nextjs_migration_blueprint_phase_5_polish_qa_lau_c812505a concept;
+    class nextjs_migration_blueprint_migration_phases_0247bbc7 concept;
+    class nextjs_migration_blueprint_03fa3e81 concept;
+    class nextjs_migration_blueprint_overview_0d5e892e concept;
+    class nextjs_migration_blueprint_phase_1_scaffold_comp_7e47623a concept;
+    class nextjs_migration_blueprint_5a_frontend_qa_fronte_2e744b48 concept;
+    class nextjs_migration_blueprint_5b_content_data_qa_de5976fc concept;
+    class nextjs_migration_blueprint_5c_api_crm_integratio_03067956 concept;
+    class nextjs_migration_blueprint_5d_performance_27b6cfdf concept;
+    class nextjs_migration_blueprint_5e_deployment_dns_0799cc8f concept;
+    class nextjs_migration_blueprint_data_layer_type_defin_67b2e348 concept;
+    class nextjs_migration_blueprint_key_notes_487a92c9 concept;
+    class nextjs_migration_blueprint_project_file_structur_505768b1 concept;
+    class nextjs_migration_blueprint_route_mapping_matrix_3dd03895 concept;
+    class nextjs_migration_blueprint_stack_ec87e833 concept;
+    class nextjs_migration_blueprint_phase_2_core_pages_co_86f33832 concept;
+    class nextjs_migration_blueprint_phase_3_interactive_f_c443be72 concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>NEXTJS_MIGRATION_BLUEPRINT.md</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing NEXTJS_MIGRATION_BLUEPRINT.md.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>5a — Frontend QA (frontend-excellence audit)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5a — Frontend QA (frontend-excellence audit).</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>5b — Content &amp; Data QA</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5b — Content &amp; Data QA.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>5c — API &amp; CRM Integration Validation</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5c — API &amp; CRM Integration Validation.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>5d — Performance</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5d — Performance.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>5e — Deployment &amp; DNS</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing 5e — Deployment &amp; DNS.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>Data Layer — Type Definitions (lib/types.ts)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Data Layer — Type Definitions (lib/types.ts).</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>Key Notes</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Key Notes.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>Migration Phases</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Migration Phases.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>Next.js Migration Blueprint — thekeithhopkins.com</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Next.js Migration Blueprint — thekeithhopkins.com.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>Overview</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Overview.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>✅ Phase 1 — Scaffold (COMPLETE)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ✅ Phase 1 — Scaffold (COMPLETE).</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>✅ Phase 2 — Core Pages (COMPLETE)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ✅ Phase 2 — Core Pages (COMPLETE).</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>✅ Phase 3 — Interactive, Forms &amp; Three.js (COMPLETE)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ✅ Phase 3 — Interactive, Forms &amp; Three.js (COMPLETE).</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>✅ Phase 4 — SEO &amp; Infrastructure (COMPLETE)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing ✅ Phase 4 — SEO &amp; Infrastructure (COMPLETE).</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>Phase 5 — Polish, QA &amp; Launch (CURRENT / IN PROGRESS)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Phase 5 — Polish, QA &amp; Launch (CURRENT / IN PROGRESS).</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Project File Structure (actual as of 2026-09-15)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Project File Structure (actual as of 2026-09-15).</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>Route Mapping Matrix</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Route Mapping Matrix.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>Stack</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing Stack.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>NEXTJS_MIGRATION_BLUEPRINT.md</code></td><td>19 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x18. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 8. layout.tsx ====== -->
+<h2 id="layout-tsx">8. layout.tsx</h2>
 <p>layout.tsx groups implementation around components, layout, footertsx, layouttsx, mostly in components/layout/Footer.tsx, app/layout.tsx, components/layout/Header.tsx. This section covers 17 nodes and 21 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -1961,239 +2276,6 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 8. blog/[slug]/page.tsx ====== -->
-<h2 id="blog-slug-page-tsx">8. blog/[slug]/page.tsx</h2>
-<p>blog/[slug]/page.tsx groups implementation around app, blog, pagetsx, slug, mostly in blog/[slug]/page.tsx, app/sitemap.ts, app/blog/page.tsx. This section covers 17 nodes and 19 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: blog/[slug]/page.tsx (17 nodes, 19 edges)
-    subgraph blog_slug_page_tsx_blog_slug_page_tsx_b7041355["blog/[slug]/page.tsx"]
-        app_blog_slug_page_67a87133("page.tsx")
-        app_blog_slug_page_blogpostpage_895f867e("BlogPostPage()<br/><small>blog/[slug]/page.tsx</small>")
-        app_blog_slug_page_postpageprops_482e2de5("PostPageProps<br/><small>blog/[slug]/page.tsx</small>")
-        app_blog_slug_page_generatemetadata_a80bca6a("generateMetadata()<br/><small>blog/[slug]/page.tsx</small>")
-        app_blog_slug_page_generatestaticparams_1c6536b6("generateStaticParams()<br/><small>blog/[slug]/page.tsx</small>")
-        app_blog_slug_page_posts_8cb947a6("posts<br/><small>blog/[slug]/page.tsx</small>")
-    end
-    subgraph blog_slug_page_tsx_app_sitemap_ts_f0af8958["app/sitemap.ts"]
-        app_sitemap_40cfcec7("sitemap.ts")
-        app_sitemap_posts_72511a4c("posts<br/><small>app/sitemap.ts</small>")
-        app_sitemap_projects_6132c336("projects<br/><small>app/sitemap.ts</small>")
-        app_sitemap_services_98e759c9("services<br/><small>app/sitemap.ts</small>")
-        app_sitemap_sitemap_5c84152d("sitemap()<br/><small>app/sitemap.ts</small>")
-    end
-    subgraph blog_slug_page_tsx_app_blog_page_tsx_661e7ddf["app/blog/page.tsx"]
-        app_blog_page_6bbe2be6("page.tsx")
-        app_blog_page_blogindexpage_5c9b9325("BlogIndexPage()<br/><small>app/blog/page.tsx</small>")
-        app_blog_page_metadata_7dd0d07a("metadata<br/><small>app/blog/page.tsx</small>")
-        app_blog_page_posts_7686534d("posts<br/><small>app/blog/page.tsx</small>")
-    end
-    lib_types_post_6441fd3b("Post<br/><small>lib/types.ts</small>")
-    lib_utils_formatdate_f6b8182a("formatDate()<br/><small>lib/utils.ts</small>")
-    app_blog_page_blogindexpage_5c9b9325 -->|calls| lib_utils_formatdate_f6b8182a
-    app_blog_slug_page_blogpostpage_895f867e -->|calls| lib_utils_formatdate_f6b8182a
-    app_blog_page_6bbe2be6 -->|imports| lib_types_post_6441fd3b
-    app_blog_page_6bbe2be6 -->|imports| lib_utils_formatdate_f6b8182a
-    app_blog_slug_page_67a87133 -->|imports| lib_types_post_6441fd3b
-    app_blog_slug_page_67a87133 -->|imports| lib_utils_formatdate_f6b8182a
-    app_sitemap_40cfcec7 -->|imports| lib_types_post_6441fd3b
-    class app_blog_slug_page_67a87133 ui;
-    class app_blog_slug_page_blogpostpage_895f867e ui;
-    class app_blog_slug_page_postpageprops_482e2de5 ui;
-    class app_blog_slug_page_generatemetadata_a80bca6a ui;
-    class app_blog_slug_page_generatestaticparams_1c6536b6 ui;
-    class app_blog_slug_page_posts_8cb947a6 ui;
-    class app_sitemap_40cfcec7 module;
-    class app_sitemap_posts_72511a4c function;
-    class app_sitemap_projects_6132c336 function;
-    class app_sitemap_services_98e759c9 function;
-    class app_sitemap_sitemap_5c84152d function;
-    class app_blog_page_6bbe2be6 ui;
-    class app_blog_page_blogindexpage_5c9b9325 ui;
-    class app_blog_page_metadata_7dd0d07a ui;
-    class app_blog_page_posts_7686534d ui;
-    class lib_types_post_6441fd3b klass;
-    class lib_utils_formatdate_f6b8182a function;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>PostPageProps</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Organizes documentation pages, navigation, or content lookup.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/blog/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small><br><code>sitemap.ts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
-  <td>No direct outbound edge</td>
-  <td>Post node in lib/types.ts.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>BlogIndexPage()</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
-  <td>Organizes documentation pages, navigation, or content lookup.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>BlogPostPage()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
-  <td>Organizes documentation pages, navigation, or content lookup.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>generateMetadata()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>generateMetadata() node in blog/[slug]/page.tsx.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>generateStaticParams()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Verifies imports, entry points, or version behavior.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>sitemap()</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>sitemap() node in app/sitemap.ts.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>BlogIndexPage()</code><br><small style="color:var(--muted)">app/blog/page.tsx</small><br><code>BlogPostPage()</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/blog/page.tsx</small><br>+1 more</td>
-  <td>No direct outbound edge</td>
-  <td>formatDate() node in lib/utils.ts.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>blog/page.tsx</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small><br><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>types.ts</code><br><small style="color:var(--muted)">lib/types.ts</small><br>+1 more</td>
-  <td>Module file in app/blog/page.tsx.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>metadata</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>metadata node in app/blog/page.tsx.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>posts</code><br><small style="color:var(--muted)">app/blog/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>posts node in app/blog/page.tsx.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>blog/[slug]/page.tsx</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>formatDate()</code><br><small style="color:var(--muted)">lib/utils.ts</small><br><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>types.ts</code><br><small style="color:var(--muted)">lib/types.ts</small><br>+1 more</td>
-  <td>Module file in blog/[slug]/page.tsx.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>posts</code><br><small style="color:var(--muted)">blog/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>posts node in blog/[slug]/page.tsx.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>sitemap.ts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>Post</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>Project</code><br><small style="color:var(--muted)">lib/types.ts</small><br><code>Service</code><br><small style="color:var(--muted)">lib/types.ts</small><br>+1 more</td>
-  <td>Module file in app/sitemap.ts.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>posts</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>posts node in app/sitemap.ts.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>projects</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>projects node in app/sitemap.ts.</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>services</code><br><small style="color:var(--muted)">app/sitemap.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>services node in app/sitemap.ts.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>blog/[slug]/page.tsx</code></td><td>6 nodes</td></tr>
-<tr><td><code>app/sitemap.ts</code></td><td>5 nodes</td></tr>
-<tr><td><code>app/blog/page.tsx</code></td><td>4 nodes</td></tr>
-<tr><td><code>lib/types.ts</code></td><td>1 nodes</td></tr>
-<tr><td><code>lib/utils.ts</code></td><td>1 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x12, imports x5, calls x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
 <!-- ====== 9. AMIX Three.js Design & Architecture Analysis ====== -->
 <h2 id="amix-three-js-design-architecture-analysis">9. AMIX Three.js Design &amp; Architecture Analysis</h2>
 <p>AMIX Three.js Design &amp; Architecture Analysis groups implementation around docs, design, threejs, analysismd, mostly in inspiration/amix-threejs/DESIGN_ANALYSIS.md, docs/README.md. This section covers 14 nodes and 13 internal edges; the diagram shows only representative relationships to stay readable.</p>
@@ -2398,196 +2480,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 10. NEXTJS_MIGRATION_BLUEPRINT.md ====== -->
-<h2 id="nextjs-migration-blueprint-md">10. NEXTJS_MIGRATION_BLUEPRINT.md</h2>
-<p>NEXTJS_MIGRATION_BLUEPRINT.md groups implementation around migration, nextjs, blueprintmd, phase, mostly in NEXTJS_MIGRATION_BLUEPRINT.md. This section covers 13 nodes and 12 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: NEXTJS_MIGRATION_BLUEPRINT.md (13 nodes, 12 edges)
-    nextjs_migration_blueprint_03fa3e81("NEXTJS MIGRATION BLUEPRINT.md<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_migration_phases_0247bbc7("Migration Phases<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_overview_0d5e892e("Overview<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_quickstart_commands_da544acb("Quickstart Commands<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_key_notes_487a92c9("Key Notes<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_route_mapping_matrix_3dd03895("Route Mapping Matrix<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_data_layer_type_defin_67b2e348("Data Layer — Type Definitions (lib/type...<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_phase_1_scaffold_day_8fa8019e("Phase 1 — Scaffold (Day 1)<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_phase_2_core_pages_da_9ad1208c("Phase 2 — Core Pages (Day 2-3)<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_phase_3_interactive_f_82101fcb("Phase 3 — Interactive &amp; Forms (Day 4)<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_phase_4_seo_deploy_da_894f13e0("Phase 4 — SEO &amp; Deploy (Day 5)<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_project_file_structur_b4139eae("Project File Structure<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_stack_ec87e833("Stack<br/><small>NEXTJS_MIGRATION_BLUEPRINT.md</small>")
-    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_quickstart_commands_da544acb
-    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_migration_phases_0247bbc7
-    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_key_notes_487a92c9
-    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_route_mapping_matrix_3dd03895
-    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_project_file_structur_b4139eae
-    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_overview_0d5e892e
-    nextjs_migration_blueprint_03fa3e81 -->|contains| nextjs_migration_blueprint_data_layer_type_defin_67b2e348
-    nextjs_migration_blueprint_migration_phases_0247bbc7 -->|contains| nextjs_migration_blueprint_phase_1_scaffold_day_8fa8019e
-    nextjs_migration_blueprint_migration_phases_0247bbc7 -->|contains| nextjs_migration_blueprint_phase_2_core_pages_da_9ad1208c
-    nextjs_migration_blueprint_migration_phases_0247bbc7 -->|contains| nextjs_migration_blueprint_phase_3_interactive_f_82101fcb
-    nextjs_migration_blueprint_migration_phases_0247bbc7 -->|contains| nextjs_migration_blueprint_phase_4_seo_deploy_da_894f13e0
-    nextjs_migration_blueprint_overview_0d5e892e -->|contains| nextjs_migration_blueprint_stack_ec87e833
-    class nextjs_migration_blueprint_03fa3e81 concept;
-    class nextjs_migration_blueprint_migration_phases_0247bbc7 concept;
-    class nextjs_migration_blueprint_overview_0d5e892e concept;
-    class nextjs_migration_blueprint_quickstart_commands_da544acb concept;
-    class nextjs_migration_blueprint_key_notes_487a92c9 concept;
-    class nextjs_migration_blueprint_route_mapping_matrix_3dd03895 concept;
-    class nextjs_migration_blueprint_data_layer_type_defin_67b2e348 concept;
-    class nextjs_migration_blueprint_phase_1_scaffold_day_8fa8019e concept;
-    class nextjs_migration_blueprint_phase_2_core_pages_da_9ad1208c concept;
-    class nextjs_migration_blueprint_phase_3_interactive_f_82101fcb concept;
-    class nextjs_migration_blueprint_phase_4_seo_deploy_da_894f13e0 concept;
-    class nextjs_migration_blueprint_project_file_structur_b4139eae concept;
-    class nextjs_migration_blueprint_stack_ec87e833 concept;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>NEXTJS_MIGRATION_BLUEPRINT.md</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing NEXTJS_MIGRATION_BLUEPRINT.md.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>Data Layer — Type Definitions (lib/types.ts)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Data Layer — Type Definitions (lib/types.ts).</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>Key Notes</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Key Notes.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>Migration Phases</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Migration Phases.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>Overview</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Overview.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>Phase 1 — Scaffold (Day 1)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Phase 1 — Scaffold (Day 1).</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>Phase 2 — Core Pages (Day 2-3)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Phase 2 — Core Pages (Day 2-3).</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>Phase 3 — Interactive &amp; Forms (Day 4)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Phase 3 — Interactive &amp; Forms (Day 4).</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>Phase 4 — SEO &amp; Deploy (Day 5)</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Phase 4 — SEO &amp; Deploy (Day 5).</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>Project File Structure</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Project File Structure.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>Quickstart Commands</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Quickstart Commands.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>Route Mapping Matrix</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Route Mapping Matrix.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>Stack</code><br><small style="color:var(--muted)">NEXTJS_MIGRATION_BLUEPRINT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Stack.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>NEXTJS_MIGRATION_BLUEPRINT.md</code></td><td>13 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x12. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 11. HeroCanvas.tsx ====== -->
-<h2 id="herocanvas-tsx">11. HeroCanvas.tsx</h2>
+<!-- ====== 10. HeroCanvas.tsx ====== -->
+<h2 id="herocanvas-tsx">10. HeroCanvas.tsx</h2>
 <p>HeroCanvas.tsx groups implementation around components, three, neongridtsx, particlefieldtsx, mostly in components/three/NeonGrid.tsx, components/three/ParticleField.tsx, components/three/HeroCanvas.tsx. This section covers 12 nodes and 14 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2771,8 +2665,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 12. opengraph-image.tsx ====== -->
-<h2 id="opengraph-image-tsx">12. opengraph-image.tsx</h2>
+<!-- ====== 11. opengraph-image.tsx ====== -->
+<h2 id="opengraph-image-tsx">11. opengraph-image.tsx</h2>
 <p>opengraph-image.tsx groups implementation around opengraph, imagetsx, app, image, mostly in app/opengraph-image.tsx. This section covers 6 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2882,8 +2776,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 13. README.md ====== -->
-<h2 id="readme-md">13. README.md</h2>
+<!-- ====== 12. README.md ====== -->
+<h2 id="readme-md">12. README.md</h2>
 <p>README.md groups implementation around readmemd, deploy, vercel, getting, mostly in README.md. This section covers 4 nodes and 3 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2971,8 +2865,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 14. This is NOT the Next.js you know ====== -->
-<h2 id="this-is-not-the-next-js-you-know">14. This is NOT the Next.js you know</h2>
+<!-- ====== 13. This is NOT the Next.js you know ====== -->
+<h2 id="this-is-not-the-next-js-you-know">13. This is NOT the Next.js you know</h2>
 <p>This is NOT the Next.js you know groups implementation around agentsmd, graphify, not, nextjs, mostly in AGENTS.md. This section covers 3 nodes and 2 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3049,8 +2943,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 15. rules/graphify.md ====== -->
-<h2 id="rules-graphify-md">15. rules/graphify.md</h2>
+<!-- ====== 14. rules/graphify.md ====== -->
+<h2 id="rules-graphify-md">14. rules/graphify.md</h2>
 <p>rules/graphify.md groups implementation around rules, graphifymd, agents, graphify, mostly in .agents/rules/graphify.md. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3116,49 +3010,19 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 16. Other ====== -->
-<h2 id="other">16. Other</h2>
-<p>Other groups implementation around workflows, graphifymd, eslintconfigmjs, nextconfigts, mostly in .agents/workflows/graphify.md, eslint.config.mjs, next.config.ts. This section covers 10 nodes and 5 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 15. workflows/graphify.md ====== -->
+<h2 id="workflows-graphify-md">15. workflows/graphify.md</h2>
+<p>workflows/graphify.md groups implementation around workflows, graphifymd, agents, workflow, mostly in .agents/workflows/graphify.md. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (10 nodes, 5 edges)
-    subgraph other_agents_workflows_graphify_md_fa0cc363[".agents/workflows/graphify.md"]
-        agents_workflows_graphify_08a1cc26("workflows/graphify.md")
-        agents_workflows_graphify_workflow_graphify_87f5fa2b("Workflow: graphify<br/><small>.agents/workflows/graphify.md</small>")
-    end
-    subgraph other_app_robots_ts_8dfd7fce["app/robots.ts"]
-        app_robots_888a1a82("robots.ts")
-        app_robots_robots_36dbe436("robots()<br/><small>app/robots.ts</small>")
-    end
-    subgraph other_eslint_config_mjs_2d8a3a4c["eslint.config.mjs"]
-        eslint_config_80901414("eslint.config.mjs")
-        eslint_config_eslintconfig_96927dc4("eslintConfig<br/><small>eslint.config.mjs</small>")
-    end
-    subgraph other_next_config_ts_1b204a5f["next.config.ts"]
-        next_config_531ff3ba("next.config.ts")
-        next_config_nextconfig_cf9503a0("nextConfig<br/><small>next.config.ts</small>")
-    end
-    subgraph other_postcss_config_mjs_8a50bb24["postcss.config.mjs"]
-        postcss_config_bfe60bb8("postcss.config.mjs")
-        postcss_config_config_b5a26879("config<br/><small>postcss.config.mjs</small>")
-    end
+    %% Section: workflows/graphify.md (2 nodes, 1 edges)
+    agents_workflows_graphify_08a1cc26("workflows/graphify.md")
+    agents_workflows_graphify_workflow_graphify_87f5fa2b("Workflow: graphify<br/><small>.agents/workflows/graphify.md</small>")
     agents_workflows_graphify_08a1cc26 -->|contains| agents_workflows_graphify_workflow_graphify_87f5fa2b
-    eslint_config_80901414 -->|contains| eslint_config_eslintconfig_96927dc4
-    next_config_531ff3ba -->|contains| next_config_nextconfig_cf9503a0
-    postcss_config_bfe60bb8 -->|contains| postcss_config_config_b5a26879
-    app_robots_888a1a82 -->|contains| app_robots_robots_36dbe436
     class agents_workflows_graphify_08a1cc26 concept;
     class agents_workflows_graphify_workflow_graphify_87f5fa2b concept;
-    class app_robots_888a1a82 module;
-    class app_robots_robots_36dbe436 function;
-    class eslint_config_80901414 function;
-    class eslint_config_eslintconfig_96927dc4 function;
-    class next_config_531ff3ba module;
-    class next_config_nextconfig_cf9503a0 function;
-    class postcss_config_bfe60bb8 function;
-    class postcss_config_config_b5a26879 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -3196,8 +3060,82 @@ flowchart LR
   <td>No direct outbound edge</td>
   <td>Documentation node describing Workflow: graphify.</td>
 </tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>.agents/workflows/graphify.md</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 16. Other ====== -->
+<h2 id="other">16. Other</h2>
+<p>Other groups implementation around eslintconfigmjs, nextconfigts, postcssconfigmjs, robotsts, mostly in eslint.config.mjs, next.config.ts, postcss.config.mjs. This section covers 8 nodes and 4 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Other (8 nodes, 4 edges)
+    subgraph other_app_robots_ts_8dfd7fce["app/robots.ts"]
+        app_robots_888a1a82("robots.ts")
+        app_robots_robots_36dbe436("robots()<br/><small>app/robots.ts</small>")
+    end
+    subgraph other_eslint_config_mjs_2d8a3a4c["eslint.config.mjs"]
+        eslint_config_80901414("eslint.config.mjs")
+        eslint_config_eslintconfig_96927dc4("eslintConfig<br/><small>eslint.config.mjs</small>")
+    end
+    subgraph other_next_config_ts_1b204a5f["next.config.ts"]
+        next_config_531ff3ba("next.config.ts")
+        next_config_nextconfig_cf9503a0("nextConfig<br/><small>next.config.ts</small>")
+    end
+    subgraph other_postcss_config_mjs_8a50bb24["postcss.config.mjs"]
+        postcss_config_bfe60bb8("postcss.config.mjs")
+        postcss_config_config_b5a26879("config<br/><small>postcss.config.mjs</small>")
+    end
+    eslint_config_80901414 -->|contains| eslint_config_eslintconfig_96927dc4
+    next_config_531ff3ba -->|contains| next_config_nextconfig_cf9503a0
+    postcss_config_bfe60bb8 -->|contains| postcss_config_config_b5a26879
+    app_robots_888a1a82 -->|contains| app_robots_robots_36dbe436
+    class app_robots_888a1a82 module;
+    class app_robots_robots_36dbe436 function;
+    class eslint_config_80901414 function;
+    class eslint_config_eslintconfig_96927dc4 function;
+    class next_config_531ff3ba module;
+    class next_config_nextconfig_cf9503a0 function;
+    class postcss_config_bfe60bb8 function;
+    class postcss_config_config_b5a26879 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
 <tr>
-  <td>3</td>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
   <td><code>eslint.config.mjs</code><br><small style="color:var(--muted)">eslint.config.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3205,7 +3143,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>2</td>
   <td><code>eslintConfig</code><br><small style="color:var(--muted)">eslint.config.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3213,7 +3151,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>3</td>
   <td><code>next.config.ts</code><br><small style="color:var(--muted)">next.config.ts</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -3221,7 +3159,7 @@ flowchart LR
   <td>Module file in next.config.ts.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>4</td>
   <td><code>nextConfig</code><br><small style="color:var(--muted)">next.config.ts</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3229,7 +3167,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>5</td>
   <td><code>postcss.config.mjs</code><br><small style="color:var(--muted)">postcss.config.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3237,7 +3175,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>6</td>
   <td><code>config</code><br><small style="color:var(--muted)">postcss.config.mjs</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3245,7 +3183,7 @@ flowchart LR
   <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>7</td>
   <td><code>robots()</code><br><small style="color:var(--muted)">app/robots.ts</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
@@ -3253,7 +3191,7 @@ flowchart LR
   <td>robots() node in app/robots.ts.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>8</td>
   <td><code>robots.ts</code><br><small style="color:var(--muted)">app/robots.ts</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td>External entry / no inbound edge</td>
@@ -3267,8 +3205,7 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>.agents/workflows/graphify.md</code></td><td>2 nodes</td></tr>
-<tr><td><code>app/robots.ts</code></td><td>2 nodes</td></tr>
+      <tr><td><code>app/robots.ts</code></td><td>2 nodes</td></tr>
 <tr><td><code>eslint.config.mjs</code></td><td>2 nodes</td></tr>
 <tr><td><code>next.config.ts</code></td><td>2 nodes</td></tr>
 <tr><td><code>postcss.config.mjs</code></td><td>2 nodes</td></tr>
@@ -3276,7 +3213,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3287,8 +3224,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>312</td></tr>
-      <tr><td>Edges</td><td>398</td></tr>
+      <tr><td>Nodes</td><td>355</td></tr>
+      <tr><td>Edges</td><td>440</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>24</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -3297,7 +3234,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>389</td></tr>
+      <tr><td>EXTRACTED</td><td>431</td></tr>
       <tr><td>INFERRED</td><td>9</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3306,7 +3243,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>thekeithhopkins-next — Architecture Documentation</p>
-  <p>Generated: 2026-09-15 02:45 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-09-15 09:52 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
