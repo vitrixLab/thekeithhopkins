@@ -39,7 +39,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
             key={idx}
             type="button"
             onClick={() => setSelectedIndex(idx)}
-            className="glass-card group relative aspect-square w-full overflow-hidden rounded-xl text-left focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="glass-card group relative aspect-square w-full overflow-hidden rounded-xl text-left focus:outline-none focus:ring-2 focus:ring-brand-500"
           >
             <Image
               src={src}
@@ -49,7 +49,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
             <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-500/20 text-amber-400 backdrop-blur-sm">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-500/20 text-brand-400 backdrop-blur-sm">
                 <Maximize2 className="h-5 w-5" />
               </span>
             </div>

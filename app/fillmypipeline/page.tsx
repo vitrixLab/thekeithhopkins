@@ -52,7 +52,7 @@ export default function FillMyPipelinePage() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-32 right-1/4 h-[500px] w-[500px] rounded-full opacity-15"
-          style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
         />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,7 @@ export default function FillMyPipelinePage() {
           <div className="mt-16 grid grid-cols-2 gap-6 border-y border-gray-800 py-10 lg:grid-cols-4">
             {STATS.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-display-md text-glow-gold font-bold text-amber-400">
+                <p className="text-display-md text-glow-gold font-bold text-brand-400">
                   {stat.value}
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-wider text-gray-400">
@@ -102,11 +102,11 @@ export default function FillMyPipelinePage() {
               <div className="space-y-6">
                 {AUDIT_STEPS.map(({ step, icon: Icon, title, description }) => (
                   <div key={step} className="glass-card flex gap-5 p-6">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-amber-500/10 text-amber-400 ring-1 ring-amber-500/20">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-brand-500/10 text-brand-400 ring-1 ring-brand-500/20">
                       <Icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <span className="font-mono text-xs font-bold text-amber-400">
+                      <span className="font-mono text-xs font-bold text-brand-400">
                         STEP {step}
                       </span>
                       <h3 className="mt-1 text-lg font-bold text-white">
@@ -120,8 +120,8 @@ export default function FillMyPipelinePage() {
                 ))}
               </div>
 
-              <div className="glass-card p-6 border-amber-500/30">
-                <div className="flex items-center gap-3 text-amber-400">
+              <div className="glass-card p-6 border-brand-500/30">
+                <div className="flex items-center gap-3 text-brand-400">
                   <ShieldCheck className="h-6 w-6" />
                   <h4 className="font-bold text-white">
                     Confidential &amp; Secure

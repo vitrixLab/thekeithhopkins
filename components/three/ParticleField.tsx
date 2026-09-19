@@ -15,7 +15,7 @@ export default function ParticleField({
   count = 800,
   spread = 20,
   depth = 20,
-  color = '#fbbf24',
+  color = '#e7bd44',
 }: ParticleFieldProps) {
   const meshRef = useRef<THREE.InstancedMesh>(null!);
   const timeRef = useRef(0);

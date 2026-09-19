@@ -57,7 +57,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 left-1/4 h-96 w-96 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
         />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -71,11 +71,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               Portfolio
             </Link>
             <ChevronRight className="h-3 w-3 text-gray-600" />
-            <span className="text-amber-400">{project.title}</span>
+            <span className="text-brand-400">{project.title}</span>
           </nav>
 
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-400">
               <Layers className="h-4 w-4" /> Commercial Venture Case Study
             </div>
             <h1 className="text-display-lg mt-4 text-white">
@@ -91,7 +91,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 {project.strategies.map((strat, i) => (
                   <span
                     key={i}
-                    className="flex items-center gap-1.5 rounded-md border border-amber-500/25 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300"
+                    className="flex items-center gap-1.5 rounded-md border border-brand-500/25 bg-brand-500/10 px-3 py-1 text-xs font-medium text-brand-300"
                   >
                     <Target className="h-3 w-3" /> {strat}
                   </span>
@@ -115,7 +115,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 <div className="space-y-6 text-base leading-relaxed text-gray-300">
                   {project.content_blocks && project.content_blocks.length > 0 ? (
                     project.content_blocks.map((block, idx) => (
-                      <p key={idx} className="border-l-2 border-amber-500/40 pl-4 text-gray-300">
+                      <p key={idx} className="border-l-2 border-brand-500/40 pl-4 text-gray-300">
                         {block}
                       </p>
                     ))
@@ -127,7 +127,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
               {/* Highlights Card */}
               <div className="glass-card p-8">
-                <h3 className="text-label-sm mb-4 text-amber-400">
+                <h3 className="text-label-sm mb-4 text-brand-400">
                   Key Strategic Outcomes
                 </h3>
                 <div className="grid gap-3 sm:grid-cols-2">
@@ -138,7 +138,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     'Operational Risk Audit & Control',
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-2.5 text-sm text-gray-300">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-400" />
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -188,7 +188,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </Link>
             <Link
               href={nextProject.nextjs_route}
-              className="flex items-center gap-1.5 text-sm font-semibold text-amber-400 hover:text-amber-300"
+              className="flex items-center gap-1.5 text-sm font-semibold text-brand-400 hover:text-brand-300"
             >
               Next Project: {nextProject.title} <ArrowRight className="h-4 w-4" />
             </Link>

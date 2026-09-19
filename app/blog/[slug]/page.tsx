@@ -56,13 +56,13 @@ export default async function BlogPostPage({ params }: PostPageProps) {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
         />
 
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="mb-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400 hover:text-amber-300"
+            className="mb-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-400 hover:text-brand-300"
           >
             <ArrowLeft className="h-4 w-4" /> Back to all articles
           </Link>
@@ -73,14 +73,14 @@ export default async function BlogPostPage({ params }: PostPageProps) {
 
           <div className="mt-6 flex flex-wrap items-center gap-6 border-t border-gray-800/80 pt-6 text-xs text-gray-400">
             <span className="flex items-center gap-1.5 text-gray-300">
-              <User className="h-4 w-4 text-amber-400" /> Keith Hopkins
+              <User className="h-4 w-4 text-brand-400" /> Keith Hopkins
             </span>
             <span className="flex items-center gap-1.5">
-              <Calendar className="h-4 w-4 text-amber-400" />
+              <Calendar className="h-4 w-4 text-brand-400" />
               {formatDate(post.date)}
             </span>
             <span className="flex items-center gap-1.5">
-              <Clock className="h-4 w-4 text-amber-400" /> 3 min read
+              <Clock className="h-4 w-4 text-brand-400" /> 3 min read
             </span>
           </div>
         </div>
@@ -107,18 +107,18 @@ export default async function BlogPostPage({ params }: PostPageProps) {
                   <Link
                     key={r.id}
                     href={r.nextjs_route}
-                    className="glass-card group p-6 transition-all hover:border-amber-500/40"
+                    className="glass-card group p-6 transition-all hover:border-brand-500/40"
                   >
-                    <span className="text-xs text-amber-400">
+                    <span className="text-xs text-brand-400">
                       {formatDate(r.date)}
                     </span>
-                    <h4 className="mt-2 text-lg font-bold text-white transition-colors group-hover:text-amber-300">
+                    <h4 className="mt-2 text-lg font-bold text-white transition-colors group-hover:text-brand-300">
                       {r.title}
                     </h4>
                     <p className="mt-2 line-clamp-2 text-xs text-gray-400">
                       {r.excerpt_html.replace(/<[^>]*>?/gm, '')}
                     </p>
-                    <span className="mt-4 flex items-center gap-1 text-xs font-semibold text-amber-400 transition-gap group-hover:gap-2">
+                    <span className="mt-4 flex items-center gap-1 text-xs font-semibold text-brand-400 transition-gap group-hover:gap-2">
                       Read <ArrowRight className="h-3.5 w-3.5" />
                     </span>
                   </Link>

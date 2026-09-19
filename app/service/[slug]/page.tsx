@@ -71,7 +71,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 left-1/3 h-96 w-96 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
         />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -85,13 +85,13 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               Services
             </Link>
             <ChevronRight className="h-3 w-3 text-gray-600" />
-            <span className="text-amber-400">{service.title}</span>
+            <span className="text-brand-400">{service.title}</span>
           </nav>
 
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-400 ring-1 ring-amber-500/20">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/10 text-brand-400 ring-1 ring-brand-500/20">
                   <Icon className="h-6 w-6" />
                 </div>
                 <span className="badge">Practice Area</span>
@@ -137,9 +137,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                     {service.details.map((detail, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-4 rounded-lg border border-gray-800/80 bg-surface-2/40 p-4 transition-colors hover:border-amber-500/30"
+                        className="flex items-start gap-4 rounded-lg border border-gray-800/80 bg-surface-2/40 p-4 transition-colors hover:border-brand-500/30"
                       >
-                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-400" />
+                        <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-400" />
                         <p className="text-sm leading-relaxed text-gray-300">
                           {detail}
                         </p>
@@ -159,7 +159,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                     {service.headings.map((heading, i) => (
                       <span
                         key={i}
-                        className="rounded-lg border border-amber-500/20 bg-amber-500/10 px-3.5 py-1.5 text-xs font-semibold text-amber-300"
+                        className="rounded-lg border border-amber-500/20 bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold text-brand-300"
                       >
                         {heading}
                       </span>
@@ -200,7 +200,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                       <li key={s.id}>
                         <Link
                           href={s.nextjs_route}
-                          className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-gray-300 transition-colors hover:bg-gray-800 hover:text-amber-400"
+                          className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-gray-300 transition-colors hover:bg-gray-800 hover:text-brand-400"
                         >
                           <span>{s.title}</span>
                           <ChevronRight className="h-4 w-4 text-gray-600" />

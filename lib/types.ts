@@ -56,11 +56,24 @@ export interface Metric {
   label: string;
 }
 
+export interface ContactInfo {
+  address: string;
+  email: string;
+  phone: string;
+  phone_display: string;
+  hours: string[];
+}
+
 export interface SiteConfig {
   brand_name: string;
   tagline: string;
   hero_title: string;
+  hero_subtitle: string;
+  about_bio: string;
   metrics: Metric[];
+  capabilities: { label: string; percent: number }[];
+  contact: ContactInfo;
+  socials: Record<string, string>;
   navigation: NavItem[];
   copyright: string;
 }

@@ -8,27 +8,27 @@ import { HelpCircle, ArrowRight } from 'lucide-react';
 const pricingTiers = pricingRaw as PricingTier[];
 
 export const metadata: Metadata = {
-  title: 'Pricing & Engagement Tiers',
+  title: 'Pricing',
   description:
-    'Transparent advisory and commercial consulting packages tailored for emerging talent, scaling brands, and corporate enterprises.',
+    'Transparent, all-inclusive packages across web, design, e-commerce, SEO, social, and animation — built to fit your goals and budget.',
 };
 
 const FAQS = [
   {
-    q: 'What is included in the monthly strategy sessions?',
-    a: 'Each strategy session is a focused 1-on-1 executive consultation covering your operational priorities, contract structures, commercial growth channels, or risk mitigation plans. You receive an actionable brief following each session.',
+    q: 'What do the Website Development packages include?',
+    a: 'Six tiers from Basic $249 one-time (1 page, 3 stock images, contact form) up to Corporate $3,949 one-time (unlimited pages, custom interactive build, analytics). Every tier includes W3C certified HTML, complete deployment, and 100% ownership rights.',
   },
   {
-    q: 'Can we customize an engagement package?',
-    a: 'Yes. While our standard tiers cover most client needs, our Corporate / Enterprise tier is tailored specifically to the scope, speed, and regulatory environment of your organization.',
+    q: 'How do Logo Design packages work?',
+    a: 'Five tiers from Startup $49 one-time (4 concepts, 2 revisions) to Premium $449 one-time (everything in Business plus custom illustration). All include 100% ownership and satisfaction guarantees on eligible packages.',
   },
   {
-    q: 'What is the commitment term for monthly retainers?',
-    a: 'Our advisory packages are typically structured on a 3-month or 6-month initial engagement to ensure measurable commercial results, transitioning to month-to-month thereafter with 30 days notice.',
+    q: 'What E-Commerce options are available?',
+    a: 'Six tiers from Basic $649 one-time (5 products) to Corporate $7,949 one-time (500+ products, parallax, analytics). Higher tiers add CMS, custom forms, lead capturing, and dedicated industry teams.',
   },
   {
-    q: 'How does Keith Hopkins assist with venture scaling?',
-    a: 'Keith brings direct operating experience across talent management, commercial operations, and strategic partnerships. We connect founders and executives directly with qualified venture partners and media channels.',
+    q: 'Are prices monthly or one-time?',
+    a: 'Website, logo, e-commerce, animation, and custom builds are one-time. SEO (from $4,499/mo), social media (from $350/mo), maintenance ($250/mo), and priority support ($180/mo) are monthly. All prices in USD; money-back guarantee applies to eligible packages.',
   },
 ];
 
@@ -40,17 +40,17 @@ export default function PricingPage() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
         />
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <span className="badge">Transparent Investment</span>
+          <span className="badge">Transparent Packages</span>
           <h1 className="text-display-lg mt-4 text-white">
-            Strategic Advisory{' '}
-            <span className="text-gradient-gold">Built For Growth</span>
+            Our{' '}
+            <span className="text-gradient-gold">Pricing Plans</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
-            Select an advisory tier aligned with your venture&apos;s current trajectory.
-            From initial strategy roadmaps to enterprise-grade commercial operations.
+            Clear, all-inclusive packages across web, design, e-commerce, SEO,
+            social media, and animation — built to fit your goals and budget.
           </p>
         </div>
       </section>
@@ -69,7 +69,7 @@ export default function PricingPage() {
             <span className="badge">Frequently Asked Questions</span>
             <h2 className="text-display-md mt-4 text-white">
               Questions About{' '}
-              <span className="text-gradient-amber">Engagements</span>
+              <span className="text-gradient-amber">Pricing</span>
             </h2>
             <p className="mt-2 text-sm text-gray-400">
               Everything you need to know about working with Keith Hopkins.
@@ -82,12 +82,12 @@ export default function PricingPage() {
                 key={faq.q}
                 className="glass-card group rounded-xl p-6 transition-all"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-white transition-colors group-hover:text-amber-400">
+                <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-white transition-colors group-hover:text-brand-400">
                   <span className="flex items-center gap-3">
-                    <HelpCircle className="h-5 w-5 text-amber-400/80" />
+                    <HelpCircle className="h-5 w-5 text-brand-400/80" />
                     {faq.q}
                   </span>
-                  <span className="text-amber-400 transition-transform duration-200 group-open:rotate-180">
+                  <span className="text-brand-400 transition-transform duration-200 group-open:rotate-180">
                     ▼
                   </span>
                 </summary>
@@ -101,14 +101,15 @@ export default function PricingPage() {
           {/* Bottom Consultation Banner */}
           <div className="glass-card mt-16 p-8 text-center sm:p-10">
             <h3 className="text-xl font-bold text-white">
-              Need a bespoke partnership or custom scope?
+              Need something custom? Let&apos;s talk.
             </h3>
             <p className="mx-auto mt-2 max-w-xl text-sm text-gray-400">
-              Schedule a 30-minute discovery consultation to discuss specific project deliverables, timelines, and commercial objectives.
+              All prices in USD. Money-back guarantee applies to eligible
+              packages — reach out and we&apos;ll scope the right fit.
             </p>
             <div className="mt-6">
               <Link href="/#contact" className="btn-primary inline-flex">
-                Schedule Discovery Call <ArrowRight className="h-4 w-4" />
+                Contact Us <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

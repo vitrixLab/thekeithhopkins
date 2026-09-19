@@ -23,8 +23,8 @@ export default function HomePage() {
       {/* ① Hero — Three.js animated canvas */}
       <HeroSection config={siteConfig} />
 
-      {/* ② About Keith — bio + expertise pillars */}
-      <AboutSection />
+      {/* ② About Keith — bio + capability bars (real % from live site) */}
+      <AboutSection config={siteConfig} />
 
       {/* ③ Services — glass-card grid from data */}
       <ServicesSection services={services} />
@@ -32,8 +32,8 @@ export default function HomePage() {
       {/* ④ Artist Roster — managed talent showcase */}
       <ArtistSection />
 
-      {/* ⑤ Partners bar + Contact form */}
-      <ContactSection />
+      {/* ⑤ Media appearances + Contact form (real live-site details) */}
+      <ContactSection config={siteConfig} />
     </>
   );
 }

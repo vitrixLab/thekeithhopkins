@@ -16,16 +16,20 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const PARTNERS = [
-  { name: 'NEWSMAX',       href: 'https://newsmax.com'       },
-  { name: 'FOX 5 Las Vegas', href: 'https://kvvu.com'       },
-  { name: 'FOX 35 Orlando', href: 'https://wofl.com'         },
-  { name: 'KUSI San Diego', href: 'https://kusi.com'         },
-  { name: 'Fill My Pipeline', href: '/fillmypipeline'        },
-  { name: 'Machine Base AI', href: '/machinebaseai'          },
+import type { SiteConfig } from '@/lib/types';
+
+/* Media appearances quoted from the live artist page (thekeithhopkins.com):
+   "public appearances on major TV networks like NEWSMAX, FOX 5 Las Vegas,
+    FOX 35 Orlando, and KUSI San Diego". Rendered as text badges, not
+   outbound links — no URLs invented. */
+const MEDIA_APPEARANCES = [
+  'NEWSMAX',
+  'FOX 5 Las Vegas',
+  'FOX 35 Orlando',
+  'KUSI San Diego',
 ];
 
-export default function ContactSection() {
+export default function ContactSection({ config }: { config: SiteConfig }) {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
@@ -62,27 +66,24 @@ export default function ContactSection() {
 
   return (
     <>
-      {/* ─── Partners Bar ──────────────────────────────────────────── */}
+      {/* ─── Media appearances bar (quoted from live artist page) ──────── */}
       <section
         id="partners"
-        aria-label="Media Partners"
+        aria-label="Media Appearances"
         className="border-y border-gray-800 bg-surface-1 py-10"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-gray-600">
-            As Seen In &amp; Partner Network
+            As Seen On
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
-            {PARTNERS.map(({ name, href }) => (
-              <a
+            {MEDIA_APPEARANCES.map((name) => (
+              <span
                 key={name}
-                href={href}
-                target={href.startsWith('http') ? '_blank' : undefined}
-                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="text-sm font-bold uppercase tracking-widest text-gray-500 transition-colors hover:text-amber-400"
+                className="text-sm font-bold uppercase tracking-widest text-gray-500"
               >
                 {name}
-              </a>
+              </span>
             ))}
           </div>
         </div>
@@ -96,32 +97,50 @@ export default function ContactSection() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-start gap-16 lg:grid-cols-2">
-            {/* Left — copy */}
+            {/* Left — copy with real contact details from live site */}
             <div>
-              <span className="badge">Get In Touch</span>
+              <span className="badge">Contact Us</span>
               <h2 className="text-display-lg mt-4 text-white">
-                Let&apos;s Build{' '}
-                <span className="text-gradient-gold">Something Together</span>
+                Have a project in mind?{' '}
+                <span className="text-gradient-gold">Let&apos;s discuss</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-gray-400">
-                Whether you&apos;re looking to develop talent, scale a venture,
-                or get an honest risk assessment — start with a conversation.
+                Reach out about services, products, or partnerships.
               </p>
 
               <ul className="mt-10 space-y-5 text-sm text-gray-400">
-                {[
-                  ['Response Time', 'Within 24 hours on business days'],
-                  ['Consultation', 'Free 30-min discovery call available'],
-                  ['Location', 'Serving clients nationwide & internationally'],
-                ].map(([label, val]) => (
-                  <li key={label} className="flex gap-3">
-                    <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
-                    <div>
-                      <span className="font-semibold text-white">{label}: </span>
-                      {val}
-                    </div>
-                  </li>
-                ))}
+                <li className="flex gap-3">
+                  <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-500" />
+                  <div>
+                    <span className="font-semibold text-white">Our Location: </span>
+                    {config.contact.address}
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-500" />
+                  <div>
+                    <span className="font-semibold text-white">Email Us: </span>
+                    <a href={`mailto:${config.contact.email}`} className="link-hover text-brand-400">
+                      {config.contact.email}
+                    </a>
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-500" />
+                  <div>
+                    <span className="font-semibold text-white">Call Us: </span>
+                    <a href={`tel:+1${config.contact.phone}`} className="link-hover text-brand-400">
+                      {config.contact.phone_display}
+                    </a>
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-500" />
+                  <div>
+                    <span className="font-semibold text-white">Working Hours: </span>
+                    {config.contact.hours.join(' · ')}
+                  </div>
+                </li>
               </ul>
             </div>
 
@@ -129,7 +148,7 @@ export default function ContactSection() {
             <div className="glass-card p-8">
               {submitted ? (
                 <div className="flex flex-col items-center gap-4 py-12 text-center">
-                  <CheckCircle className="h-14 w-14 text-amber-400" />
+                  <CheckCircle className="h-14 w-14 text-brand-400" />
                   <h3 className="text-xl font-bold text-white">
                     Message Received!
                   </h3>
@@ -172,7 +191,7 @@ export default function ContactSection() {
                         placeholder="Your name"
                         {...register('name')}
                         className={cn(
-                          'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                          'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                           errors.name
                             ? 'border-red-500/50'
                             : 'border-gray-700',
@@ -198,7 +217,7 @@ export default function ContactSection() {
                         placeholder="you@example.com"
                         {...register('email')}
                         className={cn(
-                          'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                          'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                           errors.email
                             ? 'border-red-500/50'
                             : 'border-gray-700',
@@ -226,7 +245,7 @@ export default function ContactSection() {
                       placeholder="How can Keith help?"
                       {...register('subject')}
                       className={cn(
-                        'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                        'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                         errors.subject
                           ? 'border-red-500/50'
                           : 'border-gray-700',
@@ -253,7 +272,7 @@ export default function ContactSection() {
                       placeholder="Tell us about your project, goals, or questions…"
                       {...register('message')}
                       className={cn(
-                        'w-full resize-none rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                        'w-full resize-none rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                         errors.message
                           ? 'border-red-500/50'
                           : 'border-gray-700',

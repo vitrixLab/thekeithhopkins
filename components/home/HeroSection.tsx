@@ -34,7 +34,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
         className="pointer-events-none absolute inset-0 z-10"
         style={{
           background:
-            'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, rgba(3,7,18,0.55) 60%, rgba(3,7,18,0.92) 100%)',
+            'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, rgba(25,10,12,0.55) 60%, rgba(25,10,12,0.92) 100%)',
         }}
       />
 
@@ -42,24 +42,24 @@ export default function HeroSection({ config }: HeroSectionProps) {
       <div className="relative z-20 flex flex-col items-center gap-6">
         {/* Eye-brow label */}
         <span className="badge animate-fade-up">
-          Commercial · Risk · Strategy
+          Artist Management · Marketing · Consulting
         </span>
 
-        {/* Main headline */}
+        {/* Main headline — quoted from thekeithhopkins.com */}
         <h1 className="text-display-xl animate-fade-up animation-delay-1 text-gradient-amber max-w-4xl">
           {config.hero_title}
         </h1>
 
-        {/* Tagline */}
+        {/* Subtitle — quoted bio from the live site */}
         <p className="animate-fade-up animation-delay-2 max-w-xl text-lg leading-relaxed text-gray-400">
-          {config.tagline}
+          {config.hero_subtitle}
         </p>
 
         {/* Metrics row */}
         <div className="animate-fade-up animation-delay-3 mt-4 flex flex-wrap justify-center gap-10">
           {config.metrics.map((m) => (
             <div key={m.label} className="flex flex-col items-center">
-              <span className="text-metric text-glow-gold font-bold text-amber-400">
+              <span className="text-metric text-glow-gold font-bold text-brand-400">
                 {m.value}
               </span>
               <span className="text-label-sm mt-1 text-gray-500">

@@ -9,7 +9,7 @@ interface PricingTableProps {
 
 export default function PricingTable({ tiers }: PricingTableProps) {
   return (
-    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
       {tiers.map((tier) => {
         const isPopular = !!tier.popular;
         return (
@@ -18,14 +18,14 @@ export default function PricingTable({ tiers }: PricingTableProps) {
             className={cn(
               'glass-card relative flex flex-col justify-between p-8 transition-all',
               isPopular
-                ? 'border-amber-500/60 shadow-[0_0_30px_rgba(251,191,36,0.15)] ring-1 ring-amber-500/40'
-                : 'hover:border-amber-500/30',
+                ? 'border-brand-500/60 shadow-[0_0_30px_rgba(231,189,68,0.15)] ring-1 ring-brand-500/40'
+                : 'hover:border-brand-500/30',
             )}
           >
             {/* Top popular badge */}
             {isPopular && (
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                <span className="flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-gray-950 shadow-md">
+                <span className="flex items-center gap-1 rounded-full bg-gradient-to-r from-brand-300 to-brand-600 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-gray-950 shadow-md">
                   <Zap className="h-3 w-3 fill-current" /> Most Popular
                 </span>
               </div>
@@ -53,7 +53,7 @@ export default function PricingTable({ tiers }: PricingTableProps) {
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2.5 text-sm text-gray-300">
-                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-400" />
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400" />
                       <span>{feature}</span>
                     </li>
                   ))}

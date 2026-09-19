@@ -68,7 +68,7 @@ export default function Header({ nav, brandName }: HeaderProps) {
               ) : item.cta ? (
                 <Link
                   href={item.href}
-                  className="rounded-md bg-amber-500 px-4 py-2 text-sm font-semibold text-gray-950 transition-colors hover:bg-amber-400"
+                  className="rounded-md bg-brand-500 px-4 py-2 text-sm font-semibold text-gray-950 transition-colors hover:bg-brand-400"
                 >
                   {item.label}
                 </Link>
@@ -132,7 +132,7 @@ export default function Header({ nav, brandName }: HeaderProps) {
                 ) : item.cta ? (
                   <Link
                     href={item.href}
-                    className="mt-2 block rounded-md bg-amber-500 px-3 py-2 text-center text-sm font-semibold text-gray-950 hover:bg-amber-400"
+                    className="mt-2 block rounded-md bg-brand-500 px-3 py-2 text-center text-sm font-semibold text-gray-950 hover:bg-brand-400"
                     onClick={() => setMobileOpen(false)}
                   >
                     {item.label}

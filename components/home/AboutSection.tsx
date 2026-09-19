@@ -1,80 +1,59 @@
 import {
-  Mic2,
-  TrendingUp,
+  Music2,
+  Megaphone,
   ShieldCheck,
-  Network,
+  Plane,
   Star,
 } from 'lucide-react';
+import type { SiteConfig } from '@/lib/types';
 
-const PILLARS = [
-  {
-    icon: Mic2,
-    title: 'Artist & Talent',
-    body: 'Guiding artists, performers, and creative professionals from discovery to headline acts — Noah Hunton, Patrick Gibson, Michael Carubelli and more.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Commercial Operations',
-    body: 'Streamlining revenue channels, contract strategy, and market entry for growth-stage ventures and enterprise clients across multiple sectors.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Risk Assessment',
-    body: 'Identifying and neutralizing operational, financial, and reputational risk before it costs you — practical frameworks built for fast-moving organizations.',
-  },
-  {
-    icon: Network,
-    title: 'Strategic Consulting',
-    body: 'Board-level advisory, partnership structuring, and long-range planning that aligns your vision with execution at every stage of the journey.',
-  },
+/* Capability pillars — labels + percents quoted from thekeithhopkins.com:
+   "100% Commercial Operations · 99% Risk Assessment ·
+    99% Strategic Consulting · 100% Licensed Aviator" */
+const PILLAR_ICONS = [Music2, Megaphone, ShieldCheck, Plane];
+
+/* ── Golden-ratio badge row: 3 badges at φ⁰ … ────────────────────────── */
+const BADGES = [
+  '15+ Yrs Experience',
+  '5/5 Average Rating',
+  '10+ Countries Visited',
+  'Licensed Professional',
 ];
 
-export default function AboutSection() {
+export default function AboutSection({ config }: { config: SiteConfig }) {
   return (
     <section
       id="about"
       aria-label="About Keith Hopkins"
-      className="section-padding relative overflow-hidden bg-surface-1"
+      className="section-padding-compact relative overflow-hidden bg-surface-1"
     >
-      {/* Ambient glow top-right */}
+      {/* Ambient glow top-right — champagne gold on maroon */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full opacity-10"
-        style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Left — bio */}
+        {/* Fibonacci split: bio 61.8% · capabilities 38.2% */}
+        <div className="fib-split items-center">
+          {/* Left — bio (φ share) */}
           <div>
             <span className="badge">About Keith</span>
             <h2 className="text-display-lg mt-4 text-white">
-              15+ Years Building{' '}
-              <span className="text-gradient-amber">Ventures That Last</span>
+              15+ Years of{' '}
+              <span className="text-gradient-amber">Entrepreneurship</span>
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-gray-400">
-              Keith Hopkins is a licensed professional with over 15 years of
-              experience spanning artist management, commercial operations, risk
-              assessment, and strategic consulting across multiple industries.
-            </p>
-            <p className="mt-4 leading-relaxed text-gray-500">
-              From brokering talent deals on the east coast to scaling
-              enterprise-grade business ventures, Keith brings a rare blend of
-              creative intuition and rigorous commercial discipline to every
-              engagement.
+            <p className="mt-6 max-w-prose text-lg leading-relaxed text-gray-300">
+              {config.about_bio}
             </p>
 
             {/* Credential badges */}
             <div className="mt-8 flex flex-wrap gap-3">
-              {[
-                '15+ Yrs Experience',
-                '5/5 Client Satisfaction',
-                '10+ Enterprise Ventures',
-                'Licensed Professional',
-              ].map((c) => (
+              {BADGES.map((c) => (
                 <span
                   key={c}
-                  className="flex items-center gap-1.5 rounded-full border border-amber-500/25 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber-400"
+                  className="flex items-center gap-1.5 rounded-full border border-brand-500/25 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-400"
                 >
                   <Star className="h-3 w-3" /> {c}
                 </span>
@@ -82,19 +61,40 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Right — pillars */}
-          <div className="grid gap-5 sm:grid-cols-2">
-            {PILLARS.map(({ icon: Icon, title, body }) => (
-              <div key={title} className="glass-card p-5">
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400 ring-1 ring-amber-500/20">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-label-sm text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-400">
-                  {body}
-                </p>
-              </div>
-            ))}
+          {/* Right — capability bars with real % from live site */}
+          <div className="glass-card p-8">
+            <h3 className="text-label-sm text-brand-400">Capabilities</h3>
+            <ul className="mt-5 space-y-5">
+              {config.capabilities.map(({ label, percent }, i) => {
+                const Icon = PILLAR_ICONS[i % PILLAR_ICONS.length];
+                return (
+                  <li key={label}>
+                    <div className="mb-1.5 flex items-center justify-between gap-3">
+                      <span className="flex items-center gap-2 text-sm font-semibold text-white">
+                        <Icon className="h-4 w-4 text-brand-400" aria-hidden="true" />
+                        {label}
+                      </span>
+                      <span className="font-display text-lg font-bold text-brand-400">
+                        {percent} %
+                      </span>
+                    </div>
+                    <div
+                      className="h-1.5 overflow-hidden rounded-full bg-surface-3"
+                      role="progressbar"
+                      aria-valuenow={percent}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      aria-label={label}
+                    >
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-brand-200 via-brand-400 to-brand-600"
+                        style={{ width: `${percent}%` }}
+                      />
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>

@@ -94,7 +94,7 @@ export default function Footer({ nav, brandName, tagline, copyright }: FooterPro
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-sm text-amber-400 transition-colors hover:text-amber-300"
+                      className="text-sm text-brand-400 transition-colors hover:text-brand-300"
                     >
                       {item.label}
                     </Link>

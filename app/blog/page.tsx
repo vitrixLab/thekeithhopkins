@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
         />
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <span className="badge">Insights &amp; Analysis</span>
@@ -42,11 +42,11 @@ export default function BlogIndexPage() {
             {posts.map((post) => (
               <article
                 key={post.id}
-                className="glass-card group flex flex-col justify-between p-8 transition-all hover:border-amber-500/40"
+                className="glass-card group flex flex-col justify-between p-8 transition-all hover:border-brand-500/40"
               >
                 <div>
                   <div className="flex items-center gap-4 text-xs text-gray-400">
-                    <span className="flex items-center gap-1.5 text-amber-400">
+                    <span className="flex items-center gap-1.5 text-brand-400">
                       <Calendar className="h-3.5 w-3.5" />
                       {formatDate(post.date)}
                     </span>
@@ -57,7 +57,7 @@ export default function BlogIndexPage() {
                     </span>
                   </div>
 
-                  <h2 className="mt-4 text-2xl font-bold text-white transition-colors group-hover:text-amber-300">
+                  <h2 className="mt-4 text-2xl font-bold text-white transition-colors group-hover:text-brand-300">
                     <Link href={post.nextjs_route}>
                       {post.title}
                     </Link>
@@ -74,7 +74,7 @@ export default function BlogIndexPage() {
                   </span>
                   <Link
                     href={post.nextjs_route}
-                    className="flex items-center gap-1.5 text-sm font-semibold text-amber-400 transition-gap group-hover:gap-2.5"
+                    className="flex items-center gap-1.5 text-sm font-semibold text-brand-400 transition-gap group-hover:gap-2.5"
                   >
                     Read Article <ArrowRight className="h-4 w-4" />
                   </Link>

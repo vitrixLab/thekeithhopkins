@@ -22,16 +22,17 @@ export default function ProjectsIndexPage() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 right-1/3 h-96 w-96 rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #e7bd44, transparent 70%)' }}
         />
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <span className="badge">Track Record</span>
           <h1 className="text-display-lg mt-4 text-white">
-            Featured Ventures &amp;{' '}
-            <span className="text-gradient-gold">Case Studies</span>
+            Premium{' '}
+            <span className="text-gradient-gold">Products</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
-            A selection of brand transformations, commercial operations rollouts, and specialized business ventures developed with strategic discipline.
+            High-quality products designed to enhance wellness, beauty, and
+            lifestyle for a healthier, happier life.
           </p>
         </div>
       </section>
@@ -46,7 +47,7 @@ export default function ProjectsIndexPage() {
               return (
                 <div
                   key={project.id}
-                  className="glass-card group flex flex-col overflow-hidden transition-all hover:border-amber-500/40"
+                  className="glass-card group flex flex-col overflow-hidden transition-all hover:border-brand-500/40"
                 >
                   {/* Thumbnail */}
                   <div className="relative aspect-video w-full overflow-hidden bg-surface-2">
@@ -63,10 +64,10 @@ export default function ProjectsIndexPage() {
                   {/* Body */}
                   <div className="flex flex-1 flex-col justify-between p-6">
                     <div>
-                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400">
-                        <Layers className="h-3.5 w-3.5" /> Venture Case Study
+                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-400">
+                        <Layers className="h-3.5 w-3.5" /> Premium Product
                       </div>
-                      <h2 className="mt-2 text-xl font-bold text-white group-hover:text-amber-300 transition-colors">
+                      <h2 className="mt-2 text-xl font-bold text-white group-hover:text-brand-300 transition-colors">
                         {project.title}
                       </h2>
                       <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-gray-400">
@@ -91,9 +92,9 @@ export default function ProjectsIndexPage() {
                     <div className="mt-6 pt-4 border-t border-gray-800">
                       <Link
                         href={project.nextjs_route}
-                        className="flex items-center gap-1.5 text-sm font-semibold text-amber-400 transition-gap group-hover:gap-2.5"
+                        className="flex items-center gap-1.5 text-sm font-semibold text-brand-400 transition-gap group-hover:gap-2.5"
                       >
-                        Read Case Study <ArrowRight className="h-4 w-4" />
+                        View Product <ArrowRight className="h-4 w-4" />
                       </Link>
                     </div>
                   </div>
@@ -108,14 +109,14 @@ export default function ProjectsIndexPage() {
       <section className="border-t border-gray-800 bg-surface-1 py-16">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-display-md text-white">
-            Ready to build your next success story?
+            Have a project in mind? Let&apos;s discuss.
           </h2>
           <p className="mt-3 text-sm text-gray-400">
-            Learn how Keith Hopkins applies proven commercial strategy, operational risk assessment, and partnership alignment to your goals.
+            Reach out about products, services, or partnerships.
           </p>
           <div className="mt-6">
             <Link href="/#contact" className="btn-primary">
-              Discuss Your Venture
+              Contact Us
             </Link>
           </div>
         </div>

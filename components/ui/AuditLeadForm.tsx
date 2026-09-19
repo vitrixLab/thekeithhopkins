@@ -58,7 +58,7 @@ export default function AuditLeadForm() {
   if (submitted) {
     return (
       <div className="glass-card flex flex-col items-center p-8 sm:p-12 text-center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-amber-500/10 text-amber-400 ring-1 ring-amber-500/30">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-500/10 text-brand-400 ring-1 ring-brand-500/30">
           <CheckCircle2 className="h-8 w-8" />
         </div>
         <h3 className="text-display-md mt-6 text-white">
@@ -108,7 +108,7 @@ export default function AuditLeadForm() {
               placeholder="Keith Hopkins"
               {...register('fullName')}
               className={cn(
-                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                 errors.fullName ? 'border-red-500/50' : 'border-gray-700',
               )}
             />
@@ -128,7 +128,7 @@ export default function AuditLeadForm() {
               placeholder="keith@yourcompany.com"
               {...register('email')}
               className={cn(
-                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                 errors.email ? 'border-red-500/50' : 'border-gray-700',
               )}
             />
@@ -150,7 +150,7 @@ export default function AuditLeadForm() {
               placeholder="Acme Ventures"
               {...register('company')}
               className={cn(
-                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                 errors.company ? 'border-red-500/50' : 'border-gray-700',
               )}
             />
@@ -170,7 +170,7 @@ export default function AuditLeadForm() {
               placeholder="https://yourcompany.com"
               {...register('website')}
               className={cn(
-                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white placeholder-gray-600 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                 errors.website ? 'border-red-500/50' : 'border-gray-700',
               )}
             />
@@ -190,7 +190,7 @@ export default function AuditLeadForm() {
               id="currentRevenue"
               {...register('currentRevenue')}
               className={cn(
-                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                 errors.currentRevenue ? 'border-red-500/50' : 'border-gray-700',
               )}
             >
@@ -215,7 +215,7 @@ export default function AuditLeadForm() {
               id="primaryBottleneck"
               {...register('primaryBottleneck')}
               className={cn(
-                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30',
+                'w-full rounded-lg border bg-surface-2 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30',
                 errors.primaryBottleneck ? 'border-red-500/50' : 'border-gray-700',
               )}
             >

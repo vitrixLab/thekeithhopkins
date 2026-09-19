@@ -58,11 +58,11 @@ export default function HeroCanvas() {
     >
       {/* Minimal ambient + point light for particle sheen */}
       <ambientLight intensity={0.1} />
-      <pointLight position={[0, 4, 4]} intensity={2} color="#fbbf24" />
+      <pointLight position={[0, 4, 4]} intensity={2} color="#e7bd44" />
 
       <Suspense fallback={null}>
         <CameraRig />
-        <ParticleField count={700} spread={22} depth={18} color="#fbbf24" />
+        <ParticleField count={700} spread={22} depth={18} color="#e7bd44" />
         <NeonGrid baseSpeed={0.55} />
         <PostFX />
       </Suspense>

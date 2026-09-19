@@ -1,7 +1,9 @@
 {
   "brand_name": "Keith Hopkins",
-  "tagline": "Commercial Operations, Risk Assessment & Strategic Consulting",
+  "tagline": "Artist Management, Marketing & Strategic Consulting — Let's grow together",
   "hero_title": "Let's grow together",
+  "hero_subtitle": "Keith Hopkins is a licensed professional with over 15 years of entrepreneurship and consulting experience. Specialties include social media management, marketing, and strategic consulting across multiple industries including artist management.",
+  "about_bio": "Keith Hopkins is a licensed professional with over 15 years of entrepreneurship and consulting experience. His specialties include but are not limited to social media management, marketing, strategic consulting across multiple industries including artist management.",
   "metrics": [
     {
       "value": "15+",
@@ -9,25 +11,49 @@
     },
     {
       "value": "5/5",
-      "label": "Client Satisfaction"
+      "label": "Average Rating"
     },
     {
       "value": "10+",
-      "label": "Enterprise Ventures"
+      "label": "Countries Visited"
     }
   ],
+  "capabilities": [
+    { "label": "Commercial Operations", "percent": 100 },
+    { "label": "Risk Assessment", "percent": 99 },
+    { "label": "Strategic Consulting", "percent": 99 },
+    { "label": "Licensed Aviator", "percent": 100 }
+  ],
+  "contact": {
+    "address": "1505 Demonbreun St, Nashville, TN 37203",
+    "email": "keith@thekeithhopkins.com",
+    "phone": "6154363883",
+    "phone_display": "(615) 436-3883",
+    "hours": [
+      "Mon – Fri: 09:00AM – 09:00PM",
+      "Sat: 09:00AM – 07:00PM",
+      "Sun: Closed"
+    ]
+  },
+  "socials": {
+    "facebook": "https://facebook.com",
+    "instagram": "https://instagram.com",
+    "youtube": "https://youtube.com",
+    "snapchat": "https://snapchat.com",
+    "tiktok": "https://tiktok.com"
+  },
   "navigation": [
     {
       "label": "Home",
       "href": "/"
     },
     {
-      "label": "About Keith",
-      "href": "/#about"
-    },
-    {
       "label": "Artist",
       "href": "/#artist"
+    },
+    {
+      "label": "About Keith",
+      "href": "/#about"
     },
     {
       "label": "Services",
@@ -64,12 +90,8 @@
           "href": "/fillmypipeline"
         },
         {
-          "label": "Bluetti",
+          "label": "Bluetti Texas Power",
           "href": "/bluetti"
-        },
-        {
-          "label": "Texas Power",
-          "href": "/electric"
         },
         {
           "label": "Machine Base AI",
@@ -103,5 +125,5 @@
       "cta": true
     }
   ],
-  "copyright": "© 2025-2026 Keith Hopkins. All Rights Reserved."
+  "copyright": "© Copyright 2026 | Keith Hopkins | All right reserved."
 }

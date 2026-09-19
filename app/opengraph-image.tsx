@@ -15,7 +15,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, #030712 0%, #0a0f1e 50%, #111827 100%)',
+          background: 'linear-gradient(135deg, #120709 0%, #190a0c 50%, #221013 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -36,7 +36,7 @@ export default async function Image() {
             width: '350px',
             height: '350px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(251, 191, 36, 0.18), transparent 70%)',
+            background: 'radial-gradient(circle, rgba(231, 189, 68, 0.18), transparent 70%)',
           }}
         />
 
@@ -45,13 +45,13 @@ export default async function Image() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            background: 'rgba(251, 191, 36, 0.12)',
-            border: '1px solid rgba(251, 191, 36, 0.4)',
+            background: 'rgba(231, 189, 68, 0.12)',
+            border: '1px solid rgba(231, 189, 68, 0.4)',
             borderRadius: '9999px',
             padding: '8px 20px',
             fontSize: '18px',
             fontWeight: 700,
-            color: '#fbbf24',
+            color: '#e7bd44',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
             marginBottom: '28px',
@@ -80,7 +80,7 @@ export default async function Image() {
           style={{
             fontSize: '32px',
             fontWeight: 600,
-            color: '#fbbf24',
+            color: '#e7bd44',
             textAlign: 'center',
             marginTop: '20px',
             maxWidth: '850px',
@@ -98,7 +98,7 @@ export default async function Image() {
             marginTop: '44px',
             padding: '14px 32px',
             background: 'rgba(15, 22, 41, 0.8)',
-            border: '1px solid rgba(251, 191, 36, 0.2)',
+            border: '1px solid rgba(231, 189, 68, 0.2)',
             borderRadius: '16px',
             color: '#d1d5db',
             fontSize: '16px',
