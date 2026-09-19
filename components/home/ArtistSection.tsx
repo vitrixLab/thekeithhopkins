@@ -64,7 +64,7 @@ export default function ArtistSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-20 text-center">
           <span className="badge">Artist Roster</span>
           <h2 className="text-display-lg mt-4 text-white">
             Talent We{' '}
@@ -77,11 +77,11 @@ export default function ArtistSection() {
         </div>
 
         {/* Artist cards — 2×2 Fibonacci grid (φ rhythm in card gaps) */}
-        <div className="grid gap-8 sm:grid-cols-2">
+        <div className="grid gap-8 sm:grid-cols-2 lg:gap-10">
           {ARTISTS.map(({ name, genre, description, icon: Icon, accent }) => (
             <div
               key={name}
-              className="glass-card group relative overflow-hidden p-8"
+              className="glass-card group relative overflow-hidden p-10"
             >
               {/* Gradient top accent bar */}
               <div

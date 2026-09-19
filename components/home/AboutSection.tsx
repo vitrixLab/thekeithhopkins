@@ -49,7 +49,7 @@ export default function AboutSection({ config }: { config: SiteConfig }) {
             </p>
 
             {/* Credential badges */}
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-wrap gap-3">
               {BADGES.map((c) => (
                 <span
                   key={c}
@@ -62,9 +62,9 @@ export default function AboutSection({ config }: { config: SiteConfig }) {
           </div>
 
           {/* Right — capability bars with real % from live site */}
-          <div className="glass-card p-8">
+          <div className="glass-card p-10">
             <h3 className="text-label-sm text-brand-400">Capabilities</h3>
-            <ul className="mt-5 space-y-5">
+            <ul className="mt-6 space-y-6">
               {config.capabilities.map(({ label, percent }, i) => {
                 const Icon = PILLAR_ICONS[i % PILLAR_ICONS.length];
                 return (

@@ -1,0 +1,385 @@
+{
+  "communities": {
+    "0": [
+      "clsx",
+      "hookform_resolvers",
+      "lucide_react",
+      "next",
+      "package_dependencies",
+      "package_dependencies_clsx",
+      "package_dependencies_hookform_resolvers",
+      "package_dependencies_lucide_react",
+      "package_dependencies_next",
+      "package_dependencies_postprocessing",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_hook_form",
+      "package_dependencies_react_three_drei",
+      "package_dependencies_react_three_fiber",
+      "package_dependencies_react_three_postprocessing",
+      "package_dependencies_tailwind_merge",
+      "package_dependencies_three",
+      "package_dependencies_zod",
+      "postprocessing",
+      "react",
+      "react_dom",
+      "react_hook_form",
+      "react_three_drei",
+      "react_three_fiber",
+      "react_three_postprocessing",
+      "tailwind_merge",
+      "three",
+      "zod"
+    ],
+    "1": [
+      "app_layout",
+      "app_layout_inter",
+      "app_layout_metadata",
+      "app_layout_rootlayout",
+      "app_layout_siteconfig",
+      "components_home_contactsection",
+      "components_home_contactsection_contactsection",
+      "components_home_contactsection_formdata",
+      "components_home_contactsection_partners",
+      "components_home_contactsection_rationale_39",
+      "components_home_contactsection_schema",
+      "components_layout_footer",
+      "components_layout_footer_facebookicon",
+      "components_layout_footer_footer",
+      "components_layout_footer_footerprops",
+      "components_layout_footer_instagramicon",
+      "components_layout_footer_linkedinicon",
+      "components_layout_footer_social_links",
+      "components_layout_footer_xicon",
+      "components_layout_header",
+      "components_layout_header_header",
+      "components_layout_header_headerprops",
+      "lib_types_navitem",
+      "lib_utils",
+      "lib_utils_cn",
+      "lib_utils_formatdate",
+      "lib_utils_resolveimagepath"
+    ],
+    "2": [
+      "app_page",
+      "app_page_homepage",
+      "app_page_metadata",
+      "app_page_services",
+      "app_page_siteconfig",
+      "components_home_aboutsection",
+      "components_home_aboutsection_aboutsection",
+      "components_home_aboutsection_pillars",
+      "components_home_artistsection",
+      "components_home_artistsection_artists",
+      "components_home_artistsection_artistsection",
+      "components_home_herosection",
+      "components_home_herosection_herosection",
+      "components_home_herosection_herosectionprops",
+      "components_home_servicessection",
+      "components_home_servicessection_icons",
+      "components_home_servicessection_servicessection",
+      "components_home_servicessection_servicessectionprops",
+      "lib_types",
+      "lib_types_metric",
+      "lib_types_post",
+      "lib_types_pricingtier",
+      "lib_types_project",
+      "lib_types_service",
+      "lib_types_siteconfig"
+    ],
+    "3": [
+      "eslint",
+      "eslint_config_next",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_config_next",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_types_three",
+      "package_devdependencies_typescript",
+      "tailwindcss",
+      "tailwindcss_postcss",
+      "types_node",
+      "types_react",
+      "types_react_dom",
+      "types_three",
+      "typescript"
+    ],
+    "4": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target"
+    ],
+    "5": [
+      "components_home_herosection_herocanvas",
+      "components_three_herocanvas",
+      "components_three_herocanvas_camerarig",
+      "components_three_herocanvas_herocanvas",
+      "components_three_neongrid",
+      "components_three_neongrid_neongrid",
+      "components_three_neongrid_neongridprops",
+      "components_three_particlefield",
+      "components_three_particlefield_particlefield",
+      "components_three_particlefield_particlefieldprops",
+      "components_three_postfx",
+      "components_three_postfx_postfx"
+    ],
+    "6": [
+      "ref_mts",
+      "ref_next_dev_types_ts",
+      "ref_next_env_d_ts",
+      "ref_next_types_ts",
+      "ref_node_modules",
+      "ref_ts",
+      "ref_tsx",
+      "tsconfig",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "7": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version"
+    ],
+    "8": [
+      "readme",
+      "readme_deploy_on_vercel",
+      "readme_getting_started",
+      "readme_learn_more"
+    ],
+    "9": [
+      "agents",
+      "agents_graphify",
+      "agents_this_is_not_the_next_js_you_know"
+    ],
+    "10": [
+      "nextjs_migration_blueprint",
+      "nextjs_migration_blueprint_data_layer_type_definitions_lib_types_ts",
+      "nextjs_migration_blueprint_key_notes",
+      "nextjs_migration_blueprint_migration_phases",
+      "nextjs_migration_blueprint_overview",
+      "nextjs_migration_blueprint_phase_1_scaffold_day_1",
+      "nextjs_migration_blueprint_phase_2_core_pages_day_2_3",
+      "nextjs_migration_blueprint_phase_3_interactive_forms_day_4",
+      "nextjs_migration_blueprint_phase_4_seo_deploy_day_5",
+      "nextjs_migration_blueprint_project_file_structure",
+      "nextjs_migration_blueprint_quickstart_commands",
+      "nextjs_migration_blueprint_route_mapping_matrix",
+      "nextjs_migration_blueprint_stack"
+    ],
+    "11": [
+      "agents_rules_graphify",
+      "agents_rules_graphify_graphify"
+    ],
+    "12": [
+      "agents_workflows_graphify",
+      "agents_workflows_graphify_workflow_graphify"
+    ],
+    "13": [
+      "claude",
+      "claude_graphify"
+    ],
+    "14": [
+      "eslint_config",
+      "eslint_config_eslintconfig"
+    ],
+    "15": [
+      "next_config",
+      "next_config_nextconfig"
+    ],
+    "16": [
+      "postcss_config",
+      "postcss_config_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06896551724137931,
+    "1": 0.09971509971509972,
+    "2": 0.12,
+    "3": 0.10526315789473684,
+    "4": 0.10526315789473684,
+    "5": 0.21212121212121213,
+    "6": 0.2,
+    "7": 0.2222222222222222,
+    "8": 0.5,
+    "9": 0.6666666666666666,
+    "10": 0.15384615384615385,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 7
+    },
+    {
+      "id": "lib_types_navitem",
+      "label": "NavItem",
+      "degree": 5
+    },
+    {
+      "id": "lib_types_siteconfig",
+      "label": "SiteConfig",
+      "degree": 5
+    },
+    {
+      "id": "lib_utils_cn",
+      "label": "cn()",
+      "degree": 5
+    },
+    {
+      "id": "nextjs_migration_blueprint_migration_phases",
+      "label": "Migration Phases",
+      "degree": 5
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "lib_types_service",
+      "label": "Service",
+      "degree": 4
+    },
+    {
+      "id": "tsconfig_compileroptions_lib",
+      "label": "lib",
+      "degree": 4
+    },
+    {
+      "id": "components_home_contactsection_contactsection",
+      "label": "ContactSection()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "FooterProps",
+      "target": "NavItem",
+      "source_files": [
+        "components/layout/Footer.tsx",
+        "lib/types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `FooterProps` unexpectedly reaches hub `NavItem`"
+    },
+    {
+      "source": "HeaderProps",
+      "target": "NavItem",
+      "source_files": [
+        "components/layout/Header.tsx",
+        "lib/types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `HeaderProps` unexpectedly reaches hub `NavItem`"
+    },
+    {
+      "source": "HeroSectionProps",
+      "target": "SiteConfig",
+      "source_files": [
+        "components/home/HeroSection.tsx",
+        "lib/types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `HeroSectionProps` unexpectedly reaches hub `SiteConfig`"
+    },
+    {
+      "source": "ServicesSectionProps",
+      "target": "Service",
+      "source_files": [
+        "components/home/ServicesSection.tsx",
+        "lib/types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "ContactSection()",
+      "target": "cn()",
+      "source_files": [
+        "components/home/ContactSection.tsx",
+        "lib/utils.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.070) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `devDependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.051) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `compilerOptions` connect `compilerOptions` to `include`?",
+      "why": "High betweenness centrality (0.020) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `FormData`, `Metric`, `Post` to the rest of the system?",
+      "why": "93 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `dependencies` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `layout.tsx` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09971509971509972 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `page.tsx` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

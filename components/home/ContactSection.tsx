@@ -70,13 +70,13 @@ export default function ContactSection({ config }: { config: SiteConfig }) {
       <section
         id="partners"
         aria-label="Media Appearances"
-        className="border-y border-gray-800 bg-surface-1 py-10"
+        className="border-y border-gray-800 bg-surface-1 py-16"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-gray-600">
+          <p className="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-gray-600">
             As Seen On
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-10">
             {MEDIA_APPEARANCES.map((name) => (
               <span
                 key={name}
@@ -96,7 +96,7 @@ export default function ContactSection({ config }: { config: SiteConfig }) {
         className="section-padding bg-surface-base"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-start gap-16 lg:grid-cols-2">
+          <div className="grid items-start gap-20 lg:grid-cols-2">
             {/* Left — copy with real contact details from live site */}
             <div>
               <span className="badge">Contact Us</span>

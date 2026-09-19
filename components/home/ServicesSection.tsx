@@ -53,7 +53,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
       <Link
         key={service.id}
         href={service.nextjs_route}
-        className="glass-card group flex flex-col gap-4 p-6 transition-all sm:p-8"
+        className="glass-card group flex flex-col gap-5 p-8 transition-all sm:p-10"
       >
         <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-500/10 text-brand-400 ring-1 ring-brand-500/20 transition-colors group-hover:bg-brand-500/20">
           <Icon className="h-6 w-6" />
@@ -104,14 +104,14 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
         </div>
 
         {/* Row 2 — remaining three services */}
-        <div className="mt-phi-5 grid gap-6 md:grid-cols-3">
+        <div className="mt-phi-5 grid gap-8 md:grid-cols-3">
           {rest.slice(0, 3).map((service) => renderCard(service))}
         </div>
 
         {/* Row 3 — Premium Products strip (real live-site content) */}
         <Link
           href="/project"
-          className="glass-card group mt-phi-5 flex flex-col items-start gap-4 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+          className="glass-card group mt-phi-5 flex flex-col items-start gap-5 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10"
         >
           <div className="max-w-2xl">
             <p className="text-label-sm text-brand-500">Premium Products</p>

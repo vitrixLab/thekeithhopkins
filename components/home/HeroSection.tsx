@@ -39,7 +39,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
       />
 
       {/* Hero content — above canvas + vignette */}
-      <div className="relative z-20 flex flex-col items-center gap-6">
+      <div className="relative z-20 flex flex-col items-center gap-10">
         {/* Eye-brow label */}
         <span className="badge animate-fade-up">
           Artist Management · Marketing · Consulting
@@ -56,13 +56,13 @@ export default function HeroSection({ config }: HeroSectionProps) {
         </p>
 
         {/* Metrics row */}
-        <div className="animate-fade-up animation-delay-3 mt-4 flex flex-wrap justify-center gap-10">
+        <div className="animate-fade-up animation-delay-3 mt-6 flex flex-wrap justify-center gap-14">
           {config.metrics.map((m) => (
             <div key={m.label} className="flex flex-col items-center">
               <span className="text-metric text-glow-gold font-bold text-brand-400">
                 {m.value}
               </span>
-              <span className="text-label-sm mt-1 text-gray-500">
+              <span className="text-label-sm mt-2 text-gray-500">
                 {m.label}
               </span>
             </div>
@@ -70,7 +70,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
         </div>
 
         {/* CTA buttons */}
-        <div className="animate-fade-up animation-delay-4 mt-4 flex flex-wrap justify-center gap-4">
+        <div className="animate-fade-up animation-delay-4 mt-6 flex flex-wrap justify-center gap-5">
           <Link href="/service" className="btn-primary">
             View Services
           </Link>
