@@ -30,33 +30,33 @@
     "semantic_hash": ""
   },
   "components/home/AboutSection.tsx": {
-    "mtime": 1789824278.049098,
-    "seen": 1789827416.241959,
-    "ast_hash": "43a7302eecec7260478f8f31f682f9b0",
+    "mtime": 1789830060.1187298,
+    "seen": 1789832300.8908284,
+    "ast_hash": "7949f4c87ac47f6ae5c0a08c21433a68",
     "semantic_hash": ""
   },
   "components/home/ArtistSection.tsx": {
-    "mtime": 1789824278.0660524,
-    "seen": 1789827416.241959,
-    "ast_hash": "d5c647990496cd95a9e2c18b319a8dec",
+    "mtime": 1789830055.3777208,
+    "seen": 1789832300.8908284,
+    "ast_hash": "2adc7858c30713a1ed74411b0d81edaa",
     "semantic_hash": ""
   },
   "components/home/ContactSection.tsx": {
-    "mtime": 1789824278.1987014,
-    "seen": 1789827416.241959,
-    "ast_hash": "e01c7d2e7f828dff29160293536f1531",
+    "mtime": 1789830066.7287605,
+    "seen": 1789832300.8908284,
+    "ast_hash": "23a273288aca585057e936ff9e963798",
     "semantic_hash": ""
   },
   "components/home/HeroSection.tsx": {
-    "mtime": 1789824278.388743,
-    "seen": 1789827416.241959,
-    "ast_hash": "4665bb77ef03c081c6e06b3f7d1f83a3",
+    "mtime": 1789830044.0579886,
+    "seen": 1789832300.8908284,
+    "ast_hash": "907a4d90708139802b1466f312664e11",
     "semantic_hash": ""
   },
   "components/home/ServicesSection.tsx": {
-    "mtime": 1789824278.562289,
-    "seen": 1789827416.241959,
-    "ast_hash": "fa0c34b0a78c26f82e1cfa59ff3a4376",
+    "mtime": 1789830050.6749873,
+    "seen": 1789832300.8908284,
+    "ast_hash": "d41dd046d1ca33f61e369354d3624bb5",
     "semantic_hash": ""
   },
   "components/layout/Footer.tsx": {
